@@ -105,7 +105,7 @@
     
     /* ========== Layout ========== */
     --max-width: 1200px;
-    --navbar-height: 72px;
+    --navbar-height: 56px;
 }
 
 /* ============================================
@@ -162,7 +162,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow-lg);
 }
 
 .nav-container {
@@ -240,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
     height: auto;
-    min-height: 320px;
+    min-height: 200px;
     margin-top: var(--navbar-height);
     background-image: url('https://images.unsplash.com/photo-1761839257961-4dce65b72d99?q=80&w=1920&h=500&fit=crop');
     background-size: cover;
@@ -249,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--space-12) 0;
+    padding: var(--space-8) 0;
 }
 
 .hero-overlay {
@@ -264,23 +263,73 @@ h1, h2, h3, h4, h5, h6 {
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 900px;
-    padding: var(--space-10) var(--space-12);
+    max-width: 1000px;
+    padding: var(--space-6) var(--space-8);
     text-align: left;
 }
 
 .hero-content p {
     font-family: var(--font-body);
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     font-weight: var(--font-light);
-    line-height: var(--leading-loose);
+    line-height: var(--leading-relaxed);
     color: var(--color-white);
     opacity: 0.95;
     letter-spacing: 0.01em;
 }
 
 .hero-content p + p {
-    margin-top: var(--space-6);
+    margin-top: var(--space-4);
+}
+
+/* ============================================
+   Alternative Hero (index2.html)
+   ============================================ */
+
+.hero-alt {
+    min-height: 280px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--space-8);
+}
+
+.hero-title-content h1 {
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    color: var(--color-white);
+    letter-spacing: var(--tracking-tight);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* About Section */
+.about-section {
+    background-color: var(--color-white);
+    padding: var(--space-10) var(--space-8);
+    border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.about-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    line-height: var(--leading-loose);
+    color: var(--color-neutral-600);
+    max-width: 900px;
+}
+
+.about-content p + p {
+    margin-top: var(--space-4);
 }
 
 /* ============================================
@@ -288,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 .main-content {
-    padding: var(--space-16) var(--space-8);
+    padding: var(--space-10) var(--space-8);
     max-width: var(--max-width);
     margin: 0 auto;
 }
@@ -307,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 .updates-section,
 .uma-section {
     background-color: var(--color-white);
-    padding: var(--space-8);
+    padding: var(--space-6);
     border-radius: var(--radius-lg);
     border: 1px solid var(--color-neutral-200);
     box-shadow: var(--shadow-sm);
@@ -344,7 +393,7 @@ h1, h2, h3, h4, h5, h6 {
 .projects-list li {
     margin-bottom: var(--space-3);
     color: var(--color-neutral-700);
-    font-size: var(--text-base);
+    font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
 }
 
@@ -361,7 +410,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .projects-sublist li {
     margin-bottom: var(--space-2);
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     color: var(--color-neutral-600);
 }
 
@@ -415,7 +464,7 @@ h1, h2, h3, h4, h5, h6 {
 .policy-list li {
     margin-bottom: var(--space-3);
     color: var(--color-neutral-700);
-    font-size: var(--text-base);
+    font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
 }
 
@@ -439,7 +488,7 @@ h1, h2, h3, h4, h5, h6 {
 .uma-list li {
     margin-bottom: var(--space-3);
     color: var(--color-neutral-700);
-    font-size: var(--text-base);
+    font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
 }
 
@@ -600,7 +649,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     :root {
-        --navbar-height: 64px;
+        --navbar-height: 56px;
     }
     
     .nav-toggle {
@@ -661,6 +710,19 @@ h1, h2, h3, h4, h5, h6 {
     
     .project-page {
         padding: var(--space-8) var(--space-6);
+    }
+    
+    .hero-title-content h1 {
+        font-size: var(--text-3xl);
+    }
+    
+    .about-section {
+        padding: var(--space-8) var(--space-6);
+    }
+    
+    .about-content p {
+        font-size: var(--text-base);
+        line-height: var(--leading-relaxed);
     }
 }
 
