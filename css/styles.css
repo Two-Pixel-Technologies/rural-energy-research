@@ -729,6 +729,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .nav-container.nav-centered {
         justify-content: flex-end;
+        padding: 0 var(--space-4);
     }
     
     .nav-toggle {
@@ -761,15 +762,20 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero {
-        height: 220px;
+        height: 200px;
     }
 
     .intro-section {
-        padding: var(--space-8) 0;
+        padding: var(--space-8) var(--space-4);
+    }
+
+    .intro-content {
+        padding: 0 var(--space-2);
     }
 
     .intro-content h1 {
         font-size: var(--text-2xl);
+        margin-bottom: var(--space-4);
     }
 
     .intro-text p {
@@ -777,8 +783,38 @@ h1, h2, h3, h4, h5, h6 {
         line-height: var(--leading-relaxed);
     }
 
+    .main-content {
+        padding: var(--space-6) 0;
+    }
+
     .content-grid {
         grid-template-columns: 1fr;
+        padding: 0 var(--space-4);
+        gap: var(--space-6);
+    }
+
+    .projects-section,
+    .updates-section,
+    .uma-section {
+        padding: var(--space-5);
+    }
+
+    .projects-section h2,
+    .updates-section h2,
+    .uma-section h2 {
+        font-size: var(--text-lg);
+        margin-bottom: var(--space-4);
+    }
+
+    .projects-list li,
+    .policy-list li,
+    .uma-list li {
+        font-size: var(--text-base);
+        margin-bottom: var(--space-2);
+    }
+
+    .projects-sublist li {
+        font-size: var(--text-sm);
     }
 
     .footer-content {
@@ -823,31 +859,76 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
     .hero {
-        height: 180px;
+        height: 160px;
     }
 
     .intro-section {
-        padding: var(--space-6) 0;
+        padding: var(--space-6) var(--space-3);
+    }
+
+    .intro-content {
+        padding: 0;
+    }
+
+    .intro-content h1 {
+        font-size: var(--text-xl);
+        margin-bottom: var(--space-3);
+        padding-bottom: var(--space-3);
     }
 
     .intro-text p {
         font-size: var(--text-sm);
-        line-height: var(--leading-normal);
+        line-height: var(--leading-relaxed);
+    }
+
+    .intro-text p + p {
+        margin-top: var(--space-3);
     }
 
     .main-content {
-        padding: var(--space-8) var(--space-4);
+        padding: var(--space-5) 0;
+    }
+
+    .content-grid {
+        padding: 0 var(--space-3);
+        gap: var(--space-4);
     }
 
     .projects-section,
     .updates-section,
     .uma-section {
-        padding: var(--space-6);
+        padding: var(--space-4);
     }
     
     .projects-section h2,
     .updates-section h2,
     .uma-section h2 {
-        font-size: var(--text-lg);
+        font-size: var(--text-base);
+        margin-bottom: var(--space-3);
+        padding-bottom: var(--space-2);
+    }
+
+    .projects-list,
+    .policy-list,
+    .uma-list {
+        padding-left: var(--space-5);
+    }
+
+    .projects-list li,
+    .policy-list li,
+    .uma-list li {
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-2);
+        line-height: var(--leading-relaxed);
+    }
+
+    .projects-sublist {
+        padding-left: var(--space-5);
+        margin-top: var(--space-1);
+    }
+
+    .projects-sublist li {
+        font-size: var(--text-xs);
+        margin-bottom: var(--space-1);
     }
 }
