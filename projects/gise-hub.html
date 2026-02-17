@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GIS representation and analysis of water-energy-food linkages | Rural Energy Research Group">
+    <title>GIS representation and analysis of water-energy-food linkages | Rural Energy Research Group</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <style>
+        /* Full width content section that appears after sidebar ends */
+        .project-detail__full-width {
+            margin-top: var(--space-10);
+            width: 100%;
+        }
+        
+        .project-detail__full-width p {
+            margin-bottom: var(--space-4);
+            line-height: var(--leading-loose);
+            color: var(--pd-text-body);
+        }
+        
+        /* Mobile layout: reorder to show sidebar at the very end */
+        @media (max-width: 768px) {
+            /* Make container flex to control order of all children */
+            .project-detail-container {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            /* Use display: contents to flatten the grid structure on mobile */
+            .project-detail__content {
+                display: contents;
+            }
+            
+            /* Assign orders: body content, full-width section, then sidebar */
+            .project-detail__body {
+                order: 5;
+            }
+            
+            .project-detail__full-width {
+                order: 6;
+                margin-top: var(--space-8);
+            }
+            
+            .project-detail__content aside {
+                order: 7;
+                margin-top: var(--space-8);
+            }
+            
+            /* Keep header elements at the top */
+            .project-detail__tag {
+                order: 1;
+            }
+            
+            .project-detail__title {
+                order: 2;
+            }
+            
+            .project-detail__meta {
+                order: 3;
+            }
+            
+            /* Back link stays at the very bottom */
+            .project-detail-container > div:last-child {
+                order: 8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container nav-centered">
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                <li><a href="../index.html#publications" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article class="project-detail">
+            <div class="project-detail-container">
+                <!-- Project Header -->
+                <span class="project-detail__tag">Energy Systems</span>
+                <h1 class="project-detail__title">GIS representation and analysis of water-energy-food linkages in grid based irrigation systems</h1>
+                
+                <!-- Meta Information -->
+                <div class="project-detail__meta">
+                    <div class="project-detail__meta-item">
+                        <strong>Year:</strong> 2023 – 2025
+                    </div>
+                    <div class="project-detail__meta-item">
+                        <strong>Team:</strong> Priya Jadhav, Anil Kulkarni, Tejas Nagotkar, Himanshu Sonare
+                    </div>
+                    <div class="project-detail__meta-item">
+                        <strong>Type:</strong> Research Project
+                    </div>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="project-detail__content">
+                    <div class="project-detail__body">
+                        <p>Access to a connection, and quality and schedule of power for irrigation is a major problem for farmers. Socio-political issues in this sector have led to a system with poor quality supply for farmers, and losses for distribution utilities. With climate change and unpredictable rainfall, protective irrigation is becoming imperative for all farmers. Solutions to address issues are being sought through newer technical paradigms such as offgrid solar photovoltaic pumps, High Voltage Distribution Systems (HVDS) etc. On the other hand, balancing the conflicting objectives of reducing irrigation water and energy usage, increasing food security, and farmer income, have become very important in India. Effective policy design, as well as promoting operational efficiency in the system, requires analysis through systems representing water energy-food linkages at the local level.</p>
+                        
+                        <p>This project addresses this need by documenting the electrical distribution system of agricultural feeders in GIS and connecting it to the cropping patterns and water sources. Thus setting up a system which may be used for design and analysis while optimizing resources and farmer requirements.</p>
+                        
+                        <div style="margin: 2rem 0; text-align: center;">
+                            <img src="../projects_markdown/8-GISE-Hub-Ag-feeders/media/image1.png" alt="Talegaon Feeder, Wardha" style="max-width: 700px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                            <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Talegaon Feeder, Wardha</p>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside>
+                        <div class="project-detail__sidebar-card">
+                            <h3 class="project-detail__sidebar-title">Team Members</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li><strong>Principal Investigators:</strong> Priya Jadhav (CTARA), Anil Kulkarni (EE)</li>
+                                <li><strong>Project Team:</strong> Tejas Nagotkar, Himanshu Sonare</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail__sidebar-card">
+                            <h3 class="project-detail__sidebar-title">Publications</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li style="border-bottom: none; padding-bottom: 0;">
+                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Reports and Code</strong>
+                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Reports and code submitted to DST</span>
+                                    <a href="https://drive.google.com/drive/folders/1AhdcrDdpQKeMaf1B5omd1URvoiwdnybE?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Reports →</a>
+                                </li>
+                                <li style="border-bottom: none; padding-bottom: 0;">
+                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Presentation (2025)</strong>
+                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Presentation at DST review, January 2025</span>
+                                    <a href="https://docs.google.com/presentation/d/1zvBNcm-asUhI55oachpIKl7ALUOA21ll/edit?slide=id.p1#slide=id.p1" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Presentation →</a>
+                                </li>
+                                <li style="border-bottom: none; padding-bottom: 0;">
+                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Review Comments</strong>
+                                    <a href="https://drive.google.com/drive/folders/1AnpivdtUkoFo20Id4yjRrV5OVop250MN?dmr=1&ec=wgc-drive-globalnav-goto" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Comments →</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail__sidebar-card">
+                            <h3 class="project-detail__sidebar-title">Other Projects</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li><a href="energy-water-crops.html">Modeling of Energy, Water and Crops linkages</a></li>
+                                <li><a href="demand-modelling.html">Demand Modelling of Irrigation Energy Demand</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+
+                <!-- Back Link -->
+                <div style="margin-top: 3rem;">
+                    <a href="../index.html#projects" class="btn btn--secondary">← Back to All Projects</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rural Energy Research Group</h3>
+                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@ruralresearch.org</p>
+                <p>Phone: +91 1234 567890</p>
+                <p>Address: Research Campus, New Delhi, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#publications">Publications</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

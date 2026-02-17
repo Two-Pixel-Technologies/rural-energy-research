@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demand modelling of power demand for irrigation | Rural Energy Research Group">
+    <title>Demand Modelling of Irrigation Energy Demand | Rural Energy Research Group</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <style>
+        /* Mobile layout: reorder to show sidebar at the very end */
+        @media (max-width: 768px) {
+            /* Make container flex to control order of all children */
+            .project-detail-container {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            /* Use display: contents to flatten the grid structure on mobile */
+            .project-detail__content {
+                display: contents;
+            }
+            
+            /* Assign orders: body content, then sidebar */
+            .project-detail__body {
+                order: 5;
+            }
+            
+            .project-detail__content aside {
+                order: 6;
+                margin-top: var(--space-8);
+            }
+            
+            /* Keep header elements at the top */
+            .project-detail__tag {
+                order: 1;
+            }
+            
+            .project-detail__title {
+                order: 2;
+            }
+            
+            .project-detail__meta {
+                order: 3;
+            }
+            
+            /* Back link stays at the very bottom */
+            .project-detail-container > div:last-child {
+                order: 7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container nav-centered">
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                <li><a href="../index.html#publications" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article class="project-detail">
+            <div class="project-detail-container">
+                <!-- Project Header -->
+                <span class="project-detail__tag">Energy Systems</span>
+                <h1 class="project-detail__title">Demand modelling of power demand for irrigation</h1>
+                
+                <!-- Meta Information -->
+                <div class="project-detail__meta">
+                    <div class="project-detail__meta-item">
+                        <strong>Year:</strong> 2017 – 2022
+                    </div>
+                    <div class="project-detail__meta-item">
+                        <strong>Team:</strong> Namita Sawant
+                    </div>
+                    <div class="project-detail__meta-item">
+                        <strong>Type:</strong> PhD Thesis
+                    </div>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="project-detail__content">
+                    <div class="project-detail__body">
+                        <p>This work develops a demand model for power consumption for irrigation based on cropping and irrigation practices. The model is based on a published methodology linking energy and water usage to crops. The model was tested against 7 feeders. Figure 1 illustrates the fortnightly model output and the energy consumption data for one feeder, along with the cropwise split.</p>
+                        
+                        <p>The model was built into a software module called 'Energy Estimation tool' to estimate the minimum Distribution Transformer (DT) capacity required in a village. The tool was implemented in 10 villages through the official processes of the Department of Agriculture.</p>
+                        
+                        <p>The tool is a decision support system, allowing institutional resource governance. It develops protocols to build an important dataset including agroclimatic conditions, technical information, and farmer irrigation practices.</p>
+                        
+                        <div style="margin: 2rem 0; text-align: center;">
+                            <img src="../projects_markdown/5-Demand-modelling-of-irrigation-energy-demand/media/image1.png" alt="Fortnightly model output and energy consumption data with cropwise split" style="max-width: 700px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside>
+                        <div class="project-detail__sidebar-card">
+                            <h3 class="project-detail__sidebar-title">Team Members</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li><strong>PhD Student:</strong> Namita Sawant</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail__sidebar-card">
+                            <h3 class="project-detail__sidebar-title">Publications</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li style="border-bottom: none; padding-bottom: 0;">
+                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">PhD Thesis (2022)</strong>
+                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Namita Sawant, 2017 - 2022</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail__sidebar-card">
+                            <h3 class="project-detail__sidebar-title">Other Projects</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
+                                <li><a href="energy-water-crops.html">Modeling of Energy, Water and Crops linkages</a></li>
+                                <li><a href="energy-estimation-tool.html">Energy Estimation Tool (EET)</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+                <!-- Back Link -->
+                <div style="margin-top: 3rem;">
+                    <a href="../index.html#projects" class="btn btn--secondary">← Back to All Projects</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rural Energy Research Group</h3>
+                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@ruralresearch.org</p>
+                <p>Phone: +91 1234 567890</p>
+                <p>Address: Research Campus, New Delhi, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#publications">Publications</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

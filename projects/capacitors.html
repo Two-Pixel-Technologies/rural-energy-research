@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Capacitor usage with irrigation pumps | Rural Energy Research Group">
+    <title>Capacitor Usage with Irrigation Pumps | Rural Energy Research Group</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <style>
+        /* Full width content section that appears after sidebar ends */
+        .project-detail__full-width {
+            margin-top: var(--space-10);
+            width: 100%;
+        }
+        
+        .project-detail__full-width p {
+            margin-bottom: var(--space-4);
+            line-height: var(--leading-loose);
+            color: var(--pd-text-body);
+        }
+        
+        /* Mobile layout: reorder to show sidebar at the very end */
+        @media (max-width: 768px) {
+            /* Make container flex to control order of all children */
+            .project-detail-container {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            /* Use display: contents to flatten the grid structure on mobile */
+            .project-detail__content {
+                display: contents;
+            }
+            
+            /* Assign orders: body content, full-width section, then sidebar */
+            .project-detail__body {
+                order: 5;
+            }
+            
+            .project-detail__full-width {
+                order: 6;
+                margin-top: var(--space-8);
+            }
+            
+            .project-detail__content aside {
+                order: 7;
+                margin-top: var(--space-8);
+            }
+            
+            /* Keep header elements at the top */
+            .project-detail__tag {
+                order: 1;
+            }
+            
+            .project-detail__title {
+                order: 2;
+            }
+            
+            .project-detail__meta {
+                order: 3;
+            }
+            
+            /* Back link stays at the very bottom */
+            .project-detail-container > div:last-child {
+                order: 8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container nav-centered">
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                <li><a href="../index.html#publications" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article class="project-detail">
+            <div class="project-detail-container">
+                <!-- Project Header -->
+                <span class="project-detail__tag">Energy Systems</span>
+                <h1 class="project-detail__title">Capacitor usage with irrigation pumps</h1>
+                
+                <!-- Meta Information -->
+                <div class="project-detail__meta">
+                    <div class="project-detail__meta-item">
+                        <strong>Year:</strong> 2014 – 2024
+                    </div>
+                    <div class="project-detail__meta-item">
+                        <strong>Team:</strong> Mehul Raghwan, Vivek Shinde
+                    </div>
+                    <div class="project-detail__meta-item">
+                        <strong>Type:</strong> Research Project
+                    </div>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="project-detail__content">
+                    <div class="project-detail__body">
+                        <p>Poor quality of electricity for irrigation is a major issue for farmers leading to repair expenses, poor water management, extreme inconvenience, and reduced yields. This can be reduced substantially if farmers use capacitors on irrigation pumps.</p>
+                        
+                        <p>Capacitor usage with induction motors is a standard technical solution for power distribution efficiency. is a low-cost, effective, and well-known solution, commonly used in industry yet their usage is non-existent in agriculture.</p>
+                        
+                        <p>This group has conducted several projects over the years to investigate the gaps leading to this untapped resource, technical analysis through simulations, and a structured demonstration project carried out under the Project on Climate Resilient Agriculture (PoCRA) in 10 villages has thrown more light on possible solutions.</p>
+                        
+                        <p>Broadly, capacitor usage can lead to a 5 to 10% improvement in voltage, and 5% reduction in energy loss in the conductors. More importantly, it reduces the probability of Distribution Transformer failure, and tripping incidences at the pump and DT, substantially. The cost of a capacitor is Rs.500 - 750, and it lasts for several years. The lack of usage can be put down to lack of awareness among farmers. 95% of farmers did not know about a capacitor and its benefits. One of the reasons for this may be that when one farmer uses a capacitor the effect is small but it is very significant when the majority of farmers on a DT use a capacitor.</p>
+                        
+                        <p>As a result of the demonstration projects carried out under PoCRA, it was found that farmers in the targeted villages who learnt of the benefits wanted to use capacitors, but they were limited by availability in shops. Hence it is important for the distribution company / vendors to carry out capacitor drives.</p>
+                        
+                        <p>Capacitor usage is one direct, simple, and low cost solution that can improve the quality of power supply for farmers, as well as benefit the distribution company. We are happy to provide guidance and inputs to NGOs, capacitor vendors, FPOs, or other groups who are willing to take this forward.</p>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside>
+                        <div class="project-detail__sidebar-card">
+                            <h3 class="project-detail__sidebar-title">Team Members</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li><strong>Project Team:</strong> Mehul Raghwan, Vivek Shinde</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail__sidebar-card">
+                            <h3 class="project-detail__sidebar-title">Publications</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li style="border-bottom: none; padding-bottom: 0;">
+                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Demonstration Project (2024)</strong>
+                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Structured demonstration project under PoCRA</span>
+                                    <a href="https://drive.google.com/drive/folders/1vc1EFgJnTMKwdnQr2gFpKAPhrcFymAh4?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Project →</a>
+                                </li>
+                                <li style="border-bottom: none; padding-bottom: 0;">
+                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Conference Paper (2015)</strong>
+                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Power factor issues on agricultural feeders: Investigated through the case of a village in Sangli, Maharashtra</span>
+                                    <a href="https://drive.google.com/open?id=1ethVtPLrpGD1xvo-U0ofl5Wjdpbo6W_6" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Paper →</a>
+                                </li>
+                                <li style="border-bottom: none; padding-bottom: 0;">
+                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Video Resource</strong>
+                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Educational video on capacitor usage</span>
+                                    <a href="https://www.youtube.com/watch?v=RCPcVEVgTAE" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Watch Video →</a>
+                                </li>
+                                <li style="border-bottom: none; padding-bottom: 0;">
+                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">News Article (2019)</strong>
+                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Beneficial effect of capacitor usage with agricultural pumps, Lokmat</span>
+                                    <a href="https://www.lokmat.com/editorial/capacitors-have-beneficial-effect-agriculture/" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Read Article →</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail__sidebar-card">
+                            <h3 class="project-detail__sidebar-title">Other Projects</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
+                                <li><a href="lt-distribution-networks.html">Restructuring of LT Agricultural Distribution Networks</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+
+                <!-- Full Width Content Section -->
+                <div class="project-detail__full-width">
+                    <!-- First Row: Images 1 and 2 (landscape orientation) -->
+                    <div style="display: flex; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; justify-content: center;">
+                        <div style="flex: 0 1 549px; text-align: center;">
+                            <img src="../projects_markdown/6-Capacitors/media/image3.png" alt="Video on capacitors on the PoCRA channel" style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                            <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Video on capacitors on the PoCRA channel</p>
+                        </div>
+                        <div style="flex: 0 1 467px; text-align: center;">
+                            <img src="../projects_markdown/6-Capacitors/media/image4.jpg" alt="Demonstrating the voltage increase on capacitor installation" style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                            <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Demonstrating the voltage increase on capacitor installation</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Second Row: Images 3 and 4 (portrait orientation) -->
+                    <div style="display: flex; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; justify-content: center;">
+                        <div style="flex: 0 1 375px; text-align: center;">
+                            <img src="../projects_markdown/6-Capacitors/media/image1.jpg" alt="Capacitor installed on Irrigation Pump" style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                            <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Capacitor installed on Irrigation Pump</p>
+                        </div>
+                        <div style="flex: 0 1 336px; text-align: center;">
+                            <img src="../projects_markdown/6-Capacitors/media/image2.jpg" alt="Sample awareness building material" style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                            <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Sample awareness building material</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back Link -->
+                <div style="margin-top: 3rem;">
+                    <a href="../index.html#projects" class="btn btn--secondary">← Back to All Projects</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rural Energy Research Group</h3>
+                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@ruralresearch.org</p>
+                <p>Phone: +91 1234 567890</p>
+                <p>Address: Research Campus, New Delhi, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#publications">Publications</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
