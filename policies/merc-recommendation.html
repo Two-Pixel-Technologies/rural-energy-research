@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MERC Recommendation based on agricultural network study | Rural Energy Research Group">
+    <title>MERC Recommendation - Agricultural Network Study | Rural Energy Research Group</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <style>
+        /* Policy-specific styles - centered content without sidebar */
+        .policy-content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .project-detail__body {
+            grid-column: 1 / -1;
+        }
+        
+        .project-detail__body p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-6);
+        }
+        
+        .project-detail__quote {
+            background: var(--color-neutral-100);
+            border-left: 4px solid var(--color-accent-500);
+            padding: var(--space-6);
+            margin: var(--space-8) 0;
+            font-style: italic;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--color-neutral-700);
+        }
+        
+        .project-detail__meta-item--date {
+            font-size: 1rem;
+            color: var(--color-accent-600);
+            font-weight: 600;
+        }
+        
+        /* Document Download Link Styling */
+        .document-link {
+            color: var(--color-accent-600);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-accent-500);
+            transition: all 0.2s ease;
+            padding-bottom: 1px;
+        }
+        
+        .document-link:hover {
+            color: var(--color-accent-700);
+            border-bottom-color: var(--color-accent-700);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .project-detail__body p {
+                font-size: 1rem;
+            }
+            
+            .project-detail__quote {
+                font-size: 1rem;
+                padding: var(--space-4);
+            }
+            
+            .document-download {
+                padding: var(--space-5);
+            }
+            
+            .document-download__link {
+                padding: 0.625rem 1.25rem;
+                font-size: 0.9375rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container nav-centered">
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#publications" class="nav-link">Publications</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article class="project-detail">
+            <div class="project-detail-container policy-content-wrapper">
+                <!-- Project Header -->
+                <span class="project-detail__tag">Policy Impact</span>
+                <h1 class="project-detail__title">Recommendation from the Regulatory Commission (MERC) based on agricultural network study</h1>
+                
+                <!-- Meta Information -->
+                <div class="project-detail__meta">
+                    <div class="project-detail__meta-item project-detail__meta-item--date">
+                        <strong>Date:</strong> September 2020
+                    </div>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="project-detail__content">
+                    <div class="project-detail__body">
+                        <p><a href="https://drive.google.com/file/d/14iDFhpDnnQoU79X6pYtnmD1FX_U2Ku6N/view?usp=drive_link" target="_blank" class="document-link">MERC Recommendation Letter</a></p>
+                        
+                        <p><strong>The government spends significantly on power distribution networks for irrigation, yet farmers continue to suffer from poor electricity supply and long wait times for new connections.</strong></p>
+                        
+                        <p><strong>The team developed a new approach to restructure the network to ensure a good quality power supply. This includes moving existing low-tension lines, thereby minimizing the cost of new infrastructure.</strong> A feasibility study in Umbarda Village, Washim led to one-third of the cost of the new connection, improved voltage profile and even loading of transformers.</p>
+                        
+                        <p>The Maharashtra Electricity Regulatory Commission (MERC) referred the study to MSEDCL for uptake as follows:</p>
+                        
+                        <div class="project-detail__quote">
+                            "The Commission is aware of the CAPEX proposals for Agriculture networks. The Commission feels that the study by IIT Mumbai could be beneficial to MSEDCL also for developing more cost-efficient and technically robust infrastructure."
+                        </div>
+                        
+                        <p><a href="../projects/lt-distribution-networks.html">Restructuring of Ag networks (link to project page)</a></p>
+                    </div>
+                </div>
+
+                <!-- Back Link -->
+                <div style="margin-top: 3rem;">
+                    <a href="../index.html" class="btn btn--secondary">← Back to Home</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rural Energy Research Group</h3>
+                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@ruralresearch.org</p>
+                <p>Phone: +91 1234 567890</p>
+                <p>Address: Research Campus, New Delhi, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#publications">Publications</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
