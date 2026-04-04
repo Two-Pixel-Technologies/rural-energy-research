@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Policy Directives to District Superintending Agricultural Officers and ATMA district Project Directors | Rural Energy Research Group">
-    <title>Policy Directives to ATMA and Agricultural Officers | Rural Energy Research Group</title>
+    <meta name="description" content="UMA / Engineering Education | Rural Energy Research Group">
+    <title>UMA / Engineering Education | Rural Energy Research Group</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     
     <style>
         /* Policy-specific styles - centered content without sidebar */
@@ -29,6 +29,28 @@
             font-size: 1.125rem;
             line-height: 1.8;
             margin-bottom: var(--space-6);
+        }
+        
+        .project-detail__body ul {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-6);
+            padding-left: 1.5rem;
+        }
+
+        .project-detail__body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-detail__quote {
+            background: var(--color-neutral-100);
+            border-left: 4px solid var(--color-accent-500);
+            padding: var(--space-6);
+            margin: var(--space-8) 0;
+            font-style: italic;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--color-neutral-700);
         }
         
         .project-detail__meta-item--date {
@@ -54,13 +76,13 @@
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .project-detail__body p {
+            .project-detail__body p, .project-detail__body ul {
                 font-size: 1rem;
             }
             
-            .document-downloads {
-                grid-template-columns: 1fr;
-                gap: var(--space-4);
+            .project-detail__quote {
+                font-size: 1rem;
+                padding: var(--space-4);
             }
             
             .document-download {
@@ -75,7 +97,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container nav-centered">
             <button class="nav-toggle" id="navToggle">
@@ -84,10 +106,10 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../projects.html" class="nav-link">Projects</a></li>
-                <li><a href="../index.html#publications" class="nav-link">Publications</a></li>
-                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="index.html#publications" class="nav-link">Publications</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
             </ul>
         </div>
     </nav>
@@ -96,39 +118,47 @@
         <article class="project-detail">
             <div class="project-detail-container policy-content-wrapper">
                 <!-- Project Header -->
-                <span class="project-detail__tag">Policy Directive</span>
-                <h1 class="project-detail__title">Policy Directives to District Superintending Agricultural Officers and ATMA district Project Directors</h1>
-                
-                <!-- Meta Information -->
-                <div class="project-detail__meta">
-                    <div class="project-detail__meta-item project-detail__meta-item--date">
-                        <strong>Date:</strong> July 14, 2022
-                    </div>
-                </div>
+                <span class="project-detail__tag">Education</span>
+                <h1 class="project-detail__title">UMA / Engineering Education</h1>
 
                 <!-- Content Grid -->
                 <div class="project-detail__content">
                     <div class="project-detail__body">
-                        <p><a href="https://drive.google.com/file/d/1Rc1Grvd8RHCovwj12_ohh5F6gtHWQNLj/view?usp=drive_link" target="_blank" class="document-link">Download the Policy Directives</a> | <a href="https://docs.google.com/document/d/1Ew72CrLrPmSxTFq8_bM1lGTnIIPZOmQydX93sCV2Zzc/edit?usp=drive_link" target="_blank" class="document-link">English Translation</a></p>
+                        <p>Unnat Maharashtra Abhiyan (UMA) is a project of the Ministry of Higher and Technical Education. Its mandate is to build an independent and public knowledge infrastructure for the state of Maharashtra which will bring socio-economic and cultural development for its people, especially those in the bottom 80% of the socio-economic strata.</p>
                         
-                        <p>The IIT Bombay - PoCRA project conducted from 2020 to 2024, under the <em>Nanaji Deshmukh Krushi Sanjeevani Project</em>, studied aspects related to agricultural pumping systems covering the following aspects: farmers' problems, agricultural power infrastructure, the relationship between cropping patterns and electricity demand, unauthorized agricultural pumps, and delays in obtaining electricity connections.</p>
+                        <h3>Objectives:</h3>
+                        <ul>
+                            <li>To seek alignment of curricula and research with regional development needs</li>
+                            <li>Re-emphasize field-work and case-studies as an important pedagogy</li>
+                            <li>Provide a mechanism for local bodies such as Zilla Parishads, Gram Panchayats, etc. to access engineering institutions for knowledge, funding, and data</li>
+                        </ul>
                         
-                        <p>Based on this study, IIT has proposed solutions to reduce farmers' difficulties and expenses, improving the efficiency of the power system, reducing power leakage, lowering maintenance costs for Mahavitaran, and reducing government expenditure per electricity connection. Several recommendations were made. These recommendations were shared in a policy directive to the District Superintending Agricultural Officers, and Project Directors, ATMA (Agricultural Technology Management Agency), for the 15 districts under the PoCRA project.</p>
+                        <h3>Some outputs include:</h3>
+                        <ul>
+                            <li>Textbooks</li>
+                            <li>Training workshops</li>
+                            <li>Internship programs</li>
+                        </ul>
                         
-                        <p>Directives covered holding rabi and kharif seasonal meetings to discuss electricity related problems, promote Demand side Management solutions such as usage of capacitors and Load Management, MSEDCL representatives such as Junior Engineer to be invited to the meetings, record the status and maintenance of Distribution Transformers in a village.</p>
+                        <h3>Additional Resources:</h3>
+                        <p>UMA Website (under construction): <a href="https://www.ctara.iitb.ac.in/en/uma" target="_blank" class="document-link">ctara.iitb.ac.in/en/uma</a></p>
+                        
+                        <h3>Textbook:</h3>
+                        <p>Agricultural Electricity Distribution Systems: A field based study for Electrical Engineers</p>
+                        <p><a href="https://drive.google.com/file/d/13D7HCGzWyyxriXdnEg8rvtanwzx0dL2e/view?usp=drive_link" target="_blank" class="document-link">Textbook Link (Google Drive)</a></p>
                     </div>
                 </div>
 
                 <!-- Back Link -->
                 <div style="margin-top: 3rem;">
-                    <a href="../index.html" class="btn btn--secondary">← Back to Home</a>
+                    <a href="index.html" class="btn btn--secondary">← Back to Home</a>
                 </div>
             </div>
         </article>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Rural Energy Research Group</h3>
@@ -143,9 +173,9 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="../index.html#home">Home</a></li>
-                    <li><a href="../index.html#projects">Projects</a></li>
-                    <li><a href="../index.html#publications">Publications</a></li>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#publications">Publications</a></li>
                 </ul>
             </div>
         </div>
@@ -155,6 +185,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

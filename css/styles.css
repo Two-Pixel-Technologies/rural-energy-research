@@ -216,7 +216,14 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-white);
 }
 
-.nav-link:hover::after {
+.nav-link.nav-link-active,
+.nav-link.active {
+    color: var(--color-white);
+}
+
+.nav-link:hover::after,
+.nav-link.nav-link-active::after,
+.nav-link.active::after {
     width: 100%;
 }
 
