@@ -490,11 +490,15 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: color var(--transition-fast), border-color var(--transition-fast);
+    display: block;
+    padding: var(--space-2) var(--space-2);
+    margin-left: calc(var(--space-2) * -1);
+    border-radius: var(--radius-sm);
 }
 
 .project-link:hover {
     color: var(--color-accent-600);
-    border-bottom-color: var(--color-accent-500);
+    background-color: var(--color-neutral-50);
 }
 
 .projects-sublist .project-link {
@@ -889,6 +893,41 @@ h1, h2, h3, h4, h5, h6 {
 /* Active nav link */
 .nav-link-active {
     color: var(--color-white) !important;
+}
+
+/* Fix: offset scroll target to prevent fixed navbar from covering #home */
+#home {
+    scroll-margin-top: var(--navbar-height);
+}
+
+@media (max-width: 768px) {
+    #home {
+        scroll-margin-top: 44px; /* matches reduced mobile navbar height */
+    }
+}
+
+/* Home Header Background Overlay */
+.home-header-bg {
+    background-color: var(--color-primary-800);
+    background-image: linear-gradient(rgba(21, 43, 34, 0.85), rgba(21, 43, 34, 0.85)), url('../images/home-hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: var(--space-16) 0;
+    border-bottom: 2px solid var(--color-accent-400);
+}
+
+/* Home Page Intro Card */
+.home-intro-card {
+    background-color: var(--color-neutral-50);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-sm);
+    padding: var(--space-6) var(--space-8);
+    margin-bottom: var(--space-8);
+    color: var(--color-neutral-800);
+    line-height: var(--leading-loose);
+    font-size: 1.05rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02); /* ultra minimal */
 }
 
 /* Projects Main Section */

@@ -21,8 +21,10 @@
     <style>
         /* Publications Page Specific Styles */
         .publications-page {
-            max-width: var(--max-width); /* Match alignment with Home/Projects grid */
-            margin: var(--space-8) auto var(--space-16); /* Header handles navbar offset now */
+            max-width: var(--max-width);
+            /* Match alignment with Home/Projects grid */
+            margin: var(--space-8) auto var(--space-16);
+            /* Header handles navbar offset now */
             padding: 0 var(--space-4);
         }
 
@@ -52,14 +54,12 @@
         .pub-category-title {
             font-size: var(--text-2xl);
             color: var(--color-primary-800);
-            margin-bottom: var(--space-4);
-            background-color: var(--color-neutral-50);
-            padding: var(--space-2) var(--space-4);
-            border-left: 4px solid var(--color-accent-600);
-            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-            display: inline-block; /* More compact header width */
-            padding-right: var(--space-8);
-            width: 100%;
+            margin-top: var(--space-4);
+            margin-bottom: var(--space-6);
+            padding-bottom: var(--space-2);
+            border-bottom: 2px solid var(--color-accent-400);
+            display: inline-block;
+            max-width: 100%;
         }
 
         .pub-list {
@@ -88,14 +88,15 @@
         .pub-year-badge {
             flex-shrink: 0;
             min-width: 55px;
-            padding: var(--space-1) var(--space-3);
-            background-color: var(--color-primary-50);
-            border: 1px solid var(--color-primary-100);
-            border-radius: var(--radius-md);
+            padding: 0.25rem 0.6rem;
+            background-color: #e5ebe8; /* Visible, muted grey-green matching theme */
+            border: 1px solid #d3ded9; /* Very light subtle edge */
+            border-radius: 5px; /* Slight 5px rounding */
             font-size: var(--text-sm);
-            font-weight: 600;
-            color: var(--color-primary-700);
+            font-weight: 700; /* Darker, slightly bolder for contrast */
+            color: var(--color-primary-800);
             text-align: center;
+            letter-spacing: 0.5px;
         }
 
         /* Content block */
@@ -107,7 +108,8 @@
 
         .pub-title {
             font-size: var(--text-lg);
-            font-weight: 700; /* Slightly more prominent title */
+            font-weight: 700;
+            /* Slightly more prominent title */
             color: var(--color-primary-800);
             line-height: var(--leading-tight);
             margin: 0;
@@ -123,7 +125,7 @@
         .pub-journal {
             font-style: italic;
         }
-        
+
         .pub-divider {
             color: var(--color-neutral-400);
             margin: 0 var(--space-1);
@@ -147,9 +149,9 @@
         /* Responsive Layout Fold */
         @media (max-width: 768px) {
             .pub-item {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: flex-start;
-                gap: var(--space-2);
+                gap: var(--space-3);
             }
         }
     </style>
@@ -179,203 +181,287 @@
         <header class="page-header-section pub-header-bg">
             <div class="page-header-container">
                 <h1 class="page-header-title">Publications</h1>
-                <p class="page-header-subtitle">Peer-reviewed journal articles, conference papers, and research reports published by members of the Rural Research Group.</p>
+                <p class="page-header-subtitle">Peer-reviewed journal articles, conference papers, and research reports
+                    published by members of the Rural Research Group.</p>
             </div>
         </header>
 
         <section class="publications-page">
 
-        <!-- News Articles -->
-        <section class="pub-category">
-            <h2 class="pub-category-title">News Articles</h2>
-            <ul class="pub-list">
-                <li class="pub-item">
-                    <div class="pub-year-badge">2025</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Education as a path to progress: Is it working?</h3>
-                        <div class="pub-description-line">
-                            Loksatta, 10 August 2025 <span class="pub-divider">—</span> <a href="https://www.loksatta.com/sampadkiya/features/creative-changes-in-the-education-system-ssb-93-5293320/" target="_blank" class="pub-link">[Marathi]</a> <a href="https://www.ctara.iitb.ac.in/en/system/files/Education_not_working_loksatta_english_0.pdf" target="_blank" class="pub-link">[English]</a>
+            <!-- News Articles -->
+            <section class="pub-category">
+                <h2 class="pub-category-title">News Articles</h2>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2025</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Education as a path to progress: Is it working?</h3>
+                            <div class="pub-description-line">
+                                Loksatta, 10 August 2025 <span class="pub-divider">—</span> <a
+                                    href="https://www.loksatta.com/sampadkiya/features/creative-changes-in-the-education-system-ssb-93-5293320/"
+                                    target="_blank" class="pub-link">[Marathi]</a> <a
+                                    href="https://www.ctara.iitb.ac.in/en/system/files/Education_not_working_loksatta_english_0.pdf"
+                                    target="_blank" class="pub-link">[English]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2023</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title"><a href="https://indianexpress.com/article/opinion/columns/smart-meter-saving-electricity-bills-environment-9036345/" target="_blank" style="color: inherit; text-decoration: none;">Smart Metering: A new opportunity to optimize renewable integration on the grid</a></h3>
-                        <div class="pub-description-line">
-                            Indian Express <span class="pub-divider">—</span> <a href="https://indianexpress.com/article/opinion/columns/smart-meter-saving-electricity-bills-environment-9036345/" target="_blank" class="pub-link">[Link]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2023</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title"><a
+                                    href="https://indianexpress.com/article/opinion/columns/smart-meter-saving-electricity-bills-environment-9036345/"
+                                    target="_blank" style="color: inherit; text-decoration: none;">Smart Metering: A new
+                                    opportunity to optimize renewable integration on the grid</a></h3>
+                            <div class="pub-description-line">
+                                Indian Express <span class="pub-divider">—</span> <a
+                                    href="https://indianexpress.com/article/opinion/columns/smart-meter-saving-electricity-bills-environment-9036345/"
+                                    target="_blank" class="pub-link">[Link]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2023</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Mahavitaran (MSEDCL) needs to engage with farmers</h3>
-                        <div class="pub-description-line">
-                            Loksatta, March 16, 2023 <span class="pub-divider">—</span> <a href="https://www.loksatta.com/sampadkiya/features/mahavitaran-should-make-farmer-oriented-efforts-electricity-bill-to-farmers-ysh-95-3522864/" target="_blank" class="pub-link">[Marathi]</a> <a href="https://tinyurl.com/elecfarmers" target="_blank" class="pub-link">[English]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2023</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Mahavitaran (MSEDCL) needs to engage with farmers</h3>
+                            <div class="pub-description-line">
+                                Loksatta, March 16, 2023 <span class="pub-divider">—</span> <a
+                                    href="https://www.loksatta.com/sampadkiya/features/mahavitaran-should-make-farmer-oriented-efforts-electricity-bill-to-farmers-ysh-95-3522864/"
+                                    target="_blank" class="pub-link">[Marathi]</a> <a
+                                    href="https://tinyurl.com/elecfarmers" target="_blank"
+                                    class="pub-link">[English]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2022</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">The kind of engineering education we need</h3>
-                        <div class="pub-description-line">
-                            India Express, December 14, 2022 <span class="pub-divider">—</span> <a href="https://indianexpress.com/article/opinion/columns/engineering-education-contextualised-learning-problems-solving-7671369/" target="_blank" class="pub-link">[English]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2022</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">The kind of engineering education we need</h3>
+                            <div class="pub-description-line">
+                                India Express, December 14, 2022 <span class="pub-divider">—</span> <a
+                                    href="https://indianexpress.com/article/opinion/columns/engineering-education-contextualised-learning-problems-solving-7671369/"
+                                    target="_blank" class="pub-link">[English]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2020</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Mahavitaran’s problems of agricultural supply and long term solutions</h3>
-                        <div class="pub-description-line">
-                            Loksatta, December 2020 <span class="pub-divider">—</span> <a href="https://www.loksatta.com/vishesh-news/article-on-root-of-mahavitaran-pain-abn-97-2359775/" target="_blank" class="pub-link">[Marathi]</a> <a href="https://www.ctara.iitb.ac.in/en/system/files/mahavitaran_ag_feeder_loksatta_Dec_20_2020.pdf" target="_blank" class="pub-link">[English]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2020</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Mahavitaran’s problems of agricultural supply and long term solutions
+                            </h3>
+                            <div class="pub-description-line">
+                                Loksatta, December 2020 <span class="pub-divider">—</span> <a
+                                    href="https://www.loksatta.com/vishesh-news/article-on-root-of-mahavitaran-pain-abn-97-2359775/"
+                                    target="_blank" class="pub-link">[Marathi]</a> <a
+                                    href="https://www.ctara.iitb.ac.in/en/system/files/mahavitaran_ag_feeder_loksatta_Dec_20_2020.pdf"
+                                    target="_blank" class="pub-link">[English]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2019</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Electricity supply and the plight of farmers</h3>
-                        <div class="pub-description-line">
-                            Lokmat, December 2019 <span class="pub-divider">—</span> <a href="https://www.lokmat.com/editorial/power-supply-and-farmers-distress/" target="_blank" class="pub-link">[Marathi]</a> <a href="https://drive.google.com/open?id=1040npJxA0alfe0pPkcY7wlnluAKvq61d" target="_blank" class="pub-link">[English]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2019</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Electricity supply and the plight of farmers</h3>
+                            <div class="pub-description-line">
+                                Lokmat, December 2019 <span class="pub-divider">—</span> <a
+                                    href="https://www.lokmat.com/editorial/power-supply-and-farmers-distress/"
+                                    target="_blank" class="pub-link">[Marathi]</a> <a
+                                    href="https://drive.google.com/open?id=1040npJxA0alfe0pPkcY7wlnluAKvq61d"
+                                    target="_blank" class="pub-link">[English]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2019</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Beneficial effect of capacitor usage with agricultural pumps</h3>
-                        <div class="pub-description-line">
-                            Lokmat, August 2019 <span class="pub-divider">—</span> <a href="https://www.lokmat.com/editorial/capacitors-have-beneficial-effect-agriculture/" target="_blank" class="pub-link">[Marathi]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2019</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Beneficial effect of capacitor usage with agricultural pumps</h3>
+                            <div class="pub-description-line">
+                                Lokmat, August 2019 <span class="pub-divider">—</span> <a
+                                    href="https://www.lokmat.com/editorial/capacitors-have-beneficial-effect-agriculture/"
+                                    target="_blank" class="pub-link">[Marathi]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2018</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Solar pumps and solar feeders schemes in Maharashtra</h3>
-                        <div class="pub-description-line">
-                            Lokmat, October 2018 <span class="pub-divider">—</span> <a href="http://www.lokmat.com/editorial/use-solar-energy-only-benefit-farmers/" target="_blank" class="pub-link">[Marathi]</a> <a href="http://www.ctara.iitb.ac.in/en/system/files/newspaper_article_2.pdf" target="_blank" class="pub-link">[English]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2018</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Solar pumps and solar feeders schemes in Maharashtra</h3>
+                            <div class="pub-description-line">
+                                Lokmat, October 2018 <span class="pub-divider">—</span> <a
+                                    href="http://www.lokmat.com/editorial/use-solar-energy-only-benefit-farmers/"
+                                    target="_blank" class="pub-link">[Marathi]</a> <a
+                                    href="http://www.ctara.iitb.ac.in/en/system/files/newspaper_article_2.pdf"
+                                    target="_blank" class="pub-link">[English]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2014</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Sustainable Energy Solutions for Grassroots Development</h3>
-                        <div class="pub-description-line">
-                            Priya Jadhav, Anand Rao <span class="pub-divider">—</span> <span class="pub-journal">SQ, Bombay Chamber of Commerce and Industry, Vol. IV No.1</span> <span class="pub-divider">—</span> January-March 2014
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2014</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Sustainable Energy Solutions for Grassroots Development</h3>
+                            <div class="pub-description-line">
+                                Priya Jadhav, Anand Rao <span class="pub-divider">—</span> <span class="pub-journal">SQ,
+                                    Bombay Chamber of Commerce and Industry, Vol. IV No.1</span> <span
+                                    class="pub-divider">—</span> January-March 2014
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
+                    </li>
+                </ul>
+            </section>
 
-        <!-- Journal Publications -->
-        <section class="pub-category">
-            <h2 class="pub-category-title">Journal Publications</h2>
-            <ul class="pub-list">
-                <li class="pub-item">
-                    <div class="pub-year-badge">2025</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title"><a href="https://doi.org/10.1016/j.esd.2025.101719" target="_blank" style="color: inherit; text-decoration: none;">Methodology to quantify crop, irrigation water, and energy linkages in small-holder irrigation systems</a></h3>
-                        <div class="pub-description-line">
-                            Namita Sawant, Sameer Kulkarni, Pankaj Sharma, Akanksha Doval <span class="pub-divider">—</span> <span class="pub-journal">Energy for Sustainable Development</span> <span class="pub-divider">—</span> <a href="https://doi.org/10.1016/j.esd.2025.101719" target="_blank" class="pub-link">[DOI]</a> <a href="https://authors.elsevier.com/a/1ksNG3TGDqCqJx" target="_blank" class="pub-link">[Free Download]</a>
+            <!-- Journal Publications -->
+            <section class="pub-category">
+                <h2 class="pub-category-title">Journal Publications</h2>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2025</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title"><a href="https://doi.org/10.1016/j.esd.2025.101719" target="_blank"
+                                    style="color: inherit; text-decoration: none;">Methodology to quantify crop,
+                                    irrigation water, and energy linkages in small-holder irrigation systems</a></h3>
+                            <div class="pub-description-line">
+                                Namita Sawant, Sameer Kulkarni, Pankaj Sharma, Akanksha Doval <span
+                                    class="pub-divider">—</span> <span class="pub-journal">Energy for Sustainable
+                                    Development</span> <span class="pub-divider">—</span> <a
+                                    href="https://doi.org/10.1016/j.esd.2025.101719" target="_blank"
+                                    class="pub-link">[DOI]</a> <a href="https://authors.elsevier.com/a/1ksNG3TGDqCqJx"
+                                    target="_blank" class="pub-link">[Free Download]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2021</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">ESCO Model for Energy-Efficient Pump Installation Scheme: A Case Study</h3>
-                        <div class="pub-description-line">
-                            Khobaragade S., Bhosale P., Jadhav P. <span class="pub-divider">—</span> <span class="pub-journal">Proceedings of the 7th International Conference on Advances in Energy Research</span> <span class="pub-divider">—</span> <a href="https://doi.org/10.1007/978-981-15-5955-6_35" target="_blank" class="pub-link">[DOI]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2021</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">ESCO Model for Energy-Efficient Pump Installation Scheme: A Case Study
+                            </h3>
+                            <div class="pub-description-line">
+                                Khobaragade S., Bhosale P., Jadhav P. <span class="pub-divider">—</span> <span
+                                    class="pub-journal">Proceedings of the 7th International Conference on Advances in
+                                    Energy Research</span> <span class="pub-divider">—</span> <a
+                                    href="https://doi.org/10.1007/978-981-15-5955-6_35" target="_blank"
+                                    class="pub-link">[DOI]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2020</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title"><a href="https://doi.org/10.1016/j.esd.2020.07.005" target="_blank" style="color: inherit; text-decoration: none;">Technical paradigms in electricity supply for irrigation pumps: Case of Maharashtra, India</a></h3>
-                        <div class="pub-description-line">
-                            Priya Jadhav, Namita Sawant, Athira Madhusudhana Panicker <span class="pub-divider">—</span> <span class="pub-journal">Energy for Sustainable Development 58 (2020): 50-62</span> <span class="pub-divider">—</span> <a href="https://doi.org/10.1016/j.esd.2020.07.005" target="_blank" class="pub-link">[DOI]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2020</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title"><a href="https://doi.org/10.1016/j.esd.2020.07.005" target="_blank"
+                                    style="color: inherit; text-decoration: none;">Technical paradigms in electricity
+                                    supply for irrigation pumps: Case of Maharashtra, India</a></h3>
+                            <div class="pub-description-line">
+                                Priya Jadhav, Namita Sawant, Athira Madhusudhana Panicker <span
+                                    class="pub-divider">—</span> <span class="pub-journal">Energy for Sustainable
+                                    Development 58 (2020): 50-62</span> <span class="pub-divider">—</span> <a
+                                    href="https://doi.org/10.1016/j.esd.2020.07.005" target="_blank"
+                                    class="pub-link">[DOI]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2020</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Solar PV for Irrigation in India: Developing a Framework for Determining Appropriate Pump Characteristics for a Region</h3>
-                        <div class="pub-description-line">
-                            Sawant N., Jadhav P. <span class="pub-divider">—</span> <span class="pub-journal">Advances in Energy Research, Vol. 1</span> <span class="pub-divider">—</span> <a href="https://doi.org/10.1007/978-981-15-2666-4_48" target="_blank" class="pub-link">[DOI]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2020</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Solar PV for Irrigation in India: Developing a Framework for
+                                Determining Appropriate Pump Characteristics for a Region</h3>
+                            <div class="pub-description-line">
+                                Sawant N., Jadhav P. <span class="pub-divider">—</span> <span
+                                    class="pub-journal">Advances in Energy Research, Vol. 1</span> <span
+                                    class="pub-divider">—</span> <a href="https://doi.org/10.1007/978-981-15-2666-4_48"
+                                    target="_blank" class="pub-link">[DOI]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2020</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Development of Framework to Estimate Crop-wise, Region-wise Electricity Usage for Irrigation</h3>
-                        <div class="pub-description-line">
-                            Doval A., Jadhav P. <span class="pub-divider">—</span> <span class="pub-journal">Advances in Energy Research, Vol. 1</span> <span class="pub-divider">—</span> <a href="https://doi.org/10.1007/978-981-15-2666-4_46" target="_blank" class="pub-link">[DOI]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2020</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Development of Framework to Estimate Crop-wise, Region-wise
+                                Electricity Usage for Irrigation</h3>
+                            <div class="pub-description-line">
+                                Doval A., Jadhav P. <span class="pub-divider">—</span> <span
+                                    class="pub-journal">Advances in Energy Research, Vol. 1</span> <span
+                                    class="pub-divider">—</span> <a href="https://doi.org/10.1007/978-981-15-2666-4_46"
+                                    target="_blank" class="pub-link">[DOI]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2017</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Development of framework to estimate crop-wise, region-wise electricity usage for irrigation</h3>
-                        <div class="pub-description-line">
-                            Doval A., Jadhav P. <span class="pub-divider">—</span> <span class="pub-journal">Summary Report on the 8th International Conference on Climate Change, TISS</span> <span class="pub-divider">—</span> <a href="https://www.rosalux.in/files/RosaLux/downloads/New%20Uploads%20Publications/TISS-CA/09_TISS_Conference%20Report_Published.pdf" target="_blank" class="pub-link">[PDF]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2017</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Development of framework to estimate crop-wise, region-wise
+                                electricity usage for irrigation</h3>
+                            <div class="pub-description-line">
+                                Doval A., Jadhav P. <span class="pub-divider">—</span> <span class="pub-journal">Summary
+                                    Report on the 8th International Conference on Climate Change, TISS</span> <span
+                                    class="pub-divider">—</span> <a
+                                    href="https://www.rosalux.in/files/RosaLux/downloads/New%20Uploads%20Publications/TISS-CA/09_TISS_Conference%20Report_Published.pdf"
+                                    target="_blank" class="pub-link">[PDF]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
+                    </li>
+                </ul>
+            </section>
 
-        <!-- Conferences -->
-        <section class="pub-category">
-            <h2 class="pub-category-title">Conferences</h2>
-            <ul class="pub-list">
-                <li class="pub-item">
-                    <div class="pub-year-badge">2019</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">ESCO Model for Energy Efficient Pump Installation Scheme: A Case Study</h3>
-                        <div class="pub-description-line">
-                            Saurabh Khobaragade, Priyanka Bhosale, Priya Jadhav <span class="pub-divider">—</span> <span class="pub-journal">International Conference on Advances in Energy Research, Mumbai</span> <span class="pub-divider">—</span> <a href="https://drive.google.com/open?id=1BpM9FeyTk70XwWNc7XU2SB0pAkahR1dg" target="_blank" class="pub-link">[Click here]</a>
+            <!-- Conferences -->
+            <section class="pub-category">
+                <h2 class="pub-category-title">Conferences</h2>
+                <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2019</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">ESCO Model for Energy Efficient Pump Installation Scheme: A Case Study
+                            </h3>
+                            <div class="pub-description-line">
+                                Saurabh Khobaragade, Priyanka Bhosale, Priya Jadhav <span class="pub-divider">—</span>
+                                <span class="pub-journal">International Conference on Advances in Energy Research,
+                                    Mumbai</span> <span class="pub-divider">—</span> <a
+                                    href="https://drive.google.com/open?id=1BpM9FeyTk70XwWNc7XU2SB0pAkahR1dg"
+                                    target="_blank" class="pub-link">[Click here]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2019</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Policy tool to identify the required solar PV pump characteristics for a region in India: Case study of the Maharashtra solar PV pumps scheme</h3>
-                        <div class="pub-description-line">
-                            Namita Sawant, Pankaj Sharma, Priya Jadhav <span class="pub-divider">—</span> <span class="pub-journal">38th International Energy Workshop at IEA, Paris</span> <span class="pub-divider">—</span> <a href="https://drive.google.com/open?id=12uwGbd9uDdk0q7H_RJnjJcWJY4qK0Q87" target="_blank" class="pub-link">[Click here]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2019</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Policy tool to identify the required solar PV pump characteristics for
+                                a region in India: Case study of the Maharashtra solar PV pumps scheme</h3>
+                            <div class="pub-description-line">
+                                Namita Sawant, Pankaj Sharma, Priya Jadhav <span class="pub-divider">—</span> <span
+                                    class="pub-journal">38th International Energy Workshop at IEA, Paris</span> <span
+                                    class="pub-divider">—</span> <a
+                                    href="https://drive.google.com/open?id=12uwGbd9uDdk0q7H_RJnjJcWJY4qK0Q87"
+                                    target="_blank" class="pub-link">[Click here]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2017</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Development of Framework to Estimate Crop‐wise, Region‐wise Electricity Usage for Irrigation</h3>
-                        <div class="pub-description-line">
-                            Akanksha Doval, Priya Jadhav <span class="pub-divider">—</span> <span class="pub-journal">8th International Conference on Climate Change at TISS, Mumbai</span> <span class="pub-divider">—</span> <a href="https://www.rosalux.in/files/RosaLux/downloads/New%20Uploads%20Publications/TISS-CA/09_TISS_Conference%20Report_Published.pdf" target="_blank" class="pub-link">[Click here]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2017</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Development of Framework to Estimate Crop‐wise, Region‐wise
+                                Electricity Usage for Irrigation</h3>
+                            <div class="pub-description-line">
+                                Akanksha Doval, Priya Jadhav <span class="pub-divider">—</span> <span
+                                    class="pub-journal">8th International Conference on Climate Change at TISS,
+                                    Mumbai</span> <span class="pub-divider">—</span> <a
+                                    href="https://www.rosalux.in/files/RosaLux/downloads/New%20Uploads%20Publications/TISS-CA/09_TISS_Conference%20Report_Published.pdf"
+                                    target="_blank" class="pub-link">[Click here]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="pub-item">
-                    <div class="pub-year-badge">2015</div>
-                    <div class="pub-content">
-                        <h3 class="pub-title">Power factor issues on agricultural feeders: Investigated through the case of a village in Sangli, Maharashtra</h3>
-                        <div class="pub-description-line">
-                            Presented at ICAER 2015 <span class="pub-divider">—</span> <span class="pub-journal">Maharashtra Electricity Regulatory Commission</span> <span class="pub-divider">—</span> <a href="https://drive.google.com/open?id=1ethVtPLrpGD1xvo-U0ofl5Wjdpbo6W_6" target="_blank" class="pub-link">[Click here]</a>
+                    </li>
+                    <li class="pub-item">
+                        <div class="pub-year-badge">2015</div>
+                        <div class="pub-content">
+                            <h3 class="pub-title">Power factor issues on agricultural feeders: Investigated through the
+                                case of a village in Sangli, Maharashtra</h3>
+                            <div class="pub-description-line">
+                                Presented at ICAER 2015 <span class="pub-divider">—</span> <span
+                                    class="pub-journal">Maharashtra Electricity Regulatory Commission</span> <span
+                                    class="pub-divider">—</span> <a
+                                    href="https://drive.google.com/open?id=1ethVtPLrpGD1xvo-U0ofl5Wjdpbo6W_6"
+                                    target="_blank" class="pub-link">[Click here]</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
+                    </li>
+                </ul>
+            </section>
     </main>
 
     <!-- Footer -->

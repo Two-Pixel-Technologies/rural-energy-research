@@ -53,6 +53,54 @@
             color: var(--color-neutral-700);
         }
         
+        /* UMA Distinct Styles */
+        .uma-card {
+            background-color: var(--color-neutral-50);
+            border: 1px solid var(--color-neutral-200);
+            border-radius: var(--radius-md);
+            padding: var(--space-6);
+            margin-bottom: var(--space-6);
+        }
+
+        .uma-card-heading {
+            color: var(--color-primary-800);
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: var(--space-4);
+        }
+
+        /* Accent underline applied ONLY to targeted headings */
+        .uma-accent-heading {      
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+        .uma-accent-heading::after {
+            content: "";
+  display: block;
+  width: 100%;   /* ✅ FULL WIDTH FIX */
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.5); /* theme color */
+  margin-top: 6px;
+}
+
+        .uma-list-styled {
+            margin: 0;
+            padding-left: 1.5rem;
+            list-style-type: disc;
+            list-style-position: outside;
+        }
+
+        .uma-list-styled li {
+            padding-left: 0.25rem;
+            margin-bottom: var(--space-3);
+            color: var(--color-neutral-700);
+        }
+        .uma-list-styled li:last-child {
+            margin-bottom: 0;
+        }
+        
         .project-detail__meta-item--date {
             font-size: 1rem;
             color: var(--color-accent-600);
@@ -118,34 +166,33 @@
         <article class="project-detail">
             <div class="project-detail-container policy-content-wrapper">
                 <!-- Project Header -->
-                <span class="project-detail__tag">Education</span>
-                <h1 class="project-detail__title">UMA / Engineering Education</h1>
+                <h1 class="project-detail__title uma-accent-heading" style="margin-top: var(--space-4);">UMA / Engineering Education</h1>
 
                 <!-- Content Grid -->
                 <div class="project-detail__content">
                     <div class="project-detail__body">
-                        <p>Unnat Maharashtra Abhiyan (UMA) is a project of the Ministry of Higher and Technical Education. Its mandate is to build an independent and public knowledge infrastructure for the state of Maharashtra which will bring socio-economic and cultural development for its people, especially those in the bottom 80% of the socio-economic strata.</p>
+                        <!-- SECTION 1: Introduction -->
+                        <p><strong>Unnat Maharashtra Abhiyan (UMA)</strong> is a project of the <strong>Ministry of Higher and Technical Education</strong>. Its mandate is to build an <strong>independent and public knowledge infrastructure</strong> for the state of Maharashtra which will bring socio-economic and cultural development for its people, especially those in the <strong>bottom 80% of the socio-economic strata</strong>.</p>
                         
-                        <h3>Objectives:</h3>
-                        <ul>
-                            <li>To seek alignment of curricula and research with regional development needs</li>
-                            <li>Re-emphasize field-work and case-studies as an important pedagogy</li>
-                            <li>Provide a mechanism for local bodies such as Zilla Parishads, Gram Panchayats, etc. to access engineering institutions for knowledge, funding, and data</li>
-                        </ul>
+                        <!-- SECTION 2: Objectives -->
+                        <div class="uma-card">
+                            <h3 class="uma-card-heading uma-accent-heading">Objectives</h3>
+                            <ul class="uma-list-styled">
+                                <li>To seek alignment of curricula and research with regional development needs</li>
+                                <li>Re-emphasize field-work and case-studies as an important pedagogy</li>
+                                <li>Provide a mechanism for local bodies such as Zilla Parishads, Gram Panchayats, etc. to access engineering institutions for knowledge, funding, and data for the same.</li>
+                            </ul>
+                        </div>
                         
-                        <h3>Some outputs include:</h3>
-                        <ul>
-                            <li>Textbooks</li>
-                            <li>Training workshops</li>
-                            <li>Internship programs</li>
-                        </ul>
-                        
-                        <h3>Additional Resources:</h3>
-                        <p>UMA Website (under construction): <a href="https://www.ctara.iitb.ac.in/en/uma" target="_blank" class="document-link">ctara.iitb.ac.in/en/uma</a></p>
-                        
-                        <h3>Textbook:</h3>
-                        <p>Agricultural Electricity Distribution Systems: A field based study for Electrical Engineers</p>
-                        <p><a href="https://drive.google.com/file/d/13D7HCGzWyyxriXdnEg8rvtanwzx0dL2e/view?usp=drive_link" target="_blank" class="document-link">Textbook Link (Google Drive)</a></p>
+                        <!-- SECTION 3: Detailed Content -->
+                        <div class="uma-card">
+                            <p style="margin-bottom: var(--space-5); line-height: 1.7; color: var(--color-neutral-700);">Some of the specific outputs are curricular material such as textbooks, training workshops, Internship design and training. The material will soon be accessible at the new UMA website which is under construction. Some material is available here at the CTARA website (<a href="https://www.ctara.iitb.ac.in/en/uma" target="_blank" class="document-link">https://www.ctara.iitb.ac.in/en/uma</a>)</p>
+                            
+                            <h4 style="font-size: 1.1rem; color: var(--color-primary-800); margin-bottom: var(--space-4);">Some of the material related to energy may be accessed from here:</h4>
+                            
+                            <p style="margin-bottom: var(--space-2); color: var(--color-neutral-800);"><strong>Textbook:</strong> Agricultural Electricity Distribution Systems: A field based study for Electrical Engineers</p>
+                            <p><a href="https://drive.google.com/file/d/13D7HCGzWyyxriXdnEg8rvtanwzx0dL2e/view?usp=drive_link" target="_blank" class="document-link" style="word-break: break-all;">https://drive.google.com/file/d/13D7HCGzWyyxriXdnEg8rvtanwzx0dL2e/view?usp=drive_link</a></p>
+                        </div>
                     </div>
                 </div>
 

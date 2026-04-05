@@ -24,34 +24,37 @@
         </div>
     </nav>
 
-    <!-- What We Do Section -->
-    <section class="what-we-do-section" id="home">
-        <div class="what-we-do-content">
-            <h1>Rural Energy Research Group</h1>
-            <div class="what-we-do-text">
-                <p>
-                    The group works on energy for irrigation, renewable energy, and rural electricity supply. 
-                    The research covers end-use, techno-economics, and policy in the sector. We use a systemic 
-                    lens to analyze the implementation and use of technology with the overarching goal of 
-                    equitable and sustainable development.
-                </p>
-                <p>
-                    An equally important parallel component is an integration of engineering curriculum with 
-                    development problems. The undergriding philosophy is that orienting education to local 
-                    problems of societal importance are more motivating for students, result in better learning 
-                    outcomes due to familiarity of the field situations, and also feed back for better 
-                    development outcomes.
-                </p>
-            </div>
+    <!-- New Hero Header -->
+    <header class="page-header-section home-header-bg" id="home">
+        <div class="page-header-container">
+            <h1 class="page-header-title" style="color: var(--color-white); border-bottom: none;">Rural Energy Research Group</h1>
+            <p class="page-header-subtitle" style="color: rgba(255, 255, 255, 0.9);">Researching energy for irrigation, renewable energy, and rural electricity supply. We use a systemic lens to analyze the implementation and use of technology for equitable and sustainable development.</p>
         </div>
-    </section>
+    </header>
 
     <!-- Main Content Section -->
-    <section class="main-content">
-        <div class="content-grid">
+    <section class="main-content" style="padding-top: var(--space-8);">
+        <!-- Intro Card -->
+        <div class="home-intro-card">
+            <p style="margin-bottom: var(--space-4);">
+                The group works on <strong>energy for irrigation</strong>, <strong>renewable energy</strong>, and <strong>rural electricity supply</strong>. 
+                The research covers end-use, <strong>techno-economics</strong>, and policy in the sector. We use a systemic 
+                lens to analyze the implementation and use of technology with the overarching goal of 
+                <strong>equitable and sustainable development</strong>.
+            </p>
+            <p>
+                An equally important parallel component is an integration of <strong>engineering curriculum</strong> with 
+                development problems. The undergriding philosophy is that orienting education to <strong>local 
+                problems of societal importance</strong> are more motivating for students, result in better learning 
+                outcomes due to familiarity of the field situations, and also feed back for better 
+                development outcomes.
+            </p>
+        </div>
+
+        <div class="content-grid" style="margin-top: var(--space-10);">
             <!-- Left: Projects -->
             <div class="projects-section" id="projects">
-                <h2>Projects / Relevant Research</h2>
+                <h2><a href="projects.html" style="color: inherit; text-decoration: none;">Projects / Relevant Research</a></h2>
                 <ul class="projects-list">
                     <li><a href="https://www.sciencedirect.com/science/article/pii/S0973082620302751" target="_blank" class="project-link">Analysis of Ag distribution systems (pointer to paper)</a></li>
                     <li>
@@ -91,11 +94,11 @@
 
                 <!-- UMA / Engineering Education -->
                 <div class="uma-section">
-                    <h2>UMA / Engineering Education</h2>
+                    <h2><a href="uma.html" style="color: inherit; text-decoration: none;">UMA / Engineering Education</a></h2>
                     <ul class="uma-list">
                         <li><a href="uma.html" class="project-link">Internship</a></li>
                         <li><a href="uma.html" class="project-link">Workshops</a></li>
-                        <li><a href="uma.html" class="project-link">Text book</a></li>
+                        <li><a href="https://drive.google.com/file/d/13D7HCGzWyyxriXdnEg8rvtanwzx0dL2e/view?usp=drive_link" target="_blank" class="project-link">Text book</a></li>
                     </ul>
                 </div>
             </div>
@@ -129,6 +132,27 @@
         </div>
     </footer>
 
+    <script>
+        // Make all project list items fully clickable via JavaScript wrapper behavior
+        document.querySelectorAll('.projects-list li').forEach(function(li) {
+            li.style.cursor = 'pointer';
+            li.addEventListener('click', function(e) {
+                // Proceed normally if an anchor inside the list item was directly clicked
+                if (e.target.closest('a')) return;
+                
+                // Target the primary link specifically associated with this list stratum 
+                var primaryLink = Array.from(this.children).find(function(c) { return c.tagName === 'A'; });
+                if (primaryLink) {
+                    e.stopPropagation(); // Shield outer rows from sub-list selection
+                    if (primaryLink.target === '_blank') {
+                        window.open(primaryLink.href, '_blank');
+                    } else {
+                        window.location.href = primaryLink.href;
+                    }
+                }
+            });
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
