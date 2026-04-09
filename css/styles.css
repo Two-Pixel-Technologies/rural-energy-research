@@ -930,6 +930,82 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 2px 4px rgba(0,0,0,0.02); /* ultra minimal */
 }
 
+/* Home Page Refinements (scoped to index only) */
+.home-page .home-content-grid {
+    margin-top: var(--space-8);
+}
+
+.home-page .projects-section,
+.home-page .updates-section,
+.home-page .uma-section {
+    padding: var(--space-5);
+}
+
+.home-page .right-column {
+    gap: var(--space-6);
+}
+
+.home-page .projects-section h2,
+.home-page .updates-section h2,
+.home-page .uma-section h2 {
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+}
+
+.home-page .section-heading-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.home-page .heading-link-icon {
+    font-size: 0.72em;
+    color: var(--color-neutral-500);
+    transform: translateY(-1px);
+}
+
+.home-page .section-heading-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 1px;
+}
+
+.home-page .projects-list li,
+.home-page .policy-list li,
+.home-page .uma-list li {
+    margin-bottom: var(--space-2);
+    line-height: var(--leading-normal);
+}
+
+.home-page .projects-sublist {
+    margin-top: var(--space-1);
+    margin-bottom: 0;
+}
+
+.home-page .projects-sublist li {
+    margin-bottom: var(--space-1);
+    line-height: var(--leading-normal);
+}
+
+/* Restore subtle home link behavior: underline only */
+.home-page .project-link {
+    display: inline;
+    padding: 0;
+    margin-left: 0;
+    border-radius: 0;
+    border-bottom: none;
+}
+
+.home-page .project-link:hover {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+    text-decoration-thickness: 1px;
+}
+
 /* Projects Main Section */
 .projects-section-main {
     padding: var(--space-12) 0 var(--space-16);

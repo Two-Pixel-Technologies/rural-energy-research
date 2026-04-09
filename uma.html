@@ -15,131 +15,104 @@
     <link rel="stylesheet" href="css/styles.css">
     
     <style>
-        /* Policy-specific styles - centered content without sidebar */
+        /* UMA page-only refinement: policy-like clean flow, no card UI */
         .policy-content-wrapper {
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .project-detail__body {
             grid-column: 1 / -1;
         }
-        
+
         .project-detail__body p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            margin-bottom: var(--space-6);
-        }
-        
-        .project-detail__body ul {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            margin-bottom: var(--space-6);
-            padding-left: 1.5rem;
-        }
-
-        .project-detail__body li {
-            margin-bottom: 0.5rem;
-        }
-
-        .project-detail__quote {
-            background: var(--color-neutral-100);
-            border-left: 4px solid var(--color-accent-500);
-            padding: var(--space-6);
-            margin: var(--space-8) 0;
-            font-style: italic;
-            font-size: 1.125rem;
-            line-height: 1.8;
+            font-size: 1.075rem;
+            line-height: 1.78;
+            margin-bottom: var(--space-5);
             color: var(--color-neutral-700);
         }
-        
-        /* UMA Distinct Styles */
-        .uma-card {
-            background-color: var(--color-neutral-50);
-            border: 1px solid var(--color-neutral-200);
-            border-radius: var(--radius-md);
-            padding: var(--space-6);
-            margin-bottom: var(--space-6);
-        }
 
-        .uma-card-heading {
-            color: var(--color-primary-800);
-            font-size: 1.25rem;
-            margin-top: 0;
+        .uma-accent-heading {
+            display: block;
             margin-bottom: var(--space-4);
+            padding-bottom: var(--space-3);
+            border-bottom: 1px solid var(--color-neutral-300);
+            color: var(--color-primary-700);
         }
 
-        /* Accent underline applied ONLY to targeted headings */
-        .uma-accent-heading {      
-  position: relative;
-  display: inline-block;
-  margin-bottom: 10px;
-}
+        .uma-flow-section {
+            margin-top: var(--space-6);
+        }
 
-        .uma-accent-heading::after {
-            content: "";
-  display: block;
-  width: 100%;   /* ✅ FULL WIDTH FIX */
-  height: 2px;
-  background-color: rgba(0, 0, 0, 0.5); /* theme color */
-  margin-top: 6px;
-}
+        .uma-flow-section + .uma-flow-section {
+            padding-top: var(--space-5);
+            border-top: 1px solid var(--color-neutral-200);
+        }
+
+        .uma-objectives {
+            padding-left: 0;
+        }
 
         .uma-list-styled {
             margin: 0;
-            padding-left: 1.5rem;
+            padding-left: 1.4rem;
             list-style-type: disc;
             list-style-position: outside;
+            color: var(--color-neutral-700);
+            font-size: 1.06rem;
+            line-height: 1.72;
         }
 
         .uma-list-styled li {
-            padding-left: 0.25rem;
-            margin-bottom: var(--space-3);
-            color: var(--color-neutral-700);
+            margin-bottom: var(--space-2);
         }
+
         .uma-list-styled li:last-child {
             margin-bottom: 0;
         }
-        
-        .project-detail__meta-item--date {
-            font-size: 1rem;
-            color: var(--color-accent-600);
-            font-weight: 600;
+
+        .uma-resource-label {
+            font-size: 1.06rem;
+            color: var(--color-primary-700);
+            margin-bottom: var(--space-4);
+            font-weight: var(--font-medium);
         }
-        
-        /* Document Download Link Styling */
+
+        .uma-textbook-line {
+            margin-bottom: var(--space-2);
+            color: var(--color-neutral-800);
+        }
+
         .document-link {
             color: var(--color-accent-600);
-            font-weight: 600;
-            text-decoration: none;
-            border-bottom: 1px solid var(--color-accent-500);
-            transition: all 0.2s ease;
-            padding-bottom: 1px;
+            font-weight: var(--font-medium);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.12em;
+            transition: color 0.2s ease;
         }
-        
+
         .document-link:hover {
-            color: var(--color-accent-700);
-            border-bottom-color: var(--color-accent-700);
+            color: var(--color-accent-600);
+            text-decoration: underline;
         }
-        
-        /* Responsive adjustments */
+
         @media (max-width: 768px) {
-            .project-detail__body p, .project-detail__body ul {
+            .project-detail__body p,
+            .uma-list-styled {
                 font-size: 1rem;
             }
-            
-            .project-detail__quote {
-                font-size: 1rem;
-                padding: var(--space-4);
+
+            .uma-flow-section {
+                margin-top: var(--space-6);
             }
-            
-            .document-download {
-                padding: var(--space-5);
+
+            .uma-flow-section + .uma-flow-section {
+                padding-top: var(--space-4);
             }
-            
-            .document-download__link {
-                padding: 0.625rem 1.25rem;
-                font-size: 0.9375rem;
+
+            .uma-objectives {
+                padding-left: 0;
             }
         }
     </style>
@@ -175,24 +148,24 @@
                         <p><strong>Unnat Maharashtra Abhiyan (UMA)</strong> is a project of the <strong>Ministry of Higher and Technical Education</strong>. Its mandate is to build an <strong>independent and public knowledge infrastructure</strong> for the state of Maharashtra which will bring socio-economic and cultural development for its people, especially those in the <strong>bottom 80% of the socio-economic strata</strong>.</p>
                         
                         <!-- SECTION 2: Objectives -->
-                        <div class="uma-card">
-                            <h3 class="uma-card-heading uma-accent-heading">Objectives</h3>
+                        <section class="uma-flow-section uma-objectives">
+                            <h3 class="uma-accent-heading">Objectives</h3>
                             <ul class="uma-list-styled">
                                 <li>To seek alignment of curricula and research with regional development needs</li>
                                 <li>Re-emphasize field-work and case-studies as an important pedagogy</li>
                                 <li>Provide a mechanism for local bodies such as Zilla Parishads, Gram Panchayats, etc. to access engineering institutions for knowledge, funding, and data for the same.</li>
                             </ul>
-                        </div>
+                        </section>
                         
                         <!-- SECTION 3: Detailed Content -->
-                        <div class="uma-card">
-                            <p style="margin-bottom: var(--space-5); line-height: 1.7; color: var(--color-neutral-700);">Some of the specific outputs are curricular material such as textbooks, training workshops, Internship design and training. The material will soon be accessible at the new UMA website which is under construction. Some material is available here at the CTARA website (<a href="https://www.ctara.iitb.ac.in/en/uma" target="_blank" class="document-link">https://www.ctara.iitb.ac.in/en/uma</a>)</p>
+                        <section class="uma-flow-section">
+                            <p>Some of the specific outputs are curricular material such as textbooks, training workshops, Internship design and training. The material will soon be accessible at the new UMA website which is under construction. Some material is available here at the CTARA website (<a href="https://www.ctara.iitb.ac.in/en/uma" target="_blank" class="document-link">CTARA website</a>)</p>
                             
-                            <h4 style="font-size: 1.1rem; color: var(--color-primary-800); margin-bottom: var(--space-4);">Some of the material related to energy may be accessed from here:</h4>
+                            <h4 class="uma-resource-label">Some of the material related to energy may be accessed from here:</h4>
                             
-                            <p style="margin-bottom: var(--space-2); color: var(--color-neutral-800);"><strong>Textbook:</strong> Agricultural Electricity Distribution Systems: A field based study for Electrical Engineers</p>
-                            <p><a href="https://drive.google.com/file/d/13D7HCGzWyyxriXdnEg8rvtanwzx0dL2e/view?usp=drive_link" target="_blank" class="document-link" style="word-break: break-all;">https://drive.google.com/file/d/13D7HCGzWyyxriXdnEg8rvtanwzx0dL2e/view?usp=drive_link</a></p>
-                        </div>
+                            <p class="uma-textbook-line"><strong>Textbook:</strong> Agricultural Electricity Distribution Systems: A field based study for Electrical Engineers</p>
+                            <p><a href="https://drive.google.com/file/d/13D7HCGzWyyxriXdnEg8rvtanwzx0dL2e/view?usp=drive_link" target="_blank" class="document-link">Open textbook</a></p>
+                        </section>
                     </div>
                 </div>
 
