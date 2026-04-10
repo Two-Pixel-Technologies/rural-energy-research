@@ -616,6 +616,17 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-accent-400);
 }
 
+.footer-section p a {
+    color: var(--color-neutral-400);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section p a:hover {
+    color: var(--color-accent-400);
+    text-decoration: underline;
+}
+
 .footer-bottom {
     max-width: var(--max-width);
     margin: var(--space-4) auto 0;
@@ -961,15 +972,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home-page .heading-link-icon {
-    font-size: 0.72em;
+    display: inline-block;
+    font-size: 0.62em;
+    font-weight: var(--font-normal);
     color: var(--color-neutral-500);
-    transform: translateY(-1px);
+    opacity: 0.42;
+    transform: translateY(-0.5px);
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
-.home-page .section-heading-link:hover {
+.home-page .section-heading-link:hover .heading-link-text {
     text-decoration: underline;
     text-underline-offset: 0.15em;
     text-decoration-thickness: 1px;
+}
+
+.home-page .section-heading-link:hover .heading-link-icon {
+    opacity: 0.85;
+    transform: translate(2px, -0.5px);
 }
 
 .home-page .projects-list li,

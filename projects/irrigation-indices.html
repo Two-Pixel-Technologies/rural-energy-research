@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Irrigation Investment Indices - Smarter Investments for Farmers | Rural Energy Research Group">
+    <meta name="description" content="Irrigation Investment Indices | Rural Energy Research Group">
     <title>Irrigation Investment Indices | Rural Energy Research Group</title>
     
     <!-- Google Fonts -->
@@ -13,24 +13,78 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../css/styles.css">
+    
+    <style>
+        /* Full width content section that appears after sidebar ends */
+        .project-detail__full-width {
+            margin-top: var(--space-10);
+            width: 100%;
+        }
+        
+        .project-detail__full-width p {
+            margin-bottom: var(--space-4);
+            line-height: var(--leading-loose);
+            color: var(--pd-text-body);
+        }
+        
+        /* Mobile layout: reorder to show sidebar at the very end */
+        @media (max-width: 768px) {
+            /* Make container flex to control order of all children */
+            .project-detail-container {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            /* Use display: contents to flatten the grid structure on mobile */
+            .project-detail__content {
+                display: contents;
+            }
+            
+            /* Assign orders: body content, full-width section, then sidebar */
+            .project-detail__body {
+                order: 5;
+            }
+            
+            .project-detail__full-width {
+                order: 6;
+                margin-top: var(--space-8);
+            }
+            
+            .project-detail__content aside {
+                order: 7;
+                margin-top: var(--space-8);
+            }
+            
+            /* Keep header elements at the top */
+            .project-detail__title {
+                order: 2;
+            }
+            
+            .project-detail__meta {
+                order: 3;
+            }
+            
+            /* Back link stays at the very bottom */
+            .project-detail-container > div:last-child {
+                order: 8;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-logo">Rural Energy Research Group</a>
-            
+        <div class="nav-container nav-centered">
             <button class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            
             <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
                 <li><a href="../index.html#publications" class="nav-link">Publications</a></li>
-                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact Us</a></li>
             </ul>
         </div>
     </nav>
@@ -38,155 +92,63 @@
     <main>
         <article class="project-detail">
             <div class="project-detail-container">
-                <!-- Hero Image -->
-                <div class="project-detail__hero">
-                    <img src="images/image1.png" alt="Irrigation investment analysis" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-
                 <!-- Project Header -->
 
                 <h1 class="project-detail__title">Irrigation Investment Indices</h1>
-                <p style="font-size: 1.1rem; font-style: italic; color: #666; margin-top: 1rem;">"Irrigation Indices pointed out that farmers need to make Smarter Investments"</p>
                 
                 <!-- Meta Information -->
                 <div class="project-detail__meta">
                     <div class="project-detail__meta-item">
-                        <strong>Duration:</strong> 2021 – 2022
+                        <strong>Year:</strong> 2021 – 2022
                     </div>
                     <div class="project-detail__meta-item">
-                        <strong>Funding:</strong> World Bank & Dept. of Agriculture, Gov. of Maharashtra
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Location:</strong> Marathwada and Vidarbha, Maharashtra
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Status:</strong> Completed
+                        <strong>Team:</strong> Devanand Doifode
                     </div>
                 </div>
 
                 <!-- Content Grid -->
                 <div class="project-detail__content">
                     <div class="project-detail__body">
-                        <h2>Project Overview</h2>
-                        <p>
-                            Agency: Project on Climate Resilient Agriculture, a project of the Department of Agriculture, Government of Maharashtra and the World Bank.
-                        </p>
+                        <p>Irrigation plays a critical role in enhancing agricultural productivity. In Maharashtra, access to irrigation is important due to variability in Mansson rainfall and to enable rabi cropping.</p>
                         
-                        <p>
-                            Irrigation plays a critical role in enhancing agricultural productivity. In Maharashtra, access to irrigation is important due to variability in Monsoon rainfall and to enable rabi cropping.
-                        </p>
-
-                        <p>
-                            Farmers are investing in digging wells/borewells and purchasing micro-irrigation equipment, etc., hoping for higher profits through high-valued crops such as sugarcane and horticulture. In this study, We investigated the profitability of different cropping patterns as a function of water sources.
-                        </p>
-
-                        <h2>Research Objectives</h2>
-                        <p>
-                            The project focused on understanding the economics of irrigation investments:
-                        </p>
-                        <ul class="content-list">
-                            <li>Analyze profitability of different cropping patterns based on water sources</li>
-                            <li>Develop irrigation investment indices to measure return on investment</li>
-                            <li>Study economics across different types of farming systems</li>
-                            <li>Provide guidance for smarter irrigation investment decisions</li>
-                            <li>Understand relationship between irrigation intensity and returns</li>
-                        </ul>
-
-                        <h2>Methodology</h2>
-                        <p>
-                            A study was conducted in the Marathwada and Vidarbha regions to understand the economics of irrigation investment. The irrigation investment index is the ratio of profit considering energy to total irrigation cost.
-                        </p>
+                        <p>Farmers are investing in digging wells/borewells and purchasing micro-irrigation equipment, etc., hoping for higher profits through high-valued crops such as sugarcane and horticulture. In this study, We investigated the profitability of different cropping patterns as a function of water sources.</p>
                         
-                        <p>
-                            The study was conducted on farmers in four different villages representative of different types of cropping patterns. This comprehensive approach allowed for a robust analysis across diverse agricultural contexts and water availability scenarios.
-                        </p>
-
-                        <h2>Key Findings</h2>
-                        <p>
-                            The increase in irrigation intensity is accompanied with a mostly decreasing return on investment.
-                        </p>
-
-                        <p>
-                            This counterintuitive finding has important implications for farmer decision-making and agricultural policy. While increased irrigation enables more intensive cropping, the costs associated with higher irrigation intensity - including energy costs, equipment, and maintenance - often grow faster than the additional profits generated.
-                        </p>
-
-                        <ul class="content-list">
-                            <li>Higher irrigation intensity does not always translate to better returns</li>
-                            <li>Energy costs play a significant role in irrigation investment economics</li>
-                            <li>Optimal irrigation investment varies by cropping pattern and water source</li>
-                            <li>Farmers need better information to make investment decisions</li>
-                            <li>There is a need for smarter, not just more intensive, irrigation investments</li>
-                        </ul>
-
-                        <h2>Impact & Implications</h2>
-                        <p>
-                            The research provides valuable insights for farmers considering irrigation investments. Rather than simply maximizing irrigation capacity, farmers need to carefully evaluate the economics of different investment options considering their specific context, cropping patterns, and water sources.
-                        </p>
+                        <p>A study was conducted in the Marathwada and Vidarbha regions to understand the economics of irrigation investment. The irrigation investment index is the ratio of profit considering energy to total irrigation cost.</p>
                         
-                        <p>
-                            For policymakers, the findings suggest that programs promoting irrigation expansion should be accompanied by guidance on optimal investment levels and economic viability. Support should focus not just on enabling irrigation access, but on ensuring that irrigation investments are economically sustainable for farmers.
-                        </p>
-
-                        <h2>Impact & Outreach</h2>
-                        <p>
-                            The irrigation investment indices developed in this study provide a practical tool for evaluating irrigation investment decisions. By quantifying the relationship between irrigation intensity and returns, the research helps farmers make more informed choices about where and how much to invest in irrigation infrastructure and equipment.
-                        </p>
+                        <p>The study was conducted on farmers in four different villages representative of different types of cropping patterns.</p>
                         
-                        <p>
-                            The study's findings are particularly relevant in the context of government schemes promoting micro-irrigation and well deepening. Understanding the economic returns of different irrigation strategies helps ensure that public investments and farmer resources are directed toward the most beneficial interventions.
-                        </p>
+                        <p>The increase in irrigation intensity is accompanied with a mostly decreasing return on investment.</p>
                     </div>
 
                     <!-- Sidebar -->
                     <aside>
                         <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Parent Project</h3>
+                            <h3 class="project-detail__sidebar-title">Team Members</h3>
                             <ul class="project-detail__sidebar-list">
-                                <li><a href="pocra-main.html">Project on Climate Resilient Agriculture</a></li>
+                                <li><strong>Project Team:</strong> Devanand Doifode</li>
                             </ul>
                         </div>
 
                         <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Project Team</h3>
+                            <h3 class="project-detail__sidebar-title">Other Projects</h3>
                             <ul class="project-detail__sidebar-list">
-                                <li>Devanand Doifode</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Related Projects</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><a href="energy-water-crops.html">Modelling of Energy-Water-Crops Linkage</a></li>
-                                <li><a href="efficient-irrigation-pumps.html">Efficient Irrigation Pumps</a></li>
-                                <li><a href="demand-modelling.html">Demand Modelling of Irrigation Energy</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Study Regions</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li>Marathwada Region</li>
-                                <li>Vidarbha Region</li>
-                                <li>Four representative villages</li>
-                            </ul>
-                        </div>
-
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Focus Areas</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li>Irrigation Economics</li>
-                                <li>Return on Investment Analysis</li>
-                                <li>Cropping Pattern Analysis</li>
-                                <li>Water Source Economics</li>
-                                <li>Investment Decision Support</li>
+                                <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
+                                <li><a href="energy-water-crops.html">Modeling of Energy, Water and Crops linkages</a></li>
                             </ul>
                         </div>
                     </aside>
                 </div>
 
+                <!-- Full Width Content Section -->
+                <div class="project-detail__full-width">
+                    <div style="margin: 2rem 0; text-align: center;">
+                        <img src="../projects_markdown/7a-Irrigation-investment-Indices/media/image1.png" alt="Irrigation investment analysis across different cropping patterns" style="max-width: 700px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                    </div>
+                </div>
+
                 <!-- Back Link -->
                 <div style="margin-top: 3rem;">
-                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
+                    <a href="../index.html#projects" class="btn btn--secondary">← Back to All Projects</a>
                 </div>
             </div>
         </article>
@@ -201,15 +163,15 @@
             </div>
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: info@ruralresearch.org</p>
-                <p>Phone: +91 1234 567890</p>
+                <p>Email: jadhav_priya@iitb.ac.in</p>
+                <p>Phone: 022-2576 7291</p>
                 <p>Address: Research Campus, New Delhi, India</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="../index.html#home">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
                     <li><a href="../index.html#publications">Publications</a></li>
                 </ul>
             </div>
