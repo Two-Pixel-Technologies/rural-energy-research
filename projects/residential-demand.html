@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Load management at the Distribution Transformer | Rural Energy Research Group">
-    <title>Load Management at the Distribution Transformer | Rural Energy Research Group</title>
-    
+    <meta name="description" content="Residential Electricity Demand Modeling | Rural Energy Research Group">
+    <title>Residential Electricity Demand Modeling | Rural Energy Research Group</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../css/styles.css">
-    
+
     <style>
         /* Full width content section that appears after sidebar ends */
         .project-detail__full-width {
             margin-top: var(--space-10);
             width: 100%;
         }
-        
+
         .project-detail__full-width p {
             margin-bottom: var(--space-4);
             line-height: var(--leading-loose);
             color: var(--pd-text-body);
         }
-        
+
         /* Mobile layout: reorder to show sidebar at the very end */
         @media (max-width: 768px) {
+
             /* Make container flex to control order of all children */
             .project-detail-container {
                 display: flex;
                 flex-direction: column;
             }
-            
+
             /* Use display: contents to flatten the grid structure on mobile */
             .project-detail__content {
                 display: contents;
             }
-            
+
             /* Assign orders: body content, full-width section, then sidebar */
             .project-detail__body {
                 order: 5;
             }
-            
+
             .project-detail__full-width {
                 order: 6;
                 margin-top: var(--space-8);
             }
-            
+
             .project-detail__content aside {
                 order: 7;
                 margin-top: var(--space-8);
             }
-            
+
             /* Keep header elements at the top */
             .project-detail__tag {
                 order: 1;
             }
-            
+
             .project-detail__title {
                 order: 2;
             }
-            
+
             .project-detail__meta {
                 order: 3;
             }
-            
+
             /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+            .project-detail-container>div:last-child {
                 order: 8;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -111,66 +116,56 @@
             <div class="project-detail-container">
                 <!-- Project Header -->
 
-                <h1 class="project-detail__title">Load management at the Distribution Transformer</h1>
-                
+                <h1 class="project-detail__title">Residential Electricity Demand Modeling</h1>
+
                 <!-- Meta Information -->
                 <div class="project-detail__meta">
                     <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2021 – 2024
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Vivek Shinde, Devanand Doifode, Athira Panicker (PhD)
+                        <strong>Status:</strong> Ongoing
                     </div>
                 </div>
 
                 <!-- Content Grid -->
                 <div class="project-detail__content">
                     <div class="project-detail__body">
-                        <p>During peak irrigation season (winter / Rabi) agricultural distribution transformers across the state get overloaded for a few weeks leading to transformer failure and other power quality problems. Load management involves scheduling farmers' irrigation requirements to avoid overloading.</p>
-                        
-                        <p>Farmers create a schedule in groups considering irrigation requirements, and field conditions such as the day-night supply of electricity, water transfers from borewell to openwell, and prioritising critical irrigations. An app has been developed to simplify the generation of irrigation schedules. In fact, it has been observed that farmers sometimes use a crude and suboptimal approach where one of two branches of the network operates on alternate days.</p>
+                        <p>Renewable energy integration on the grid has become imperative and the generation component
+                            of renewables in the country has increased substantially over the last decade. The diurnal
+                            and seasonal variation entails that strategies such as storage or demand response need to be
+                            implemented to ensure a stable and economical integration. In this project we look at
+                            residential demand, mainly rural, to identify and evaluate the potential of demand response.
+                            Several academic projects are ongoing. IIT Bombay has an MoU with Tata Power for Demand
+                            modeling with studies being done on residential smart meter data. A collaboration with
+                            Columbia University on this topic to investigate for Mumbai residential consumers, the
+                            temperature and overall consumption as factors in demand.</p>
 
-                        <p><strong>A video on the initiative:</strong></p>
-                        <div class="project-video-embed">
-                            <iframe src="https://www.youtube.com/embed/Yh3jxU0WCNI?start=179" title="Load Management Initiative video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-
-                        <p>The load management initiative has been successfully implemented at 11 locations across Vidarbha and Marathwada. The app is currently available under the PoCRA scheme of the Department of Agriculture, Government of Maharashtra.</p>
-
-                        <div class="project-media-grid">
-                            <div class="project-media-grid__item project-media-grid__item--landscape">
-                                <img src="../projects_markdown/7-Load-Management/media/image1.jpg" alt="Schedule generated using the load management app">
-                                <p class="project-figure-caption">Schedule generated using the load management app for Ingole DT</p>
-                            </div>
-                            <div class="project-media-grid__item project-media-grid__item--vertical">
-                                <img src="../projects_markdown/7-Load-Management/media/image3.jpg" alt="Irrigation details interface">
-                                <p class="project-figure-caption">Irrigation details interface of the load management app</p>
-                            </div>
+                        <div class="project-media-figure">
+                            <img src="../images/res.1.png" alt="Residential electricity demand analysis"
+                                style="max-width: 300px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                            <p class="project-figure-caption">Residential demand over one day, Village feeder in Wardha
+                                MTech: Pranit Chute 2022-2024</p>
                         </div>
                     </div>
 
                     <!-- Sidebar -->
                     <aside>
                         <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Team Members</h3>
+                            <h3 class="project-detail__sidebar-title">Collaborations</h3>
                             <ul class="project-detail__sidebar-list">
-                                <li><strong>Project Team:</strong> Vivek Shinde, Devanand Doifode</li>
-                                <li><strong>PhD Student:</strong> Athira Panicker</li>
+                                <li><strong>Industry Partner:</strong> Tata Power (MoU for Demand Modeling)</li>
+                                <li><strong>Academic Partner:</strong> Columbia University</li>
                             </ul>
                         </div>
 
                         <div class="project-detail__sidebar-card">
                             <h3 class="project-detail__sidebar-title">Other related projects</h3>
                             <ul class="project-detail__sidebar-list">
-                                <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
+                                <li><a href="technical-paradigms.html">Technical Paradigms in Electricity Supply</a>
+                                </li>
                                 <li><a href="energy-estimation-tool.html">Energy Estimation Tool</a></li>
-                                <li><a href="capacitors.html">Capacitor Usage with Irrigation Pumps</a></li>
                             </ul>
                         </div>
                     </aside>
                 </div>
-
-
 
                 <!-- Back Link -->
                 <div style="margin-top: 3rem;">
@@ -211,4 +206,5 @@
     <!-- JavaScript -->
     <script src="../js/main.js"></script>
 </body>
+
 </html>

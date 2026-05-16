@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Load management at the Distribution Transformer | Rural Energy Research Group">
-    <title>Load Management at the Distribution Transformer | Rural Energy Research Group</title>
-    
+    <meta name="description"
+        content="Estimation of Solar PV Potential for Rooftop, Canal-Based and Ground-Based Plants in Goa | Rural Energy Research Group">
+    <title>Solar Potential of Rooftop, Goa | Rural Energy Research Group</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../css/styles.css">
-    
+
     <style>
         /* Full width content section that appears after sidebar ends */
         .project-detail__full-width {
             margin-top: var(--space-10);
             width: 100%;
         }
-        
+
         .project-detail__full-width p {
             margin-bottom: var(--space-4);
             line-height: var(--leading-loose);
             color: var(--pd-text-body);
         }
-        
+
         /* Mobile layout: reorder to show sidebar at the very end */
         @media (max-width: 768px) {
+
             /* Make container flex to control order of all children */
             .project-detail-container {
                 display: flex;
                 flex-direction: column;
             }
-            
+
             /* Use display: contents to flatten the grid structure on mobile */
             .project-detail__content {
                 display: contents;
             }
-            
+
             /* Assign orders: body content, full-width section, then sidebar */
             .project-detail__body {
                 order: 5;
             }
-            
+
             .project-detail__full-width {
                 order: 6;
                 margin-top: var(--space-8);
             }
-            
+
             .project-detail__content aside {
                 order: 7;
                 margin-top: var(--space-8);
             }
-            
+
             /* Keep header elements at the top */
             .project-detail__tag {
                 order: 1;
             }
-            
+
             .project-detail__title {
                 order: 2;
             }
-            
+
             .project-detail__meta {
                 order: 3;
             }
-            
+
             /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+            .project-detail-container>div:last-child {
                 order: 8;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -111,40 +117,48 @@
             <div class="project-detail-container">
                 <!-- Project Header -->
 
-                <h1 class="project-detail__title">Load management at the Distribution Transformer</h1>
-                
+                <h1 class="project-detail__title">Estimation of the Potential for Ground-Based, Roof-Top and Canal-Based
+                    Solar Power Plants in the State of Goa</h1>
+
                 <!-- Meta Information -->
                 <div class="project-detail__meta">
                     <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2021 – 2024
+                        <strong>Year:</strong> 2017 – 2018
                     </div>
                     <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Vivek Shinde, Devanand Doifode, Athira Panicker (PhD)
+                        <strong>Team:</strong> Prof. Priya Jadhav (PI), Prof. Purushottam Kulkarni (Co-PI), Apoorva
+                        Apte, Radhika Vaze, Dr. Pramod Pathak
                     </div>
                 </div>
 
                 <!-- Content Grid -->
                 <div class="project-detail__content">
                     <div class="project-detail__body">
-                        <p>During peak irrigation season (winter / Rabi) agricultural distribution transformers across the state get overloaded for a few weeks leading to transformer failure and other power quality problems. Load management involves scheduling farmers' irrigation requirements to avoid overloading.</p>
-                        
-                        <p>Farmers create a schedule in groups considering irrigation requirements, and field conditions such as the day-night supply of electricity, water transfers from borewell to openwell, and prioritising critical irrigations. An app has been developed to simplify the generation of irrigation schedules. In fact, it has been observed that farmers sometimes use a crude and suboptimal approach where one of two branches of the network operates on alternate days.</p>
+                        <p>This study, conducted by CTARA, IIT Bombay and sponsored by the Department of Science,
+                            Technology and Environment, Goa, systematically estimated solar PV potential across three
+                            categories: government building rooftops, canal tops, and abandoned mine lands. Using GIS
+                            mapping with 10% site verification, the study found rooftop potential of ~26 MWp across
+                            government buildings, ~39.9 MWp on canal tops, and ~57.5 MWp on abandoned mine lands —
+                            totalling approximately 123 MWp. These are conservative estimates, with actual potential
+                            likely higher. The study concluded that Goa can meet its 150 MW solar RPO target set by
+                            MNRE, potentially achieving energy self-sufficiency.</p>
 
-                        <p><strong>A video on the initiative:</strong></p>
-                        <div class="project-video-embed">
-                            <iframe src="https://www.youtube.com/embed/Yh3jxU0WCNI?start=179" title="Load Management Initiative video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-
-                        <p>The load management initiative has been successfully implemented at 11 locations across Vidarbha and Marathwada. The app is currently available under the PoCRA scheme of the Department of Agriculture, Government of Maharashtra.</p>
-
-                        <div class="project-media-grid">
-                            <div class="project-media-grid__item project-media-grid__item--landscape">
-                                <img src="../projects_markdown/7-Load-Management/media/image1.jpg" alt="Schedule generated using the load management app">
-                                <p class="project-figure-caption">Schedule generated using the load management app for Ingole DT</p>
+                        <div
+                            style="margin: 2rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                            <div style="text-align: center;">
+                                <img src="../images/goa.1.png" alt="Solar potential estimation in Goa"
+                                    style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                                <p
+                                    style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">
+                                    Placement of panels using Sketchup in shadow free areas</p>
                             </div>
-                            <div class="project-media-grid__item project-media-grid__item--vertical">
-                                <img src="../projects_markdown/7-Load-Management/media/image3.jpg" alt="Irrigation details interface">
-                                <p class="project-figure-caption">Irrigation details interface of the load management app</p>
+                            <div style="text-align: center;">
+                                <img src="../images/goa.2.png" alt="Solar PV potential analysis"
+                                    style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                                <p
+                                    style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">
+                                    Mapping of technically feasible area for canal-top solar PV on the Tillari dam
+                                    canal. Feasible lengths in blue. </p>
                             </div>
                         </div>
                     </div>
@@ -154,23 +168,42 @@
                         <div class="project-detail__sidebar-card">
                             <h3 class="project-detail__sidebar-title">Team Members</h3>
                             <ul class="project-detail__sidebar-list">
-                                <li><strong>Project Team:</strong> Vivek Shinde, Devanand Doifode</li>
-                                <li><strong>PhD Student:</strong> Athira Panicker</li>
+                                <li><strong>Principal Investigator:</strong> Prof. Priya Jadhav</li>
+                                <li><strong>Co-Principal Investigator:</strong> Prof. Purushottam Kulkarni</li>
+                                <li><strong>Project Associate:</strong> Apoorva Apte</li>
+                                <li><strong>Project Staff:</strong> Radhika Vaze</li>
+                                <li><strong>Technical Expert & Consultant:</strong> Dr. Pramod Pathak</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail__sidebar-card project-detail__sidebar-card--related-publications">
+                            <h3 class="project-detail__sidebar-title">Report</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li style="border-bottom: none; padding-bottom: 0;">
+                                    <strong
+                                        style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Project
+                                        Report</strong>
+                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Full
+                                        report on solar potential estimation for the State of Goa</span>
+                                    <a href="../public/solar-potential-estimation-report.pdf" target="_blank"
+                                        style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Download
+                                        Report here →</a>
+                                </li>
                             </ul>
                         </div>
 
                         <div class="project-detail__sidebar-card">
                             <h3 class="project-detail__sidebar-title">Other related projects</h3>
                             <ul class="project-detail__sidebar-list">
-                                <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
-                                <li><a href="energy-estimation-tool.html">Energy Estimation Tool</a></li>
-                                <li><a href="capacitors.html">Capacitor Usage with Irrigation Pumps</a></li>
+                                <li><a href="solar-golap.html">Analysis of a rural 1 MW Solar PV plant in Ratnagiri</a>
+                                </li>
+                                <li><a href="solar-dharashiv.html">Solar Agriculture Plants - Dharashiv</a></li>
+                                <li><a href="technical-paradigms.html">Technical Paradigms in Electricity Supply</a>
+                                </li>
                             </ul>
                         </div>
                     </aside>
                 </div>
-
-
 
                 <!-- Back Link -->
                 <div style="margin-top: 3rem;">
@@ -211,4 +244,5 @@
     <!-- JavaScript -->
     <script src="../js/main.js"></script>
 </body>
+
 </html>
