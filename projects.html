@@ -56,41 +56,6 @@
         .clickable-card-wrapper:hover .card-pseudo-link {
             color: var(--color-accent-700);
         }
-
-        /* Projects page PoCRA layout only */
-        .projects-section-main .pocra-main-section {
-            grid-column: 1 / -1;
-            display: grid;
-            gap: var(--space-8);
-        }
-
-        .projects-section-main .pocra-subprojects {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: var(--space-8);
-            padding-left: var(--space-5);
-            margin-left: var(--space-2);
-            border-left: 3px solid rgba(58, 109, 86, 0.25);
-        }
-
-        .projects-section-main .pocra-subprojects .clickable-card-wrapper {
-            height: 100%;
-        }
-
-        @media (max-width: 992px) {
-            .projects-section-main .pocra-subprojects {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 768px) {
-            .projects-section-main .pocra-subprojects {
-                grid-template-columns: 1fr;
-                margin-left: 0;
-                padding-left: var(--space-4);
-                border-left-width: 4px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -141,25 +106,20 @@
             <div class="projects-container">
                 <div class="projects-grid-layout">
 
-                    <div class="pocra-main-section">
-                        <!-- PoCRA Main Card (full-width) -->
-                        <a href="projects/pocra.html" class="clickable-card-wrapper pocra-main-card">
-                            <article class="project-card-item project-card-item-no-image">
-                                <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                    <h3 class="project-card-heading">PoCRA</h3>
-                                    <p class="project-card-text" style="-webkit-line-clamp: unset; line-clamp: unset;">
-                                        IIT Bombay's collaboration with PoCRA to enhance climate-resilience and profitability of smallholder farming systems. Energy team solutions for reliable access to water and electricity for irrigation across 5000 villages.
-                                    </p>
-                                    <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2020-2024</p>
-                                    <div class="card-pseudo-link">
-                                        Learn more <span class="arrow-icon">→</span>
-                                    </div>
+                    <a href="projects/pocra.html" class="clickable-card-wrapper pocra-main-card">
+                        <article class="project-card-item project-card-item-no-image">
+                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                <h3 class="project-card-heading">PoCRA</h3>
+                                <p class="project-card-text" style="-webkit-line-clamp: unset; line-clamp: unset;">
+                                    IIT Bombay's collaboration with PoCRA to enhance climate-resilience and profitability of smallholder farming systems. Energy team solutions for reliable access to water and electricity for irrigation across 5000 villages.
+                                </p>
+                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2020-2024</p>
+                                <div class="card-pseudo-link">
+                                    Learn more <span class="arrow-icon">→</span>
                                 </div>
-                            </article>
-                        </a>
-
-                        <!-- PoCRA Sub-projects (indented with green left border) -->
-                        <div class="pocra-subprojects">
+                            </div>
+                        </article>
+                    </a>
 
                     <a href="projects/energy-water-crops.html" class="clickable-card-wrapper">
                         <article class="project-card-item project-card-item-no-image">
@@ -265,9 +225,6 @@
                             </div>
                         </article>
                     </a>
-
-                    </div>
-                </div>
 
                     <!-- Project 9 -->
                     <a href="projects/gise-hub.html" class="clickable-card-wrapper">
