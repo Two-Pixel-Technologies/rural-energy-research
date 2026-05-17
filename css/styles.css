@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    Design System - Rural Energy Research Group
    ============================================ */
 
@@ -1780,7 +1780,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 768px) {
     .project-detail__content {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1.25fr;
     }
 }
 
@@ -1965,9 +1965,168 @@ h1, h2, h3, h4, h5, h6 {
         padding: var(--space-5);
     }
 }
-/ *  
- f o r c e  
- c s s  
- r e f r e s h  
- * /  
- 
+
+/* ============================================
+   Project Detail Media & Figure Styles
+   ============================================ */
+
+/* Single figure with image */
+.project-media-figure {
+    margin: var(--space-6) 0;
+    text-align: center;
+}
+
+.project-media-figure img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Half-width figure variant (used on energy-water-crops, energy-estimation-tool) */
+.project-media-figure--half {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-media-figure--half img {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Figure caption */
+.project-figure-caption {
+    font-size: var(--text-sm);
+    color: var(--pd-text-muted, var(--color-neutral-500));
+    margin-top: var(--space-2);
+    line-height: var(--leading-normal);
+    font-style: italic;
+}
+
+/* Media grid (side-by-side images) */
+.project-media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+    align-items: start;
+}
+
+.project-media-grid__item {
+    text-align: center;
+}
+
+.project-media-grid__item img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.project-media-grid__item--vertical img {
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+}
+
+.project-media-grid__item--landscape img {
+    max-width: 100%;
+}
+
+/* Video embed */
+.project-video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin: var(--space-6) 0 var(--space-2);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.project-video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Responsive adjustments for project media */
+@media (max-width: 768px) {
+    .project-media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-media-grid__item--vertical img {
+        max-width: 220px;
+    }
+}
+
+/* ============================================
+   Projects Listing Page – PoCRA Group Layout
+   (Scoped to projects listing page only)
+   ============================================ */
+
+/* PoCRA group spans full grid width */
+.projects-pocra-group {
+    grid-column: 1 / -1;
+    background: var(--color-white);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+}
+
+/* PoCRA parent card – no border/shadow since group provides it */
+.projects-pocra-group > .clickable-card-wrapper > .project-card-item {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.projects-pocra-group > .clickable-card-wrapper > .project-card-item .project-card-heading {
+    font-size: var(--text-2xl) !important;
+    color: var(--color-primary-600);
+}
+
+/* Sub-projects grid */
+.projects-pocra-subgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-neutral-200);
+}
+
+.projects-pocra-subgrid .project-card-item {
+    border: 1px solid var(--color-neutral-200);
+    background: var(--color-neutral-50);
+}
+
+.projects-pocra-subgrid .project-card-heading {
+    font-size: var(--text-base) !important;
+}
+
+.projects-pocra-subgrid .project-card-text {
+    font-size: var(--text-xs);
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+@media (max-width: 768px) {
+    .projects-pocra-subgrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-pocra-group {
+        padding: var(--space-4);
+    }
+}
