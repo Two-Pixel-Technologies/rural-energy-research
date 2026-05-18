@@ -28,45 +28,55 @@
         }
         
         /* Image gallery styles */
+        
+        
         .image-gallery {
-            display: flex;
-            gap: 1.5rem;
-            margin: 2rem 0;
-            align-items: flex-start;
-        }
-        
-        .image-gallery__item {
-            flex: 1;
-            min-width: 0; /* Allow flexbox to shrink below content size */
-        }
-        
-        /* Set relative widths based on aspect ratios to achieve same height */
-        /* image2 (landscape 3:2) gets more width than image1 (portrait 3:4) */
-        .image-gallery__item:first-child {
-            flex-basis: 66.7%; /* Landscape image gets more space */
-        }
-        
-        .image-gallery__item:last-child {
-            flex-basis: 33.3%; /* Portrait image gets less space */
-        }
-        
-        .image-gallery__item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 8px;
-            box-shadow: var(--shadow-md);
-            object-fit: contain; /* Prevent cropping */
-        }
-        
-        .image-gallery__caption {
-            margin-top: 0.75rem;
-            font-size: var(--text-sm);
-            color: var(--color-neutral-500);
-            font-style: italic;
-            text-align: center;
-            line-height: 1.4;
-        }
+    display: flex;
+    gap: 0.8rem;
+    margin: 2rem 0;
+    align-items: flex-start;
+}
+
+.image-gallery__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Landscape image gets more width */
+.image-gallery__item:first-child {
+    flex: 1.35;
+}
+
+/* Portrait image narrower */
+.image-gallery__item:last-child {
+    flex: 0.72;
+}
+
+.image-gallery__item img {
+    display: block;
+    height: 260px;       /* SAME fixed height */
+    width: auto;         /* width adjusts automatically */
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: none;
+    background: none;
+    margin: 0 auto;
+}
+
+.image-gallery__caption {
+    margin-top: 0.45rem;
+    font-size: 0.92rem;
+    color: var(--color-neutral-500);
+    line-height: 1.4;
+    font-style: italic;
+    text-align: center;
+}
         
         /* Tablet: slightly adjust spacing */
         @media (max-width: 1024px) {

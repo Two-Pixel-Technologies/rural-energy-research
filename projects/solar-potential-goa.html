@@ -78,6 +78,36 @@
                 order: 8;
             }
         }
+
+        .page-solar-goa .project-media-grid {
+            align-items: flex-end;
+        }
+
+        .page-solar-goa .project-media-grid__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background: none;
+        }
+
+        .page-solar-goa .project-media-grid__item img {
+            width: auto;
+            max-width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin: 0 auto;
+            display: block;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 768px) {
+            .page-solar-goa .project-media-grid__item img {
+                height: auto;
+                max-height: 220px;
+            }
+        }
     </style>
 </head>
 
@@ -113,7 +143,7 @@
     </nav>
 
     <main>
-        <article class="project-detail">
+        <article class="project-detail page-solar-goa">
             <div class="project-detail-container">
                 <!-- Project Header -->
 
@@ -143,22 +173,14 @@
                             likely higher. The study concluded that Goa can meet its 150 MW solar RPO target set by
                             MNRE, potentially achieving energy self-sufficiency.</p>
 
-                        <div
-                            style="margin: 2rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                            <div style="text-align: center;">
-                                <img src="../images/goa.1.png" alt="Solar potential estimation in Goa"
-                                    style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-                                <p
-                                    style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">
-                                    Placement of panels using Sketchup in shadow free areas</p>
+                        <div class="project-media-grid">
+                            <div class="project-media-grid__item">
+                                <img src="../images/goa.1.png" alt="Solar potential estimation in Goa">
+                                <p class="project-figure-caption">Placement of panels using Sketchup in shadow free areas</p>
                             </div>
-                            <div style="text-align: center;">
-                                <img src="../images/goa.2.png" alt="Solar PV potential analysis"
-                                    style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-                                <p
-                                    style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">
-                                    Mapping of technically feasible area for canal-top solar PV on the Tillari dam
-                                    canal. Feasible lengths in blue. </p>
+                            <div class="project-media-grid__item">
+                                <img src="../images/goa.2.png" alt="Solar PV potential analysis">
+                                <p class="project-figure-caption">Mapping of technically feasible area for canal-top solar PV on the Tillari dam canal. Feasible lengths in blue.</p>
                             </div>
                         </div>
                     </div>

@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rural Energy Research Group</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .home-page .uma-section .uma-card-body p {
+            font-size: var(--text-lg);
+            line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-2);
+            color: var(--color-neutral-700);
+        }
+
+        .home-page .uma-section .uma-card-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .home-page .uma-section .uma-card-link {
+            color: var(--color-accent-600);
+            text-decoration: none;
+        }
+
+        .home-page .uma-section .uma-card-link:hover {
+            color: var(--color-accent-700);
+            text-decoration: underline;
+            text-underline-offset: 0.12em;
+            text-decoration-thickness: 1px;
+        }
+    </style>
 </head>
 <body class="home-page">
     <!-- Navbar -->
@@ -100,16 +124,14 @@
 
                 <!-- UMA / Engineering Education -->
                 <div class="uma-section">
-                    <h2>
-                        <a href="uma.html" class="section-heading-link">
-                            <span class="heading-link-text">UMA / Engineering Education Initiative</span>
-                        </a>
-                    </h2>
-                    <ul class="uma-list">
-                        <li><a href="uma.html" class="project-link">Internship</a></li>
-                        <li><a href="uma.html" class="project-link">Workshops</a></li>
-                        <li><a href="https://drive.google.com/file/d/13D7HCGzWyyxriXdnEg8rvtanwzx0dL2e/view?usp=drive_link" target="_blank" class="project-link">Text book</a></li>
-                    </ul>
+                    <h2>UMA / Engineering Education Initiative</h2>
+                    <div class="uma-card-body">
+                        <p><strong>UMA: Unnat Maharashtra Abhiyan</strong></p>
+                        <p>A joint program of the Govt. of Maharashtra &amp; IIT Bombay — bridging higher education institutions to development needs through various academic initiatives.</p>
+                        <p>Report on workshop to introduce an elective &lsquo;Field Study of Agricultural Distribution Systems for Electrical Engineers&rsquo;: <a href="public/UMA_Electrical%20Eng_Book_2025.pdf" target="_blank" rel="noopener" class="uma-card-link">Sample pages</a></p>
+                        <p><a href="https://homepages.iitb.ac.in/~umaiitbombay/uma-website_4.html#resources" target="_blank" rel="noopener" class="uma-card-link">Other Training Resources</a></p>
+                        <p>More details here : <a href="https://homepages.iitb.ac.in/~umaiitbombay/uma-website_4.html" target="_blank" rel="noopener" class="uma-card-link">UMA Website</a></p>
+                    </div>
                 </div>
 
                 <!-- Policy Briefs -->
