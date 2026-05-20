@@ -83,13 +83,49 @@
         }
 
         .vidyut-project-page .project-media-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            align-items: start;
-            gap: 2px
-            width: 100%;
-            margin: var(--space-6) 0 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 0.35rem;
+        width: 100%;
+        margin: var(--space-6) 0 0;
         }
+
+        .vidyut-project-page .project-media-grid__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+        }
+
+        .vidyut-project-page .vidyut-media-slot {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+}
+
+.vidyut-project-page .vidyut-media-slot img {
+    width: auto;
+    max-width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: none;
+    display: block;
+}
+
+.project-figure-caption {
+    margin-top: 0.50rem;
+    color: var(--color-neutral-600);
+    font-size: 0.58rem;
+    line-height: 1.35;
+    text-align: center;
+}
 
         .vidyut-project-page .project-media-grid__item {
             display: flex;
@@ -101,31 +137,7 @@
             box-shadow: none;
         }
 
-        .vidyut-project-page .vidyut-media-slot {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            width: 100%;
-            height: 175px;
-        }
-
-        .vidyut-project-page .vidyut-media-slot img {
-            width: auto;
-            max-width: 100%;
-            height: 175px;
-            object-fit: contain;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-md);
-            display: block;
-        }
-
-        .project-figure-caption {
-            margin-top: 0.55rem;
-            color: var(--color-neutral-600);
-            font-size: 0.7rem;
-            line-height: 1.4;
-            text-align: center;
-        }
+        
 
         @media (min-width: 769px) {
             .vidyut-project-page .project-media-grid {
