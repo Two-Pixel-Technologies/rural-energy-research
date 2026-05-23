@@ -883,18 +883,30 @@ h1, h2, h3, h4, h5, h6 {
         display: none;
     }
 
+    .nav-item-dropdown:hover .dropdown-menu {
+        transform: none;
+        left: auto;
+    }
+
     .dropdown-menu {
         position: static;
+        left: auto;
+        right: auto;
         width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
         opacity: 1;
         visibility: visible;
         transform: none;
         box-shadow: none;
         background-color: rgba(0, 0, 0, 0.1);
         margin-top: var(--space-2);
+        margin-left: 0;
+        margin-right: 0;
         display: none;
         padding: var(--space-2) 0;
         border: none;
+        align-self: stretch;
     }
     
     .dropdown-menu::before {
@@ -903,12 +915,18 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav-item-dropdown.active .dropdown-menu {
         display: block;
+        transform: none;
+        left: auto;
     }
 
     .dropdown-link {
-        padding: var(--space-2) 0;
+        padding: var(--space-2) var(--space-4);
         color: #FFC300;
         text-align: center;
+    }
+
+    .dropdown-link:hover {
+        padding-left: var(--space-4);
     }
 
     .hero {
