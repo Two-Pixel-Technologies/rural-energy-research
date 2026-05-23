@@ -1059,7 +1059,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Home Header Background Overlay */
 .home-header-bg {
     background-color: var(--color-primary-800);
-    background-image: linear-gradient(rgba(21, 43, 34, 0.58), rgba(21, 43, 34, 0.58)), url('../images/home-hero-bg.png');
+    background-image: linear-gradient(rgba(21, 43, 34, 0.58), rgba(21, 43, 34, 0.58)), url('../images/pic11.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1180,10 +1180,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .team-header-bg {
     background-color: var(--color-primary-800);
-    background-image: linear-gradient(rgba(21, 43, 34, 0.62), rgba(21, 43, 34, 0.62)), url('https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1920&h=500&fit=crop');
+    background-image: linear-gradient(rgba(21, 43, 34, 0.62), rgba(21, 43, 34, 0.62)), url('../images/pic4.jpg');
     background-size: cover;
     background-position: center;
     border-bottom: 2px solid var(--color-accent-400);
+    padding: 4rem 0;
 }
 
 .team-container {
