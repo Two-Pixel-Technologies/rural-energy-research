@@ -79,6 +79,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container nav-centered">
+            <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
+                <img src="../public/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+            </a>
             <button class="nav-toggle" id="navToggle">
                 <span></span>
                 <span></span>
@@ -87,8 +90,18 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
-                <li><a href="../index.html#publications" class="nav-link">Publications</a></li>
-                <li><a href="../index.html#contact" class="nav-link">Contact Us</a></li>
+                <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                <li><a href="../team.html" class="nav-link">Team</a></li>
+                <li class="nav-item-dropdown" id="linksDropdown">
+                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                    <div class="dropdown-menu" id="linksMenu">
+                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
+                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
+                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
+                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                    </div>
+                </li>
+                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
             </ul>
         </div>
     </nav>
@@ -97,8 +110,8 @@
         <article class="project-detail">
             <div class="project-detail-container">
                 <!-- Project Header -->
-                <span class="project-detail__tag">Energy Systems</span>
-                <h1 class="project-detail__title">Energy Estimation Tool</h1>
+
+                <h1 class="project-detail__title">Energy Estimation Tool for Distribution Transformer capacity estimation</h1>
                 
                 <!-- Meta Information -->
                 <div class="project-detail__meta">
@@ -108,17 +121,24 @@
                     <div class="project-detail__meta-item">
                         <strong>Team:</strong> Vivek Shinde, Devanand Doifode, Aryan Dangi, Asim
                     </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Type:</strong> Research Project
-                    </div>
                 </div>
 
                 <!-- Content Grid -->
                 <div class="project-detail__content">
                     <div class="project-detail__body">
                         <p>The government spends a lot (~1000 crores) annually to extend the agricultural distribution system. However the insufficient electricity infrastructure capacity results in poor quality of supply to farmers and high maintenance costs to the power distribution company. The Energy Estimation Tool (EET) is an innovative solution to determine infrastructure requirements based on crop data.</p>
+
+                        <div class="project-media-figure project-media-figure--half">
+                            <img src="../projects_markdown/5a-Energy-Estimation-Tool-EET/media/image4.jpg" alt="Rabi Hangam Baithaks to present EET result, Rui, Beed">
+                            <p class="project-figure-caption">Rabi Hangam Baithaks to present EET result, Rui, Beed</p>
+                        </div>
                         
                         <p>The tool is based on a methodology quantifying crop, irrigation water, and energy, which was developed through extensive measurements and field-level observations (see 'Methodology on Energy and water estimation by crops'). The EET tool was successfully implemented in 10 villages in the Beed and Wardha districts through government processes. Village-level cropping and other data were collected by village agriculture officers (Krishi Sahayaks). The tool output was discussed in winter meetings (Rabi hangam baithak) attended by farmers, a distribution company representative, and the Krishi Sahayak. Thus promoting Information, Comprehension and Collective action. The outcomes of the EET tool matched with the Distribution Transformer (DT) failure rate in the villages.</p>
+
+                        <div class="project-media-figure project-media-figure--half">
+                            <img src="../projects_markdown/5a-Energy-Estimation-Tool-EET/media/image2.png" alt="The outcome of EET for Rohana Village, Arvi, Wardha">
+                            <p class="project-figure-caption">The outcome of EET for Rohana Village, Arvi, Wardha</p>
+                        </div>
                         
                         <p>EET can be used for infrastructure planning at the village level and upstream, higher-level reporting and intersectoral policy-making (Water-Energy-Food Nexus).</p>
                     </div>
@@ -133,7 +153,7 @@
                         </div>
 
                         <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Other Projects</h3>
+                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
                             <ul class="project-detail__sidebar-list">
                                 <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
                                 <li><a href="demand-modelling.html">Demand Modelling of Irrigation Energy Demand</a></li>
@@ -143,34 +163,11 @@
                     </aside>
                 </div>
 
-                <!-- Full Width Content Section -->
-                <div class="project-detail__full-width">
-                    <div style="margin: 2rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
-                        <div style="text-align: center;">
-                            <img src="../projects_markdown/5a-Energy-Estimation-Tool-EET/media/image4.jpg" alt="Rabi Hangam Baithaks to present EET result, Rui, Beed" style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-                            <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Rabi Hangam Baithaks to present EET result, Rui, Beed</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <img src="../projects_markdown/5a-Energy-Estimation-Tool-EET/media/image2.png" alt="The outcome of EET for Rohana Village, Arvi, Wardha" style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-                            <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">The outcome of EET for Rohana Village, Arvi, Wardha</p>
-                        </div>
-                    </div>
-                    
-                    <div style="margin: 2rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
-                        <div style="text-align: center;">
-                            <img src="../projects_markdown/5a-Energy-Estimation-Tool-EET/media/image3.png" alt="Comparing EET results with actual data, Makni" style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-                            <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Comparing EET results with actual data, Makni</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <img src="../projects_markdown/5a-Energy-Estimation-Tool-EET/media/image1.jpg" alt="Different locations of pilot studies for building EET" style="width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-                            <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Different locations of pilot studies for building EET</p>
-                        </div>
-                    </div>
-                </div>
+
 
                 <!-- Back Link -->
                 <div style="margin-top: 3rem;">
-                    <a href="../index.html#projects" class="btn btn--secondary">← Back to All Projects</a>
+                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
                 </div>
             </div>
         </article>
@@ -185,16 +182,17 @@
             </div>
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: info@ruralresearch.org</p>
-                <p>Phone: +91 1234 567890</p>
-                <p>Address: Research Campus, New Delhi, India</p>
+                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="../index.html#home">Home</a></li>
-                    <li><a href="../index.html#projects">Projects</a></li>
-                    <li><a href="../index.html#publications">Publications</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../publications.html">Publications</a></li>
+                    <li><a href="../team.html">Team</a></li>
                 </ul>
             </div>
         </div>

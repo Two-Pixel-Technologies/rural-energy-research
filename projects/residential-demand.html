@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Solar Agriculture Plants - Dharashiv District | Rural Energy Research Group">
-    <title>Solar Agriculture Plants - Dharashiv | Rural Energy Research Group</title>
-    
+    <meta name="description" content="Residential Electricity Demand Modeling | Rural Energy Research Group">
+    <title>Residential Electricity Demand Modeling | Rural Energy Research Group</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../css/styles.css">
-    
+
     <style>
         /* Full width content section that appears after sidebar ends */
         .project-detail__full-width {
             margin-top: var(--space-10);
             width: 100%;
         }
-        
+
         .project-detail__full-width p {
             margin-bottom: var(--space-4);
             line-height: var(--leading-loose);
             color: var(--pd-text-body);
         }
-        
+
         /* Mobile layout: reorder to show sidebar at the very end */
         @media (max-width: 768px) {
+
             /* Make container flex to control order of all children */
             .project-detail-container {
                 display: flex;
                 flex-direction: column;
             }
-            
+
             /* Use display: contents to flatten the grid structure on mobile */
             .project-detail__content {
                 display: contents;
             }
-            
+
             /* Assign orders: body content, full-width section, then sidebar */
             .project-detail__body {
                 order: 5;
             }
-            
+
             .project-detail__full-width {
                 order: 6;
                 margin-top: var(--space-8);
             }
-            
+
             .project-detail__content aside {
                 order: 7;
                 margin-top: var(--space-8);
             }
-            
+
             /* Keep header elements at the top */
             .project-detail__tag {
                 order: 1;
             }
-            
+
             .project-detail__title {
                 order: 2;
             }
-            
+
             .project-detail__meta {
                 order: 3;
             }
-            
+
             /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+            .project-detail-container>div:last-child {
                 order: 8;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -111,26 +116,34 @@
             <div class="project-detail-container">
                 <!-- Project Header -->
 
-                <h1 class="project-detail__title">Solar Agriculture Plants - Dharashiv District</h1>
-                
+                <h1 class="project-detail__title">Residential Electricity Demand Modeling</h1>
+
                 <!-- Meta Information -->
                 <div class="project-detail__meta">
                     <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2025 – Ongoing
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Shashwata Swarupa Sahoo, Tejas Nagotkar, Keshav Reddy
+                        <strong>Status:</strong> Ongoing
                     </div>
                 </div>
 
                 <!-- Content Grid -->
                 <div class="project-detail__content">
                     <div class="project-detail__body">
-                        <p>The central government is promoting the establishment of 2 - 8 MW scale renewable energy projects connected to Agricultural feeders. This approach results in renewable capacity development with the possibility of providing day time supply to all farmers with potentially lower requirement of distribution/transmission infrastructure enhancement. The scheme is also (a) allowing farmers to be community owners of the projects (b) allows farmers the opportunity to lease/sell agricultural land for a remunerative price.</p>
-                        
-                        <p>Reliable and low cost energy, or electrical power, is an important enabler in agricultural, industrial development, and for basic amenities for society. Also, the current renewable energy focus on small / medium sized solar PV and wind power plants is creating opportunities as well as challenges for people in rural areas.</p>
-                        
-                        <p>This project conducts the study and analysis of the implementation of the scheme in Dharashiv. The study will focus on project management processes, efficiency, coverage and overall benefits. Other attributes may be added as per discussions with district administration</p>
+                        <p>Renewable energy integration on the grid has become imperative and the generation component
+                            of renewables in the country has increased substantially over the last decade. The diurnal
+                            and seasonal variation entails that strategies such as storage or demand response need to be
+                            implemented to ensure a stable and economical integration. In this project we look at
+                            residential demand, mainly rural, to identify and evaluate the potential of demand response.
+                            Several academic projects are ongoing. IIT Bombay has an MoU with Tata Power for Demand
+                            modeling with studies being done on residential smart meter data. A collaboration with
+                            Columbia University on this topic to investigate for Mumbai residential consumers, the
+                            temperature and overall consumption as factors in demand.</p>
+
+                        <div class="project-media-figure">
+                            <img src="../images/res.1.png" alt="Residential electricity demand analysis"
+                                style="max-width: 300px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                            <p class="project-figure-caption">Residential demand over one day, Village feeder in Wardha
+                                MTech: Pranit Chute 2022-2024</p>
+                        </div>
                     </div>
 
                     <!-- Sidebar -->
@@ -140,25 +153,19 @@
                         <div class="project-detail__sidebar-card">
                             <h3 class="project-detail__sidebar-title">Other related projects</h3>
                             <ul class="project-detail__sidebar-list">
-                                <li><a href="solar-golap.html">Study of 1 MW Solar Plant - Golap, Ratnagiri</a></li>
-                                <li><a href="technical-paradigms.html">Technical Paradigms in Electricity Supply</a></li>
+                                <li><a href="technical-paradigms.html">Technical Paradigms in Electricity Supply</a>
+                                </li>
+                                <li><a href="energy-estimation-tool.html">Energy Estimation Tool</a></li>
                             </ul>
                         </div>
                         <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Team Members</h3>
+                            <h3 class="project-detail__sidebar-title">Collaborations</h3>
                             <ul class="project-detail__sidebar-list">
-                                <li><strong>Project Team:</strong> Shashwata Swarupa Sahoo (PhD), Tejas Nagotkar, Keshav Reddy (MTech)</li>
+                                <li><strong>Industry Partner:</strong> Tata Power (MoU for Demand Modeling)</li>
+                                <li><strong>Academic Partner:</strong> Columbia University</li>
                             </ul>
                         </div>
                     </aside>
-                </div>
-
-                <!-- Full Width Content Section -->
-                <div class="project-detail__full-width">
-                    <div style="margin: 2rem 0; text-align: center;">
-                        <img src="../projects_markdown/10-Solar_Ag_plants_Dharashiv/media/image1.jpg" alt="Shahapur Solar Power Plant (4 MW) setup under MSKVY scheme" style="max-width: 500px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-                        <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Shahapur Solar Power Plant (4 MW) setup under MSKVY scheme</p>
-                    </div>
                 </div>
 
                 <!-- Back Link -->
@@ -200,4 +207,5 @@
     <!-- JavaScript -->
     <script src="../js/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Vidyut Project, a collaboration with STAGE, University of Chicago | Rural Energy Research Group">
+    <title>The Vidyut Project, a collaboration with STAGE, University of Chicago | Rural Energy Research Group</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .policy-content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .project-detail__body {
+            grid-column: 1 / -1;
+        }
+
+        .project-detail__body p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-6);
+            color: var(--pd-text-body);
+        }
+
+        .project-detail__meta-item--date,
+        .project-detail__meta-item--team {
+            font-size: 1rem;
+            color: var(--color-accent-600);
+            font-weight: 600;
+            margin-bottom: -2px;
+        }
+
+        .document-link {
+            color: var(--color-accent-600);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid var(--color-accent-500);
+            transition: all 0.2s ease;
+            padding-bottom: 1px;
+        }
+
+        .document-link:hover {
+            color: var(--color-accent-700);
+            border-bottom-color: var(--color-accent-700);
+        }
+
+        .vidyut-project-page .project-detail__meta-item--team {
+            color: var(--pd-text-body);
+            font-weight: 400;
+        }
+
+        .vidyut-team-block {
+            margin: 0;
+            line-height: 1.6;
+            color: var(--pd-text-body);
+        }
+
+        .vidyut-team-block p {
+            margin: 0;
+        }
+
+        .vidyut-team-block .vidyut-team-row--uchicago {
+            padding-left: 3.15em;
+        }
+
+        .vidyut-team-block strong {
+            color: var(--pd-text-body);
+            font-weight: 600;
+        }
+
+        .vidyut-team__org {
+            font-weight: 700;
+            color: var(--color-accent-600);
+        }
+
+        .vidyut-project-page .project-media-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 0.35rem;
+        width: 100%;
+        margin: var(--space-6) 0 0;
+        }
+
+        .vidyut-project-page .project-media-grid__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+        }
+
+        .vidyut-project-page .vidyut-media-slot {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+}
+
+.vidyut-project-page .vidyut-media-slot img {
+    width: auto;
+    max-width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: none;
+    display: block;
+}
+
+.project-figure-caption {
+    margin-top: 0.50rem;
+    color: var(--color-neutral-600);
+    font-size: 0.58rem;
+    line-height: 1.35;
+    text-align: center;
+}
+
+        .vidyut-project-page .project-media-grid__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background: none;
+            border: none;
+            box-shadow: none;
+        }
+
+        
+
+        @media (min-width: 769px) {
+            .vidyut-project-page .project-media-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vidyut-project-page .project-media-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vidyut-project-page .vidyut-media-slot {
+                height: auto;
+            }
+
+            .vidyut-project-page .vidyut-media-slot img {
+                max-height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container nav-centered">
+            <a href="index.html" class="nav-brand" aria-label="IIT Bombay">
+                <img src="public/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+            </a>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li class="nav-item-dropdown" id="linksDropdown">
+                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                    <div class="dropdown-menu" id="linksMenu">
+                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
+                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
+                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
+                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                    </div>
+                </li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article class="project-detail vidyut-project-page">
+            <div class="project-detail-container policy-content-wrapper">
+                <h1 class="project-detail__title">The Vidyut Project, a collaboration with STAGE, University of Chicago</h1>
+                <div class="project-detail__meta">
+                    <div class="project-detail__meta-item project-detail__meta-item--date"><strong>Year:</strong> 2024 - 2026</div>
+                    <div class="project-detail__meta-item project-detail__meta-item--team">
+                        <div class="vidyut-team-block">
+                            <p class="vidyut-team-row"><strong>Team:</strong> <span class="vidyut-team__org">IIT Bombay:</span> Vivek Shinde, Devanand Doifode, Himali Mhatre (CTARA), Gaurav (Chemical)</p>
+                            <p class="vidyut-team-row vidyut-team-row--uchicago"><span class="vidyut-team__org"> UChicago:</span> Nancy Kawalek, Sunanda Prabhu-Gaunkar, Atilla Newey, Melanie Vazquez-Pita, Sarthak Dhankar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-detail__content">
+                    <div class="project-detail__body">
+                        <p>STAGE Center (Scientists, Technologists, and Artists Generating Exploration), University of Chicago's Pritzker School of Molecular Engineering (<a href="https://stagecenter.uchicago.edu" target="_blank" class="document-link">https://stagecenter.uchicago.edu</a>) is an initiative to bring science to the people.</p>
+                        <p>In this collaboration, work done by our group on demand-side management on agricultural feeders was used as a basis to explore creative ways — including storytelling, games, and film — to communicate ideas around energy-efficiency and rural technologies with farming communities. The initiatives were conducted in two villages - Pimpalgaon and __ , in Beed district.</p>
+
+                        <div class="project-media-grid">
+                            <div class="project-media-grid__item">
+                                <div class="vidyut-media-slot">
+                                    <img src="images/updates.1.png" alt="Vidyut Project activity">
+                                </div>
+                                <p class="project-figure-caption">A short documentary in Marathi with ENGLISH SUBTITLES (Final version yet to be released)</p>
+                            </div>
+                            <div class="project-media-grid__item">
+                                <div class="vidyut-media-slot">
+                                    <img src="images/cap.3.png" alt="Community outreach for energy initiatives">
+                                </div>
+                                <p class="project-figure-caption">A game illustrating capacitor benefits</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <a href="index.html" class="btn btn--secondary">← Back to Home</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Rural Energy Research Group</h3>
+                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,80 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Solar Agriculture Plants - Dharashiv District | Rural Energy Research Group">
-    <title>Solar Agriculture Plants - Dharashiv | Rural Energy Research Group</title>
-    
+    <meta name="description"
+        content="Estimation of Solar PV Potential for Rooftop, Canal-Based and Ground-Based Plants in Goa | Rural Energy Research Group">
+    <title>Solar Potential of Rooftop, Goa | Rural Energy Research Group</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../css/styles.css">
-    
+
     <style>
         /* Full width content section that appears after sidebar ends */
         .project-detail__full-width {
             margin-top: var(--space-10);
             width: 100%;
         }
-        
+
         .project-detail__full-width p {
             margin-bottom: var(--space-4);
             line-height: var(--leading-loose);
             color: var(--pd-text-body);
         }
-        
+
         /* Mobile layout: reorder to show sidebar at the very end */
         @media (max-width: 768px) {
+
             /* Make container flex to control order of all children */
             .project-detail-container {
                 display: flex;
                 flex-direction: column;
             }
-            
+
             /* Use display: contents to flatten the grid structure on mobile */
             .project-detail__content {
                 display: contents;
             }
-            
+
             /* Assign orders: body content, full-width section, then sidebar */
             .project-detail__body {
                 order: 5;
             }
-            
+
             .project-detail__full-width {
                 order: 6;
                 margin-top: var(--space-8);
             }
-            
+
             .project-detail__content aside {
                 order: 7;
                 margin-top: var(--space-8);
             }
-            
+
             /* Keep header elements at the top */
             .project-detail__tag {
                 order: 1;
             }
-            
+
             .project-detail__title {
                 order: 2;
             }
-            
+
             .project-detail__meta {
                 order: 3;
             }
-            
+
             /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+            .project-detail-container>div:last-child {
                 order: 8;
+            }
+        }
+
+        .page-solar-goa .project-media-grid {
+            align-items: flex-end;
+        }
+
+        .page-solar-goa .project-media-grid__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background: none;
+        }
+
+        .page-solar-goa .project-media-grid__item img {
+            width: auto;
+            max-width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin: 0 auto;
+            display: block;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 768px) {
+            .page-solar-goa .project-media-grid__item img {
+                height: auto;
+                max-height: 220px;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -107,58 +143,89 @@
     </nav>
 
     <main>
-        <article class="project-detail">
+        <article class="project-detail page-solar-goa">
             <div class="project-detail-container">
                 <!-- Project Header -->
 
-                <h1 class="project-detail__title">Solar Agriculture Plants - Dharashiv District</h1>
-                
+                <h1 class="project-detail__title">Estimation of the Potential for Ground-Based, Roof-Top and Canal-Based
+                    Solar Power Plants in the State of Goa</h1>
+
                 <!-- Meta Information -->
                 <div class="project-detail__meta">
                     <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2025 – Ongoing
+                        <strong>Year:</strong> 2017 – 2018
                     </div>
                     <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Shashwata Swarupa Sahoo, Tejas Nagotkar, Keshav Reddy
+                        <strong>Team:</strong> Prof. Priya Jadhav (PI), Prof. Purushottam Kulkarni (Co-PI), Apoorva
+                        Apte, Radhika Vaze, Dr. Pramod Pathak
                     </div>
                 </div>
 
                 <!-- Content Grid -->
                 <div class="project-detail__content">
                     <div class="project-detail__body">
-                        <p>The central government is promoting the establishment of 2 - 8 MW scale renewable energy projects connected to Agricultural feeders. This approach results in renewable capacity development with the possibility of providing day time supply to all farmers with potentially lower requirement of distribution/transmission infrastructure enhancement. The scheme is also (a) allowing farmers to be community owners of the projects (b) allows farmers the opportunity to lease/sell agricultural land for a remunerative price.</p>
-                        
-                        <p>Reliable and low cost energy, or electrical power, is an important enabler in agricultural, industrial development, and for basic amenities for society. Also, the current renewable energy focus on small / medium sized solar PV and wind power plants is creating opportunities as well as challenges for people in rural areas.</p>
-                        
-                        <p>This project conducts the study and analysis of the implementation of the scheme in Dharashiv. The study will focus on project management processes, efficiency, coverage and overall benefits. Other attributes may be added as per discussions with district administration</p>
+                        <p>This study, conducted by CTARA, IIT Bombay and sponsored by the Department of Science,
+                            Technology and Environment, Goa, systematically estimated solar PV potential across three
+                            categories: government building rooftops, canal tops, and abandoned mine lands. Using GIS
+                            mapping with 10% site verification, the study found rooftop potential of ~26 MWp across
+                            government buildings, ~39.9 MWp on canal tops, and ~57.5 MWp on abandoned mine lands —
+                            totalling approximately 123 MWp. These are conservative estimates, with actual potential
+                            likely higher. The study concluded that Goa can meet its 150 MW solar RPO target set by
+                            MNRE, potentially achieving energy self-sufficiency.</p>
+
+                        <div class="project-media-grid">
+                            <div class="project-media-grid__item">
+                                <img src="../images/goa.1.png" alt="Solar potential estimation in Goa">
+                                <p class="project-figure-caption">Placement of panels using Sketchup in shadow free areas</p>
+                            </div>
+                            <div class="project-media-grid__item">
+                                <img src="../images/goa.2.png" alt="Solar PV potential analysis">
+                                <p class="project-figure-caption">Mapping of technically feasible area for canal-top solar PV on the Tillari dam canal. Feasible lengths in blue.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Sidebar -->
                     <aside>
                         
 
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
+                        <div class="project-detail__sidebar-card project-detail__sidebar-card--related-publications">
+                            <h3 class="project-detail__sidebar-title">Project Resources</h3>
                             <ul class="project-detail__sidebar-list">
-                                <li><a href="solar-golap.html">Study of 1 MW Solar Plant - Golap, Ratnagiri</a></li>
-                                <li><a href="technical-paradigms.html">Technical Paradigms in Electricity Supply</a></li>
+                                <li style="border-bottom: none; padding-bottom: 0;">
+                                    <strong
+                                        style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Project
+                                        Report</strong>
+                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Full
+                                        report on solar potential estimation for the State of Goa</span>
+                                    <a href="../public/solar-potential-estimation-report.pdf" target="_blank"
+                                        style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Download
+                                        Report here →</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="project-detail__sidebar-card">
                             <h3 class="project-detail__sidebar-title">Team Members</h3>
                             <ul class="project-detail__sidebar-list">
-                                <li><strong>Project Team:</strong> Shashwata Swarupa Sahoo (PhD), Tejas Nagotkar, Keshav Reddy (MTech)</li>
+                                <li><strong>Principal Investigator:</strong> Prof. Priya Jadhav</li>
+                                <li><strong>Co-Principal Investigator:</strong> Prof. Purushottam Kulkarni</li>
+                                <li><strong>Project Associate:</strong> Apoorva Apte</li>
+                                <li><strong>Project Staff:</strong> Radhika Vaze</li>
+                                <li><strong>Technical Expert & Consultant:</strong> Dr. Pramod Pathak</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-detail__sidebar-card">
+                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
+                            <ul class="project-detail__sidebar-list">
+                                <li><a href="solar-golap.html">Analysis of a rural 1 MW Solar PV plant in Ratnagiri</a>
+                                </li>
+                                <li><a href="solar-dharashiv.html">Solar Agriculture Plants - Dharashiv</a></li>
+                                <li><a href="technical-paradigms.html">Technical Paradigms in Electricity Supply</a>
+                                </li>
                             </ul>
                         </div>
                     </aside>
-                </div>
-
-                <!-- Full Width Content Section -->
-                <div class="project-detail__full-width">
-                    <div style="margin: 2rem 0; text-align: center;">
-                        <img src="../projects_markdown/10-Solar_Ag_plants_Dharashiv/media/image1.jpg" alt="Shahapur Solar Power Plant (4 MW) setup under MSKVY scheme" style="max-width: 500px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-                        <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Shahapur Solar Power Plant (4 MW) setup under MSKVY scheme</p>
-                    </div>
                 </div>
 
                 <!-- Back Link -->
@@ -200,4 +267,5 @@
     <!-- JavaScript -->
     <script src="../js/main.js"></script>
 </body>
+
 </html>

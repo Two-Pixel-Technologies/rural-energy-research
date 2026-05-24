@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    Design System - Rural Energy Research Group
    ============================================ */
 
@@ -105,7 +105,7 @@
     
     /* ========== Layout ========== */
     --max-width: 1200px;
-    --navbar-height: 56px;
+    --navbar-height: 54px;
 }
 
 /* ============================================
@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar {
     background-color: var(--color-primary-700);
-    padding: var(--space-4) 0;
+    padding: 0.75rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -176,29 +176,44 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-container.nav-centered {
     justify-content: center;
+    position: relative;
 }
 
-.nav-logo {
-    font-family: var(--font-heading);
-    font-size: var(--text-xl);
-    font-weight: var(--font-bold);
-    color: var(--color-white);
-    letter-spacing: var(--tracking-tight);
+.nav-brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    position: absolute;
+    left: var(--space-2);
+}
+
+.nav-brand-logo {
+    width: auto;
+    height: 56px;
+    display: block;
+    object-fit: contain;
 }
 
 .nav-menu {
     display: flex;
-    gap: var(--space-10);
+    gap: 1.75rem;
+    margin-left: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-link {
     font-family: var(--font-body);
     font-size: var(--text-base);
     font-weight: var(--font-normal);
-    color: var(--color-neutral-200);
+    color: #FFC300;
     letter-spacing: var(--tracking-normal);
     padding: var(--space-2) 0;
     position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .nav-link::after {
@@ -208,16 +223,102 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--color-accent-400);
+    background-color: #FFC300;
     transition: width var(--transition-base);
 }
 
 .nav-link:hover {
-    color: var(--color-white);
+    color: #FFC300;
 }
 
-.nav-link:hover::after {
+.nav-link.nav-link-active,
+.nav-link.active {
+    color: #FFC300;
+}
+
+.nav-link:hover::after,
+.nav-link.nav-link-active::after,
+.nav-link.active::after {
     width: 100%;
+}
+
+/* Navbar Dropdown */
+.nav-item-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-2) 0;
+    color: #FFC300;
+}
+
+.nav-dropdown-toggle::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFC300;
+    transition: width var(--transition-base);
+}
+
+.nav-item-dropdown:hover .nav-dropdown-toggle::after {
+    width: 100%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primary-800);
+    min-width: 160px;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+    z-index: 1001;
+    margin-top: var(--space-2);
+    border: 1px solid var(--color-primary-600);
+}
+
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid var(--color-primary-600);
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-link {
+    display: block;
+    padding: var(--space-2) var(--space-5);
+    color: #FFC300;
+    font-size: var(--text-sm);
+    transition: all var(--transition-fast);
+}
+
+.dropdown-link:hover {
+    background-color: var(--color-primary-700);
+    color: #FFC300;
+    padding-left: var(--space-6);
 }
 
 .nav-toggle {
@@ -483,11 +584,15 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: color var(--transition-fast), border-color var(--transition-fast);
+    display: block;
+    padding: var(--space-2) var(--space-2);
+    margin-left: calc(var(--space-2) * -1);
+    border-radius: var(--radius-sm);
 }
 
 .project-link:hover {
     color: var(--color-accent-600);
-    border-bottom-color: var(--color-accent-500);
+    background-color: var(--color-neutral-50);
 }
 
 .projects-sublist .project-link {
@@ -605,6 +710,17 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-accent-400);
 }
 
+.footer-section p a {
+    color: var(--color-neutral-400);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-section p a:hover {
+    color: var(--color-accent-400);
+    text-decoration: underline;
+}
+
 .footer-bottom {
     max-width: var(--max-width);
     margin: var(--space-4) auto 0;
@@ -718,7 +834,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .nav-container.nav-centered {
-        justify-content: flex-end;
+        justify-content: space-between;
+        position: static;
+    }
+
+    .nav-brand {
+        position: static;
     }
     
     .nav-toggle {
@@ -744,10 +865,68 @@ h1, h2, h3, h4, h5, h6 {
     
     .nav-link {
         padding: var(--space-3) 0;
+        text-align: center;
     }
     
     .nav-link::after {
         display: none;
+    }
+
+    /* Mobile Dropdown */
+    .nav-item-dropdown {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-dropdown-toggle::after {
+        display: none;
+    }
+
+    .nav-item-dropdown:hover .dropdown-menu {
+        transform: none;
+        left: auto;
+    }
+
+    .dropdown-menu {
+        position: static;
+        left: auto;
+        right: auto;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin-top: var(--space-2);
+        margin-left: 0;
+        margin-right: 0;
+        display: none;
+        padding: var(--space-2) 0;
+        border: none;
+        align-self: stretch;
+    }
+    
+    .dropdown-menu::before {
+        display: none;
+    }
+
+    .nav-item-dropdown.active .dropdown-menu {
+        display: block;
+        transform: none;
+        left: auto;
+    }
+
+    .dropdown-link {
+        padding: var(--space-2) var(--space-4);
+        color: #FFC300;
+        text-align: center;
+    }
+
+    .dropdown-link:hover {
+        padding-left: var(--space-4);
     }
 
     .hero {
@@ -882,6 +1061,286 @@ h1, h2, h3, h4, h5, h6 {
 /* Active nav link */
 .nav-link-active {
     color: var(--color-white) !important;
+}
+
+/* Fix: offset scroll target to prevent fixed navbar from covering #home */
+#home {
+    scroll-margin-top: var(--navbar-height);
+}
+
+@media (max-width: 768px) {
+    #home {
+        scroll-margin-top: 44px; /* matches reduced mobile navbar height */
+    }
+}
+
+/* Home Header Background Overlay */
+.home-header-bg {
+    background-color: var(--color-primary-800);
+    background-image: linear-gradient(rgba(21, 43, 34, 0.58), rgba(21, 43, 34, 0.58)), url('../images/pic11.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: calc(var(--space-16) + var(--space-8)) 0 calc(var(--space-16) + var(--space-1));
+    border-bottom: 2px solid var(--color-accent-400);
+}
+
+/* Home Page Intro Card */
+.home-intro-card {
+    background-color: var(--color-neutral-50);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-sm);
+    padding: var(--space-6) var(--space-8);
+    margin-bottom: var(--space-8);
+    color: var(--color-neutral-800);
+    line-height: var(--leading-loose);
+    font-size: 1.05rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02); /* ultra minimal */
+}
+
+/* Home Page Refinements (scoped to index only) */
+.home-page .home-content-grid {
+    margin-top: var(--space-8);
+}
+
+.home-page .projects-section,
+.home-page .updates-section,
+.home-page .uma-section {
+    padding: var(--space-5);
+}
+
+.home-page .right-column {
+    gap: var(--space-6);
+}
+
+.home-page .right-column > div {
+    flex: 1;
+}
+
+.home-page .recent-section .project-link {
+    display: block;
+}
+
+.home-page .projects-section h2,
+.home-page .updates-section h2,
+.home-page .uma-section h2 {
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-3);
+}
+
+.home-page .section-heading-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.home-page .heading-link-icon {
+    display: inline-block;
+    font-size: 0.62em;
+    font-weight: var(--font-normal);
+    color: var(--color-neutral-500);
+    opacity: 0.42;
+    transform: translateY(-0.5px);
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.home-page .section-heading-link:hover .heading-link-text {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    text-decoration-thickness: 1px;
+}
+
+.home-page .section-heading-link:hover .heading-link-icon {
+    opacity: 0.85;
+    transform: translate(2px, -0.5px);
+}
+
+.home-page .projects-list li,
+.home-page .policy-list li,
+.home-page .uma-list li {
+    margin-bottom: var(--space-2);
+    line-height: var(--leading-normal);
+}
+
+.home-page .projects-sublist {
+    margin-top: var(--space-1);
+    margin-bottom: 0;
+}
+
+.home-page .projects-sublist li {
+    margin-bottom: var(--space-1);
+    line-height: var(--leading-normal);
+}
+
+/* Restore subtle home link behavior: underline only */
+.home-page .project-link {
+    display: inline;
+    padding: 0;
+    margin-left: 0;
+    border-radius: 0;
+    border-bottom: none;
+}
+
+.home-page .project-link:hover {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+    text-decoration-thickness: 1px;
+}
+
+/* Team Page */
+.team-section-main {
+    padding: var(--space-10) 0 var(--space-12);
+}
+
+.team-header-bg {
+    background-color: var(--color-primary-800);
+    background-image: linear-gradient(rgba(21, 43, 34, 0.62), rgba(21, 43, 34, 0.62)), url('../images/pic4.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid var(--color-accent-400);
+    padding: 4rem 0;
+}
+
+.team-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-5);
+}
+
+.team-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6) var(--space-5);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-accent-500);
+    transition: width var(--transition-slow);
+}
+
+.team-card:hover::before {
+    width: 100%;
+}
+
+.team-card-avatar {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--color-accent-100) 0%, var(--color-neutral-50) 100%);
+    border: 2px solid var(--color-neutral-200);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-400);
+    flex-shrink: 0;
+    transition: all var(--transition-base);
+}
+
+.team-card:hover .team-card-avatar {
+    border-color: var(--color-accent-400);
+    color: var(--color-accent-500);
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(90, 154, 124, 0.12);
+}
+
+.team-card-avatar svg {
+    width: 40px;
+    height: 40px;
+}
+
+.team-card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.team-name {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--color-primary-900);
+    margin: 0;
+    line-height: var(--leading-tight);
+}
+
+.team-role {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    background-color: var(--color-accent-100);
+    color: var(--color-primary-700);
+    border-radius: 20px;
+    font-size: var(--text-xs);
+    font-weight: var(--font-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    margin: 0;
+    border: 1px solid var(--color-accent-300);
+}
+
+.team-email {
+    font-size: var(--text-sm);
+    margin: var(--space-2) 0 0 0;
+}
+
+.team-email a {
+    color: var(--color-accent-600);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.team-email a:hover {
+    color: var(--color-accent-700);
+    text-decoration: underline;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-accent-300);
+}
+
+.team-cta {
+    margin-top: var(--space-10);
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Projects Main Section */
@@ -1340,7 +1799,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 768px) {
     .project-detail__content {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1.25fr;
     }
 }
 
@@ -1378,6 +1837,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content-list li::marker {
+    color: var(--pd-primary);
+}
+
+.content-list2 {
+    list-style: disc;
+    padding-left: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.content-list2 li {
+    margin-bottom: var(--space-2);
+    color: var(--pd-text-muted);
+    line-height: var(--leading-relaxed);
+}
+
+.content-list2 li::marker {
     color: var(--pd-primary);
 }
 
@@ -1523,5 +1998,170 @@ h1, h2, h3, h4, h5, h6 {
     
     .project-detail__sidebar-card {
         padding: var(--space-5);
+    }
+}
+
+/* ============================================
+   Project Detail Media & Figure Styles
+   ============================================ */
+
+/* Single figure with image */
+.project-media-figure {
+    margin: var(--space-6) 0;
+    text-align: center;
+}
+
+.project-media-figure img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Half-width figure variant (used on energy-water-crops, energy-estimation-tool) */
+.project-media-figure--half {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-media-figure--half img {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Figure caption */
+.project-figure-caption {
+    font-size: var(--text-sm);
+    color: var(--pd-text-muted, var(--color-neutral-500));
+    margin-top: var(--space-2);
+    line-height: var(--leading-normal);
+    font-style: italic;
+}
+
+/* Media grid (side-by-side images) */
+.project-media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+    align-items: start;
+}
+
+.project-media-grid__item {
+    text-align: center;
+}
+
+.project-media-grid__item img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.project-media-grid__item--vertical img {
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+}
+
+.project-media-grid__item--landscape img {
+    max-width: 100%;
+}
+
+/* Video embed */
+.project-video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin: var(--space-6) 0 var(--space-2);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.project-video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Responsive adjustments for project media */
+@media (max-width: 768px) {
+    .project-media-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-media-grid__item--vertical img {
+        max-width: 220px;
+    }
+}
+
+/* ============================================
+   Projects Listing Page – PoCRA Group Layout
+   (Scoped to projects listing page only)
+   ============================================ */
+
+/* PoCRA group spans full grid width */
+.projects-pocra-group {
+    grid-column: 1 / -1;
+    background: var(--color-white);
+    border: 1px solid var(--color-neutral-200);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+}
+
+/* PoCRA parent card – no border/shadow since group provides it */
+.projects-pocra-group > .clickable-card-wrapper > .project-card-item {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.projects-pocra-group > .clickable-card-wrapper > .project-card-item .project-card-heading {
+    font-size: var(--text-2xl) !important;
+    color: var(--color-primary-600);
+}
+
+/* Sub-projects grid */
+.projects-pocra-subgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-neutral-200);
+}
+
+.projects-pocra-subgrid .project-card-item {
+    border: 1px solid var(--color-neutral-200);
+    background: var(--color-neutral-50);
+}
+
+.projects-pocra-subgrid .project-card-heading {
+    font-size: var(--text-base) !important;
+}
+
+.projects-pocra-subgrid .project-card-text {
+    font-size: var(--text-xs);
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+@media (max-width: 768px) {
+    .projects-pocra-subgrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-pocra-group {
+        padding: var(--space-4);
     }
 }
