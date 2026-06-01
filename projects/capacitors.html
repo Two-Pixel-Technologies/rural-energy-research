@@ -1,271 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Capacitor usage with irrigation pumps | Rural Energy Research Group">
-    <title>Capacitor Usage with Irrigation Pumps | Rural Energy Research Group</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <style>
-        /* Full width content section that appears after sidebar ends */
-        .project-detail__full-width {
-            margin-top: var(--space-10);
-            width: 100%;
-        }
-        
-        .project-detail__full-width p {
-            margin-bottom: var(--space-4);
-            line-height: var(--leading-loose);
-            color: var(--pd-text-body);
-        }
-        
-        /* Mobile layout: reorder to show sidebar at the very end */
-        @media (max-width: 768px) {
-            /* Make container flex to control order of all children */
-            .project-detail-container {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Capacitor usage with irrigation pumps | Rural Energy Research Group">
+        <title>Capacitor Usage with Irrigation Pumps | Rural Energy Research Group</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <style>
+                /* Full width content section that appears after sidebar ends */
+                .project-detail__full-width {
+                margin-top: var(--space-10);
+                width: 100%;
+                }
+
+                .project-detail__full-width p {
+                margin-bottom: var(--space-4);
+                line-height: var(--leading-loose);
+                color: var(--pd-text-body);
+                }
+
+                /* Mobile layout: reorder to show sidebar at the very end */
+                @media (max-width: 768px) {
+                /* Make container flex to control order of all children */
+                .project-detail-container {
                 display: flex;
                 flex-direction: column;
-            }
-            
-            /* Use display: contents to flatten the grid structure on mobile */
-            .project-detail__content {
+                }
+
+                /* Use display: contents to flatten the grid structure on mobile */
+                .project-detail__content {
                 display: contents;
-            }
-            
-            /* Assign orders: body content, full-width section, then sidebar */
-            .project-detail__body {
+                }
+
+                /* Assign orders: body content, full-width section, then sidebar */
+                .project-detail__body {
                 order: 5;
-            }
-            
-            .project-detail__full-width {
+                }
+
+                .project-detail__full-width {
                 order: 6;
                 margin-top: var(--space-8);
-            }
-            
-            .project-detail__content aside {
+                }
+
+                .project-detail__content aside {
                 order: 7;
                 margin-top: var(--space-8);
-            }
-            
-            /* Keep header elements at the top */
-            .project-detail__tag {
+                }
+
+                /* Keep header elements at the top */
+                .project-detail__tag {
                 order: 1;
-            }
-            
-            .project-detail__title {
+                }
+
+                .project-detail__title {
                 order: 2;
-            }
-            
-            .project-detail__meta {
+                }
+
+                .project-detail__meta {
                 order: 3;
-            }
-            
-            /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+                }
+
+                /* Back link stays at the very bottom */
+                .project-detail-container > div:last-child {
                 order: 8;
-            }
-        }
+                }
+                }
 
-        .page-capacitors .project-media-grid {
-            align-items: flex-end;
-        }
+                .page-capacitors .project-media-grid {
+                align-items: flex-end;
+                }
 
-        .page-capacitors .project-media-grid__item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+                .page-capacitors .project-media-grid__item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                }
 
-        .page-capacitors .project-media-grid__item img {
-            width: auto;
-            max-width: 100%;
-            height: 260px;
-            object-fit: contain;
-            margin: 0 auto;
-            display: block;
-        }
+                .page-capacitors .project-media-grid__item img {
+                width: auto;
+                max-width: 100%;
+                height: 260px;
+                object-fit: contain;
+                margin: 0 auto;
+                display: block;
+                }
 
-        .page-capacitors .project-media-grid__item--vertical img {
-            max-width: 190px;
-        }
+                .page-capacitors .project-media-grid__item--vertical img {
+                max-width: 190px;
+                }
 
-        @media (max-width: 768px) {
-            .page-capacitors .project-media-grid__item img {
+                @media (max-width: 768px) {
+                .page-capacitors .project-media-grid__item img {
                 height: auto;
                 max-height: 300px;
-            }
+                }
 
-            .page-capacitors .project-media-grid__item--vertical img {
+                .page-capacitors .project-media-grid__item--vertical img {
                 max-width: 220px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container nav-centered">
-            <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
-                <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
-            </a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
-                <li><a href="../publications.html" class="nav-link">Publications</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
-                <li class="nav-item-dropdown" id="linksDropdown">
-                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
-                    <div class="dropdown-menu" id="linksMenu">
-                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
-                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
-                    </div>
-                </li>
-                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+                }
+                }
+        </style>
+        </head>
+            <body>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <div class="nav-container nav-centered">
+                        <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
+                            <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+                        </a>
+                            <button class="nav-toggle" id="navToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                                <ul class="nav-menu" id="navMenu">
+                                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                                    <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                                    <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                                    <li><a href="../team.html" class="nav-link">Team</a></li>
+                                    <li class="nav-item-dropdown" id="linksDropdown">
+                                        <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                                        <div class="dropdown-menu" id="linksMenu">
+                                            <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA’s Departmental page</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">Unnat Maharashtra Abhiyan</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link" target="_blank">Priya Jadhav’s profile on CTARA</a>
+                                            <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                                        </div>
+                                        </li>
+                                            <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                                        </ul>
+                                        </div>
+                                        </nav>
 
-    <main>
-        <article class="project-detail page-capacitors">
-            <div class="project-detail-container">
-                <!-- Project Header -->
+                                            <main>
+                                                <article class="project-detail page-capacitors">
+                                                    <div class="project-detail-container">
+                                                        <!-- Project Header -->
 
-                <h1 class="project-detail__title">Capacitor usage with irrigation pumps</h1>
-                
-                <!-- Meta Information -->
-                <div class="project-detail__meta">
-                    <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2014 – 2024
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Mehul Raghwan (MTech 2015), Vivek Shinde
-                    </div>
-                </div>
+                                                        <h1 class="project-detail__title">Capacitor usage with irrigation pumps</h1>
 
-                <!-- Content Grid -->
-                <div class="project-detail__content">
-                    <div class="project-detail__body">
-                        <p>Poor quality of electricity for irrigation is a major issue for farmers leading to repair expenses, poor water management, extreme inconvenience, and reduced yields. This can be reduced substantially if farmers use capacitors on irrigation pumps leading to benefits for farmers as well as the power distribution company. Capacitor usage with induction motors is a standard technical solution for power distribution efficiency, commonly used in industry, yet their usage is non-existent in agriculture.</p>
-                        
-                        <p>This group has conducted several projects over the years, including structured demonstration projects conducted over a year (under PoCRA), to investigate the gaps leading to this untapped resource and to develop avenues for promotion of the technology. We find a lack of promotion by government agencies is leading to lack of awareness among farmers, and further the awareness has to be followed up with drives and access to capacitors in the market.</p>
-                        
-                        <p>We are happy to provide guidance and inputs to NGOs, capacitor vendors, FPOs, or other groups who are willing to take this forward. Access to academic work, project reports and awareness building material such as videos are available here.</p>
+                                                        <!-- Meta Information -->
+                                                        <div class="project-detail__meta">
+                                                            <div class="project-detail__meta-item">
+                                                                <strong>Year:</strong> 2014 – 2024
+                                                            </div>
+                                                                <div class="project-detail__meta-item">
+                                                                    <strong>Team:</strong> Mehul Raghwan (MTech 2015), Vivek Shinde
+                                                                </div>
+                                                                </div>
 
-                        <div class="project-media-grid">
-                            <div class="project-media-grid__item project-media-grid__item--vertical">
-                                <img src="../images/cap.1.png" alt="Capacitor installed on Irrigation Pump">
-                                <p class="project-figure-caption">Capacitor installed on Irrigation Pump</p>
-                            </div>
-                            <div class="project-media-grid__item project-media-grid__item--landscape">
-                                <img src="../images/cap.3.png" alt="A game illustrating capacitor benefits">
-                                <p class="project-figure-caption">A game illustrating capacitor benefits</p>
-                            </div>
-                        </div>
+                                                                    <!-- Content Grid -->
+                                                                    <div class="project-detail__content">
+                                                                        <div class="project-detail__body">
+                                                                            <p>Poor quality of electricity for irrigation is a major issue for farmers leading to repair expenses, poor water management, extreme inconvenience, and reduced yields. This can be reduced substantially if farmers use capacitors on irrigation pumps leading to benefits for farmers as well as the power distribution company. Capacitor usage with induction motors is a standard technical solution for power distribution efficiency, commonly used in industry, yet their usage is non-existent in agriculture.</p>
 
-                        <div class="project-video-embed">
-                            <iframe src="https://www.youtube.com/embed/wuMUdQssLC8?start=1" title="Video on the benefits of capacitors and load management for farmers in Maharashtra" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <p class="project-figure-caption">Video on the benefits of capacitors and load management for farmers in Maharashtra. Made and disseminated under PoCRA.</p>
-                    </div>
+                                                                            <p>This group has conducted several projects over the years, including structured demonstration projects conducted over a year (under PoCRA), to investigate the gaps leading to this untapped resource and to develop avenues for promotion of the technology. We find a lack of promotion by government agencies is leading to lack of awareness among farmers, and further the awareness has to be followed up with drives and access to capacitors in the market.</p>
 
-                    <!-- Sidebar -->
-                    <aside>
-                        
+                                                                            <p>We are happy to provide guidance and inputs to NGOs, capacitor vendors, FPOs, or other groups who are willing to take this forward. Access to academic work, project reports and awareness building material such as videos are available here.</p>
 
-                        <div class="project-detail__sidebar-card project-detail__sidebar-card--related-publications">
-                            <h3 class="project-detail__sidebar-title">Related publications</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Demonstration Project (2024)</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Structured demonstration project under PoCRA</span>
-                                    <a href="https://drive.google.com/drive/folders/1vc1EFgJnTMKwdnQr2gFpKAPhrcFymAh4?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Project →</a>
-                                </li>
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Conference Paper (2015)</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Power factor issues on agricultural feeders: Investigated through the case of a village in Sangli, Maharashtra</span>
-                                    <a href="https://drive.google.com/open?id=1ethVtPLrpGD1xvo-U0ofl5Wjdpbo6W_6" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Paper →</a>
-                                </li>
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Video Resource</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Educational video on capacitor usage</span>
-                                    <a href="https://www.youtube.com/watch?v=wuMUdQssLC8&t=1s" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Watch Video →</a>
-                                </li>
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">News Article (2019)</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Beneficial effect of capacitor usage with agricultural pumps, Lokmat</span>
-                                    <a href="https://www.lokmat.com/editorial/capacitors-have-beneficial-effect-agriculture/" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Read Article →</a>
-                                </li>
-                            </ul>
-                        </div>
+                                                                            <div class="project-media-grid">
+                                                                                <div class="project-media-grid__item project-media-grid__item--vertical">
+                                                                                    <img src="../images/cap.1.png" alt="Capacitor installed on Irrigation Pump">
+                                                                                    <p class="project-figure-caption">Capacitor installed on Irrigation Pump</p>
+                                                                                </div>
+                                                                                    <div class="project-media-grid__item project-media-grid__item--landscape">
+                                                                                        <img src="../images/cap.3.png" alt="A game illustrating capacitor benefits">
+                                                                                        <p class="project-figure-caption">A game illustrating capacitor benefits</p>
+                                                                                    </div>
+                                                                                    </div>
 
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
-                                <li><a href="lt-distribution-networks.html">Restructuring of LT Agricultural Distribution Networks</a></li>
-                            </ul>
-                        </div>
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Team Members</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><strong>Project Team:</strong> Mehul Raghwan (MTech 2015), Vivek Shinde</li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+                                                                                        <div class="project-image-embed">
+                                                                                        <img src="../images/cap.project.png"
+                                                                                        alt="Benefits of capacitors and load management for farmers in Maharashtra"
+                                                                                        style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
+                                                                                        </div>
+                                                                                            <p class="project-figure-caption">Video on the benefits of capacitors and load management for farmers in Maharashtra. Made and disseminated under PoCRA.</p>
+                                                                                        </div>
 
-                <!-- Back Link -->
-                <div style="margin-top: 3rem;">
-                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
-                </div>
-            </div>
-        </article>
-    </main>
+                                                                                            <!-- Sidebar -->
+                                                                                            <aside>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Rural Energy Research Group</h3>
-                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
-                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
-                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../team.html">Team</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
-        </div>
-    </footer>
+                                                                                                <div class="project-detail__sidebar-card project-detail__sidebar-card--related-publications">
+                                                                                                    <h3 class="project-detail__sidebar-title">Related publications</h3>
+                                                                                                    <ul class="project-detail__sidebar-list">
+                                                                                                        <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                            <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Demonstration Project (2024)</strong>
+                                                                                                            <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Structured demonstration project under PoCRA</span>
+                                                                                                            <a href="https://drive.google.com/drive/folders/1vc1EFgJnTMKwdnQr2gFpKAPhrcFymAh4?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Project →</a>
+                                                                                                        </li>
+                                                                                                            <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                                <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Conference Paper (2015)</strong>
+                                                                                                                <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Power factor issues on agricultural feeders: Investigated through the case of a village in Sangli, Maharashtra</span>
+                                                                                                                <a href="https://drive.google.com/open?id=1ethVtPLrpGD1xvo-U0ofl5Wjdpbo6W_6" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Paper →</a>
+                                                                                                            </li>
+                                                                                                                <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Video Resource</strong>
+                                                                                                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Educational video on capacitor usage</span>
+                                                                                                                    <a href="https://www.youtube.com/watch?v=wuMUdQssLC8&t=1s" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Watch Video →</a>
+                                                                                                                </li>
+                                                                                                                    <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                                        <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">News Article (2019)</strong>
+                                                                                                                        <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Beneficial effect of capacitor usage with agricultural pumps, Lokmat</span>
+                                                                                                                        <a href="https://www.lokmat.com/editorial/capacitors-have-beneficial-effect-agriculture/" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Read Article →</a>
+                                                                                                                    </li>
+                                                                                                                    </ul>
+                                                                                                                    </div>
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-</body>
-</html>
+                                                                                                                        <div class="project-detail__sidebar-card">
+                                                                                                                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
+                                                                                                                            <ul class="project-detail__sidebar-list">
+                                                                                                                                <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
+                                                                                                                                <li><a href="lt-distribution-networks.html">Restructuring of LT Agricultural Distribution Networks</a></li>
+                                                                                                                            </ul>
+                                                                                                                            </div>
+                                                                                                                                <div class="project-detail__sidebar-card">
+                                                                                                                                    <h3 class="project-detail__sidebar-title">Team Members</h3>
+                                                                                                                                    <ul class="project-detail__sidebar-list">
+                                                                                                                                        <li><strong>Project Team:</strong> Mehul Raghwan (MTech 2015), Vivek Shinde</li>
+                                                                                                                                    </ul>
+                                                                                                                                    </div>
+                                                                                                                                    </aside>
+                                                                                                                                    </div>
+
+                                                                                                                                        <!-- Back Link -->
+                                                                                                                                        <div style="margin-top: 3rem;">
+                                                                                                                                            <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
+                                                                                                                                        </div>
+                                                                                                                                        </div>
+                                                                                                                                        </article>
+                                                                                                                                        </main>
+
+                                                                                                                                            <!-- Footer -->
+                                                                                                                                            <footer class="footer">
+                                                                                                                                                <div class="footer-content">
+                                                                                                                                                    <div class="footer-section">
+                                                                                                                                                        <h3>Rural Energy Research Group</h3>
+                                                                                                                                                        <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+                                                                                                                                                    </div>
+                                                                                                                                                        <div class="footer-section">
+                                                                                                                                                            <h3>Contact Us</h3>
+                                                                                                                                                            <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                                                                                                                                                            <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                                                                                                                                                            <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+                                                                                                                                                        </div>
+                                                                                                                                                            <div class="footer-section">
+                                                                                                                                                                <h3>Quick Links</h3>
+                                                                                                                                                                <ul>
+                                                                                                                                                                    <li><a href="../index.html">Home</a></li>
+                                                                                                                                                                    <li><a href="../projects.html">Projects</a></li>
+                                                                                                                                                                    <li><a href="../publications.html">Publications</a></li>
+                                                                                                                                                                    <li><a href="../team.html">Team</a></li>
+                                                                                                                                                                </ul>
+                                                                                                                                                                </div>
+                                                                                                                                                                </div>
+                                                                                                                                                                    <div class="footer-bottom">
+                                                                                                                                                                        <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    </footer>
+
+                                                                                                                                                                        <!-- JavaScript -->
+                                                                                                                                                                        <script src="../js/main.js"></script>
+                                                                                                                                                                    </body>
+                                                                                                                                                                    </html>

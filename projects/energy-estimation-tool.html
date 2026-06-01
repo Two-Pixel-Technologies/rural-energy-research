@@ -1,207 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Energy Estimation Tool - A tool to determine infrastructure capacity | Rural Energy Research Group">
-    <title>Energy Estimation Tool | Rural Energy Research Group</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <style>
-        /* Full width content section that appears after sidebar ends */
-        .project-detail__full-width {
-            margin-top: var(--space-10);
-            width: 100%;
-        }
-        
-        .project-detail__full-width p {
-            margin-bottom: var(--space-4);
-            line-height: var(--leading-loose);
-            color: var(--pd-text-body);
-        }
-        
-        /* Mobile layout: reorder to show sidebar at the very end */
-        @media (max-width: 768px) {
-            /* Make container flex to control order of all children */
-            .project-detail-container {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Energy Estimation Tool - A tool to determine infrastructure capacity | Rural Energy Research Group">
+        <title>Energy Estimation Tool | Rural Energy Research Group</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <style>
+                /* Full width content section that appears after sidebar ends */
+                .project-detail__full-width {
+                margin-top: var(--space-10);
+                width: 100%;
+                }
+
+                .project-detail__full-width p {
+                margin-bottom: var(--space-4);
+                line-height: var(--leading-loose);
+                color: var(--pd-text-body);
+                }
+
+                /* Mobile layout: reorder to show sidebar at the very end */
+                @media (max-width: 768px) {
+                /* Make container flex to control order of all children */
+                .project-detail-container {
                 display: flex;
                 flex-direction: column;
-            }
-            
-            /* Use display: contents to flatten the grid structure on mobile */
-            .project-detail__content {
+                }
+
+                /* Use display: contents to flatten the grid structure on mobile */
+                .project-detail__content {
                 display: contents;
-            }
-            
-            /* Assign orders: body content, full-width section, then sidebar */
-            .project-detail__body {
+                }
+
+                /* Assign orders: body content, full-width section, then sidebar */
+                .project-detail__body {
                 order: 5;
-            }
-            
-            .project-detail__full-width {
+                }
+
+                .project-detail__full-width {
                 order: 6;
                 margin-top: var(--space-8);
-            }
-            
-            .project-detail__content aside {
+                }
+
+                .project-detail__content aside {
                 order: 7;
                 margin-top: var(--space-8);
-            }
-            
-            /* Keep header elements at the top */
-            .project-detail__tag {
+                }
+
+                /* Keep header elements at the top */
+                .project-detail__tag {
                 order: 1;
-            }
-            
-            .project-detail__title {
+                }
+
+                .project-detail__title {
                 order: 2;
-            }
-            
-            .project-detail__meta {
+                }
+
+                .project-detail__meta {
                 order: 3;
-            }
-            
-            /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+                }
+
+                /* Back link stays at the very bottom */
+                .project-detail-container > div:last-child {
                 order: 8;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container nav-centered">
-            <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
-                <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
-            </a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
-                <li><a href="../publications.html" class="nav-link">Publications</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
-                <li class="nav-item-dropdown" id="linksDropdown">
-                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
-                    <div class="dropdown-menu" id="linksMenu">
-                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
-                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
-                    </div>
-                </li>
-                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+                }
+                }
+        </style>
+        </head>
+            <body>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <div class="nav-container nav-centered">
+                        <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
+                            <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+                        </a>
+                            <button class="nav-toggle" id="navToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                                <ul class="nav-menu" id="navMenu">
+                                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                                    <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                                    <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                                    <li><a href="../team.html" class="nav-link">Team</a></li>
+                                    <li class="nav-item-dropdown" id="linksDropdown">
+                                        <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                                        <div class="dropdown-menu" id="linksMenu">
+                                            <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA’s Departmental page</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">Unnat Maharashtra Abhiyan</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link" target="_blank">Priya Jadhav’s profile on CTARA</a>
+                                            <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                                        </div>
+                                        </li>
+                                            <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                                        </ul>
+                                        </div>
+                                        </nav>
 
-    <main>
-        <article class="project-detail">
-            <div class="project-detail-container">
-                <!-- Project Header -->
+                                            <main>
+                                                <article class="project-detail">
+                                                    <div class="project-detail-container">
+                                                        <!-- Project Header -->
 
-                <h1 class="project-detail__title">Energy Estimation Tool for Distribution Transformer capacity estimation</h1>
-                
-                <!-- Meta Information -->
-                <div class="project-detail__meta">
-                    <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2023 – 2024
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Vivek Shinde, Devanand Doifode, Aryan Dangi, Asim
-                    </div>
-                </div>
+                                                        <h1 class="project-detail__title">Energy Estimation Tool for Distribution Transformer capacity estimation</h1>
 
-                <!-- Content Grid -->
-                <div class="project-detail__content">
-                    <div class="project-detail__body">
-                        <p>The government spends a lot (~1000 crores) annually to extend the agricultural distribution system. However the insufficient electricity infrastructure capacity results in poor quality of supply to farmers and high maintenance costs to the power distribution company. The Energy Estimation Tool (EET) is an innovative solution to determine infrastructure requirements based on crop data.</p>
+                                                        <!-- Meta Information -->
+                                                        <div class="project-detail__meta">
+                                                            <div class="project-detail__meta-item">
+                                                                <strong>Year:</strong> 2023 – 2024
+                                                            </div>
+                                                                <div class="project-detail__meta-item">
+                                                                    <strong>Team:</strong> Vivek Shinde, Devanand Doifode, Aryan Dangi, Asim
+                                                                </div>
+                                                                </div>
 
-                        <div class="project-media-figure project-media-figure--half">
-                            <img src="../images/energy-estimation-tool-hangam-baithaks.jpg" alt="Rabi Hangam Baithaks to present EET result, Rui, Beed">
-                            <p class="project-figure-caption">Rabi Hangam Baithaks to present EET result, Rui, Beed</p>
-                        </div>
-                        
-                        <p>The tool is based on a methodology quantifying crop, irrigation water, and energy, which was developed through extensive measurements and field-level observations (see 'Methodology on Energy and water estimation by crops'). The EET tool was successfully implemented in 10 villages in the Beed and Wardha districts through government processes. Village-level cropping and other data were collected by village agriculture officers (Krishi Sahayaks). The tool output was discussed in winter meetings (Rabi hangam baithak) attended by farmers, a distribution company representative, and the Krishi Sahayak. Thus promoting Information, Comprehension and Collective action. The outcomes of the EET tool matched with the Distribution Transformer (DT) failure rate in the villages.</p>
+                                                                    <!-- Content Grid -->
+                                                                    <div class="project-detail__content">
+                                                                        <div class="project-detail__body">
+                                                                            <p>The government spends a lot (~1000 crores) annually to extend the agricultural distribution system. However the insufficient electricity infrastructure capacity results in poor quality of supply to farmers and high maintenance costs to the power distribution company. The Energy Estimation Tool (EET) is an innovative solution to determine infrastructure requirements based on crop data.</p>
 
-                        <div class="project-media-figure project-media-figure--half">
-                            <img src="../images/energy-estimation-tool-outcome.png" alt="The outcome of EET for Rohana Village, Arvi, Wardha">
-                            <p class="project-figure-caption">The outcome of EET for Rohana Village, Arvi, Wardha</p>
-                        </div>
-                        
-                        <p>EET can be used for infrastructure planning at the village level and upstream, higher-level reporting and intersectoral policy-making (Water-Energy-Food Nexus).</p>
-                    </div>
+                                                                            <div class="project-media-figure project-media-figure--half">
+                                                                                <img src="../images/energy-estimation-tool-hangam-baithaks.jpg" alt="Rabi Hangam Baithaks to present EET result, Rui, Beed">
+                                                                                <p class="project-figure-caption">Rabi Hangam Baithaks to present EET result, Rui, Beed</p>
+                                                                            </div>
 
-                    <!-- Sidebar -->
-                    <aside>
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Team Members</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><strong>Project Team:</strong> Vivek Shinde, Devanand Doifode, Aryan Dangi, Asim</li>
-                            </ul>
-                        </div>
+                                                                                <p>The tool is based on a methodology quantifying crop, irrigation water, and energy, which was developed through extensive measurements and field-level observations (see 'Methodology on Energy and water estimation by crops'). The EET tool was successfully implemented in 10 villages in the Beed and Wardha districts through government processes. Village-level cropping and other data were collected by village agriculture officers (Krishi Sahayaks). The tool output was discussed in winter meetings (Rabi hangam baithak) attended by farmers, a distribution company representative, and the Krishi Sahayak. Thus promoting Information, Comprehension and Collective action. The outcomes of the EET tool matched with the Distribution Transformer (DT) failure rate in the villages.</p>
 
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
-                                <li><a href="demand-modelling.html">Demand Modelling of Irrigation Energy Demand</a></li>
-                                <li><a href="energy-water-crops.html">Modeling of Energy, Water and Crops linkages</a></li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+                                                                                <div class="project-media-figure project-media-figure--half">
+                                                                                    <img src="../images/energy-estimation-tool-outcome.png" alt="The outcome of EET for Rohana Village, Arvi, Wardha">
+                                                                                    <p class="project-figure-caption">The outcome of EET for Rohana Village, Arvi, Wardha</p>
+                                                                                </div>
 
+                                                                                    <p>EET can be used for infrastructure planning at the village level and upstream, higher-level reporting and intersectoral policy-making (Water-Energy-Food Nexus).</p>
+                                                                                </div>
 
+                                                                                    <!-- Sidebar -->
+                                                                                    <aside>
+                                                                                        <div class="project-detail__sidebar-card">
+                                                                                            <h3 class="project-detail__sidebar-title">Team Members</h3>
+                                                                                            <ul class="project-detail__sidebar-list">
+                                                                                                <li><strong>Project Team:</strong> Vivek Shinde, Devanand Doifode, Aryan Dangi, Asim</li>
+                                                                                            </ul>
+                                                                                            </div>
 
-                <!-- Back Link -->
-                <div style="margin-top: 3rem;">
-                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
-                </div>
-            </div>
-        </article>
-    </main>
+                                                                                                <div class="project-detail__sidebar-card">
+                                                                                                    <h3 class="project-detail__sidebar-title">Other related projects</h3>
+                                                                                                    <ul class="project-detail__sidebar-list">
+                                                                                                        <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
+                                                                                                        <li><a href="demand-modelling.html">Demand Modelling of Irrigation Energy Demand</a></li>
+                                                                                                        <li><a href="energy-water-crops.html">Modeling of Energy, Water and Crops linkages</a></li>
+                                                                                                    </ul>
+                                                                                                    </div>
+                                                                                                    </aside>
+                                                                                                    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Rural Energy Research Group</h3>
-                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
-                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
-                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../team.html">Team</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
-        </div>
-    </footer>
+                                                                                                        <!-- Back Link -->
+                                                                                                        <div style="margin-top: 3rem;">
+                                                                                                            <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
+                                                                                                        </div>
+                                                                                                        </div>
+                                                                                                        </article>
+                                                                                                        </main>
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-</body>
-</html>
+                                                                                                            <!-- Footer -->
+                                                                                                            <footer class="footer">
+                                                                                                                <div class="footer-content">
+                                                                                                                    <div class="footer-section">
+                                                                                                                        <h3>Rural Energy Research Group</h3>
+                                                                                                                        <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+                                                                                                                    </div>
+                                                                                                                        <div class="footer-section">
+                                                                                                                            <h3>Contact Us</h3>
+                                                                                                                            <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                                                                                                                            <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                                                                                                                            <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+                                                                                                                        </div>
+                                                                                                                            <div class="footer-section">
+                                                                                                                                <h3>Quick Links</h3>
+                                                                                                                                <ul>
+                                                                                                                                    <li><a href="../index.html">Home</a></li>
+                                                                                                                                    <li><a href="../projects.html">Projects</a></li>
+                                                                                                                                    <li><a href="../publications.html">Publications</a></li>
+                                                                                                                                    <li><a href="../team.html">Team</a></li>
+                                                                                                                                </ul>
+                                                                                                                                </div>
+                                                                                                                                </div>
+                                                                                                                                    <div class="footer-bottom">
+                                                                                                                                        <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+                                                                                                                                    </div>
+                                                                                                                                    </footer>
+
+                                                                                                                                        <!-- JavaScript -->
+                                                                                                                                        <script src="../js/main.js"></script>
+                                                                                                                                    </body>
+                                                                                                                                    </html>

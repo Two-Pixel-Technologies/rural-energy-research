@@ -1,311 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Study to examine agricultural consumption in Maharashtra | Rural Energy Research Group">
-    <title>Study on Agricultural Energy Consumption Estimation | Rural Energy Research Group</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <style>
-        /* Full width content section that appears after sidebar ends */
-        .project-detail__full-width {
-            margin-top: var(--space-10);
-            width: 100%;
-        }
-        
-        .project-detail__full-width p {
-            margin-bottom: var(--space-4);
-            line-height: var(--leading-loose);
-            color: var(--pd-text-body);
-        }
-        
-        /* Image gallery styles */
-        
-        
-        .image-gallery {
-    display: flex;
-    gap: 0.8rem;
-    margin: 2rem 0;
-    align-items: flex-start;
-}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Study to examine agricultural consumption in Maharashtra | Rural Energy Research Group">
+        <title>Study on Agricultural Energy Consumption Estimation | Rural Energy Research Group</title>
 
-.image-gallery__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: none;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-}
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-/* Landscape image gets more width */
-.image-gallery__item:first-child {
-    flex: 1.35;
-}
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="../css/styles.css">
 
-/* Portrait image narrower */
-.image-gallery__item:last-child {
-    flex: 0.72;
-}
+        <style>
+                /* Full width content section that appears after sidebar ends */
+                .project-detail__full-width {
+                margin-top: var(--space-10);
+                width: 100%;
+                }
 
-.image-gallery__item img {
-    display: block;
-    height: 260px;       /* SAME fixed height */
-    width: auto;         /* width adjusts automatically */
-    max-width: 100%;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: none;
-    background: none;
-    margin: 0 auto;
-}
+                .project-detail__full-width p {
+                margin-bottom: var(--space-4);
+                line-height: var(--leading-loose);
+                color: var(--pd-text-body);
+                }
 
-.image-gallery__caption {
-    margin-top: 0.45rem;
-    font-size: 0.92rem;
-    color: var(--color-neutral-500);
-    line-height: 1.4;
-    font-style: italic;
-    text-align: center;
-}
-        
-        /* Tablet: slightly adjust spacing */
-        @media (max-width: 1024px) {
-            .image-gallery {
-                gap: 1rem;
-            }
-        }
-        
-        /* Mobile: stack images vertically */
-        @media (max-width: 768px) {
-            .image-gallery {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            
-            .image-gallery__item:first-child,
-            .image-gallery__item:last-child {
-                flex-basis: auto;
-                max-width: 100%;
-            }
-        }
-        
-        /* Mobile layout: reorder to show sidebar at the very end */
-        @media (max-width: 768px) {
-            /* Make container flex to control order of all children */
-            .project-detail-container {
+                /* Image gallery styles */
+
+
+                .image-gallery {
+                display: flex;
+                gap: 0.8rem;
+                margin: 2rem 0;
+                align-items: flex-start;
+                }
+
+                .image-gallery__item {
                 display: flex;
                 flex-direction: column;
-            }
-            
-            /* Use display: contents to flatten the grid structure on mobile */
-            .project-detail__content {
+                align-items: center;
+                background: none;
+                padding: 0;
+                border: none;
+                box-shadow: none;
+                }
+
+                /* Landscape image gets more width */
+                .image-gallery__item:first-child {
+                flex: 1.35;
+                }
+
+                /* Portrait image narrower */
+                .image-gallery__item:last-child {
+                flex: 0.72;
+                }
+
+                .image-gallery__item img {
+                display: block;
+                height: 260px;       /* SAME fixed height */
+                width: auto;         /* width adjusts automatically */
+                max-width: 100%;
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: none;
+                background: none;
+                margin: 0 auto;
+                }
+
+                .image-gallery__caption {
+                margin-top: 0.45rem;
+                font-size: 0.92rem;
+                color: var(--color-neutral-500);
+                line-height: 1.4;
+                font-style: italic;
+                text-align: center;
+                }
+
+                /* Tablet: slightly adjust spacing */
+                @media (max-width: 1024px) {
+                .image-gallery {
+                gap: 1rem;
+                }
+                }
+
+                /* Mobile: stack images vertically */
+                @media (max-width: 768px) {
+                .image-gallery {
+                flex-direction: column;
+                gap: 2rem;
+                }
+
+                .image-gallery__item:first-child,
+                .image-gallery__item:last-child {
+                flex-basis: auto;
+                max-width: 100%;
+                }
+                }
+
+                /* Mobile layout: reorder to show sidebar at the very end */
+                @media (max-width: 768px) {
+                /* Make container flex to control order of all children */
+                .project-detail-container {
+                display: flex;
+                flex-direction: column;
+                }
+
+                /* Use display: contents to flatten the grid structure on mobile */
+                .project-detail__content {
                 display: contents;
-            }
-            
-            /* Assign orders: body content, full-width section, then sidebar */
-            .project-detail__body {
+                }
+
+                /* Assign orders: body content, full-width section, then sidebar */
+                .project-detail__body {
                 order: 5;
-            }
-            
-            .project-detail__full-width {
+                }
+
+                .project-detail__full-width {
                 order: 6;
                 margin-top: var(--space-8);
-            }
-            
-            .project-detail__content aside {
+                }
+
+                .project-detail__content aside {
                 order: 7;
                 margin-top: var(--space-8);
-            }
-            
-            /* Keep header elements at the top */
-            .project-detail__tag {
+                }
+
+                /* Keep header elements at the top */
+                .project-detail__tag {
                 order: 1;
-            }
-            
-            .project-detail__title {
+                }
+
+                .project-detail__title {
                 order: 2;
-            }
-            
-            .project-detail__meta {
+                }
+
+                .project-detail__meta {
                 order: 3;
-            }
-            
-            /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+                }
+
+                /* Back link stays at the very bottom */
+                .project-detail-container > div:last-child {
                 order: 8;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container nav-centered">
-            <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
-                <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
-            </a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
-                <li><a href="../publications.html" class="nav-link">Publications</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
-                <li class="nav-item-dropdown" id="linksDropdown">
-                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
-                    <div class="dropdown-menu" id="linksMenu">
-                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
-                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
-                    </div>
-                </li>
-                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+                }
+                }
+        </style>
+        </head>
+            <body>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <div class="nav-container nav-centered">
+                        <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
+                            <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+                        </a>
+                            <button class="nav-toggle" id="navToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                                <ul class="nav-menu" id="navMenu">
+                                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                                    <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                                    <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                                    <li><a href="../team.html" class="nav-link">Team</a></li>
+                                    <li class="nav-item-dropdown" id="linksDropdown">
+                                        <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                                        <div class="dropdown-menu" id="linksMenu">
+                                            <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA’s Departmental page</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">Unnat Maharashtra Abhiyan</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link" target="_blank">Priya Jadhav’s profile on CTARA</a>
+                                            <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                                        </div>
+                                        </li>
+                                            <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                                        </ul>
+                                        </div>
+                                        </nav>
 
-    <main>
-        <article class="project-detail">
-            <div class="project-detail-container">
-                <!-- Project Header -->
+                                            <main>
+                                                <article class="project-detail">
+                                                    <div class="project-detail-container">
+                                                        <!-- Project Header -->
 
-                <h1 class="project-detail__title">Study to examine agricultural consumption in Maharashtra</h1>
-                
-                <!-- Meta Information -->
-                <div class="project-detail__meta">
-                    <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2015 – 2016
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Multi-institutional collaboration across Maharashtra
-                    </div>
-                </div>
+                                                        <h1 class="project-detail__title">Study to examine agricultural consumption in Maharashtra</h1>
 
-                <!-- Content Grid -->
-                <div class="project-detail__content">
-                    <div class="project-detail__body">
-                        <p>Agricultural loads are a large part of MSEDCL consumers, comprising 25 to 30% of the total energy consumption. There are several issues with the current situation with regard to agricultural energy consumption measurement. Though 67% of the pumps are supposed to be metered, and the rest billed on a flat rate, metering is in fact in a poor state for all consumers. Over the years doubts have been expressed over agricultural energy consumption numbers. There have been repeated demands from the MERC for a rigorous study to determine specific consumption [Ref: Case 19 of 2012, Case 100 of 2011].</p>
-                        
-                        <p>Hence the distribution company, Maharashtra State Electricity Distribution Company Ltd. (MSEDCL), commissioned a study to develop a protocol for energy consumption estimation in the state.</p>
-                        
-                        <p>The study was conducted on a sample set of 100 feeders in the state. 15 engineering colleges across the state of Maharashtra were engaged in a collaborative exercise.</p>
-                        
-                        <p>The estimated energy consumption for 2015-15 resulted in changes in MSEDCL energy accounting, and the study was quoted and used in regulatory commission hearings: Case No. 48 of 2016 (November 2016), and Case No. 176 of 2016 (November 2017).</p>
+                                                        <!-- Meta Information -->
+                                                        <div class="project-detail__meta">
+                                                            <div class="project-detail__meta-item">
+                                                                <strong>Year:</strong> 2015 – 2016
+                                                            </div>
+                                                                <div class="project-detail__meta-item">
+                                                                    <strong>Team:</strong> Multi-institutional collaboration across Maharashtra
+                                                                </div>
+                                                                </div>
 
-                        <div class="image-gallery">
-                            <div class="image-gallery__item">
-                                <img src="../images/agricultural-energy-consumption-survey.jpg" alt="IIT Bombay team surveying farmers on the Old Dawachwadi feeder, Niphad block, Nashik">
-                                <p class="image-gallery__caption">IIT Bombay team surveying farmers on the Old Dawachwadi feeder, Niphad block, Nashik</p>
-                            </div>
-                            <div class="image-gallery__item">
-                                <img src="../images/agricultural-energy-consumption-pump-measurement.jpg" alt="Power measurements at a pump">
-                                <p class="image-gallery__caption">Power measurements at a pump</p>
-                            </div>
-                        </div>
-                    </div>
+                                                                    <!-- Content Grid -->
+                                                                    <div class="project-detail__content">
+                                                                        <div class="project-detail__body">
+                                                                            <p>Agricultural loads are a large part of MSEDCL consumers, comprising 25 to 30% of the total energy consumption. There are several issues with the current situation with regard to agricultural energy consumption measurement. Though 67% of the pumps are supposed to be metered, and the rest billed on a flat rate, metering is in fact in a poor state for all consumers. Over the years doubts have been expressed over agricultural energy consumption numbers. There have been repeated demands from the MERC for a rigorous study to determine specific consumption [Ref: Case 19 of 2012, Case 100 of 2011].</p>
 
-                    <!-- Sidebar -->
-                    <aside>
-                        <div class="project-detail__sidebar-card project-detail__sidebar-card--related-publications">
-                            <h3 class="project-detail__sidebar-title">Related publications</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">MERC Case (2016)</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Case No. 48 of 2016, November 2016</span>
-                                    <a href="https://drive.google.com/file/d/1MJiFYlm3vKW1ELe36NIwampHBdSfo_0M/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Document →</a>
-                                </li>
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">MERC Case (2017)</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Case No. 176 of 2016, November 2017</span>
-                                    <a href="https://drive.google.com/file/d/1mmlWda4sWx7lQ-la7rovfu3Au3La-GkD/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Document →</a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Participating Institutions</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li>Mauli College of Engineering and Technology, Shegaon</li>
-                                <li>Government engineering college of Aurangabad</li>
-                                <li>Someshwar Engineering College, Someshwar</li>
-                                <li>Karmayogi Engineering College Shelve, Pandharpur</li>
-                                <li>Rajarambapu Institue of Technology, Islampur, Sangli</li>
-                                <li>Government College of Engineering, Jalgaon</li>
-                                <li>BAIF Development Research Foundation, Pune</li>
-                                <li>MBES, College of Engineering, Ambajogai</li>
-                                <li>Nagesh Karajagi Orchid College of Engineering & Technology, Solapur</li>
-                                <li>SGGS Institute of Engineering and Technology, Nanded</li>
-                                <li>K. K. Wagh Institute of Engineering Education & Research, Nasik</li>
-                                <li>CoEP, Pune</li>
-                                <li>VNIT, Nagpur</li>
-                                <li>Government College, Arvi</li>
-                            </ul>
-                        </div>
+                                                                            <p>Hence the distribution company, Maharashtra State Electricity Distribution Company Ltd. (MSEDCL), commissioned a study to develop a protocol for energy consumption estimation in the state.</p>
 
-                        
+                                                                            <p>The study was conducted on a sample set of 100 feeders in the state. 15 engineering colleges across the state of Maharashtra were engaged in a collaborative exercise.</p>
 
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><a href="demand-modelling.html">Demand Modelling of Irrigation Energy Demand</a></li>
-                                <li><a href="energy-estimation-tool.html">Energy Estimation Tool</a></li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+                                                                            <p>The estimated energy consumption for 2015-15 resulted in changes in MSEDCL energy accounting, and the study was quoted and used in regulatory commission hearings: Case No. 48 of 2016 (November 2016), and Case No. 176 of 2016 (November 2017).</p>
 
+                                                                            <div class="image-gallery">
+                                                                                <div class="image-gallery__item">
+                                                                                    <img src="../images/agricultural-energy-consumption-survey.jpg" alt="IIT Bombay team surveying farmers on the Old Dawachwadi feeder, Niphad block, Nashik">
+                                                                                    <p class="image-gallery__caption">IIT Bombay team surveying farmers on the Old Dawachwadi feeder, Niphad block, Nashik</p>
+                                                                                </div>
+                                                                                    <div class="image-gallery__item">
+                                                                                        <img src="../images/agricultural-energy-consumption-pump-measurement.jpg" alt="Power measurements at a pump">
+                                                                                        <p class="image-gallery__caption">Power measurements at a pump</p>
+                                                                                    </div>
+                                                                                    </div>
+                                                                                    </div>
 
-                <!-- Back Link -->
-                <div style="margin-top: 3rem;">
-                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
-                </div>
-            </div>
-        </article>
-    </main>
+                                                                                        <!-- Sidebar -->
+                                                                                        <aside>
+                                                                                            <div class="project-detail__sidebar-card project-detail__sidebar-card--related-publications">
+                                                                                                <h3 class="project-detail__sidebar-title">Related publications</h3>
+                                                                                                <ul class="project-detail__sidebar-list">
+                                                                                                    <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                        <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">MERC Case (2016)</strong>
+                                                                                                        <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Case No. 48 of 2016, November 2016</span>
+                                                                                                        <a href="https://drive.google.com/file/d/1MJiFYlm3vKW1ELe36NIwampHBdSfo_0M/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Document →</a>
+                                                                                                    </li>
+                                                                                                        <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                            <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">MERC Case (2017)</strong>
+                                                                                                            <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Case No. 176 of 2016, November 2017</span>
+                                                                                                            <a href="https://drive.google.com/file/d/1mmlWda4sWx7lQ-la7rovfu3Au3La-GkD/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Document →</a>
+                                                                                                        </li>
+                                                                                                        </ul>
+                                                                                                        </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Rural Energy Research Group</h3>
-                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
-                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
-                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../team.html">Team</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
-        </div>
-    </footer>
+                                                                                                            <div class="project-detail__sidebar-card">
+                                                                                                                <h3 class="project-detail__sidebar-title">Participating Institutions</h3>
+                                                                                                                <ul class="project-detail__sidebar-list">
+                                                                                                                    <li>Mauli College of Engineering and Technology, Shegaon</li>
+                                                                                                                    <li>Government engineering college of Aurangabad</li>
+                                                                                                                    <li>Someshwar Engineering College, Someshwar</li>
+                                                                                                                    <li>Karmayogi Engineering College Shelve, Pandharpur</li>
+                                                                                                                    <li>Rajarambapu Institue of Technology, Islampur, Sangli</li>
+                                                                                                                    <li>Government College of Engineering, Jalgaon</li>
+                                                                                                                    <li>BAIF Development Research Foundation, Pune</li>
+                                                                                                                    <li>MBES, College of Engineering, Ambajogai</li>
+                                                                                                                    <li>Nagesh Karajagi Orchid College of Engineering & Technology, Solapur</li>
+                                                                                                                    <li>SGGS Institute of Engineering and Technology, Nanded</li>
+                                                                                                                    <li>K. K. Wagh Institute of Engineering Education & Research, Nasik</li>
+                                                                                                                    <li>CoEP, Pune</li>
+                                                                                                                    <li>VNIT, Nagpur</li>
+                                                                                                                    <li>Government College, Arvi</li>
+                                                                                                                </ul>
+                                                                                                                </div>
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-</body>
-</html>
+                                                                                                                    <div class="project-detail__sidebar-card">
+                                                                                                                        <h3 class="project-detail__sidebar-title">Other related projects</h3>
+                                                                                                                        <ul class="project-detail__sidebar-list">
+                                                                                                                            <li><a href="demand-modelling.html">Demand Modelling of Irrigation Energy Demand</a></li>
+                                                                                                                            <li><a href="energy-estimation-tool.html">Energy Estimation Tool</a></li>
+                                                                                                                        </ul>
+                                                                                                                        </div>
+                                                                                                                        </aside>
+                                                                                                                        </div>
+
+                                                                                                                            <!-- Back Link -->
+                                                                                                                            <div style="margin-top: 3rem;">
+                                                                                                                                <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
+                                                                                                                            </div>
+                                                                                                                            </div>
+                                                                                                                            </article>
+                                                                                                                            </main>
+
+                                                                                                                                <!-- Footer -->
+                                                                                                                                <footer class="footer">
+                                                                                                                                    <div class="footer-content">
+                                                                                                                                        <div class="footer-section">
+                                                                                                                                            <h3>Rural Energy Research Group</h3>
+                                                                                                                                            <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+                                                                                                                                        </div>
+                                                                                                                                            <div class="footer-section">
+                                                                                                                                                <h3>Contact Us</h3>
+                                                                                                                                                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                                                                                                                                                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                                                                                                                                                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+                                                                                                                                            </div>
+                                                                                                                                                <div class="footer-section">
+                                                                                                                                                    <h3>Quick Links</h3>
+                                                                                                                                                    <ul>
+                                                                                                                                                        <li><a href="../index.html">Home</a></li>
+                                                                                                                                                        <li><a href="../projects.html">Projects</a></li>
+                                                                                                                                                        <li><a href="../publications.html">Publications</a></li>
+                                                                                                                                                        <li><a href="../team.html">Team</a></li>
+                                                                                                                                                    </ul>
+                                                                                                                                                    </div>
+                                                                                                                                                    </div>
+                                                                                                                                                        <div class="footer-bottom">
+                                                                                                                                                            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+                                                                                                                                                        </div>
+                                                                                                                                                        </footer>
+
+                                                                                                                                                            <!-- JavaScript -->
+                                                                                                                                                            <script src="../js/main.js"></script>
+                                                                                                                                                        </body>
+                                                                                                                                                        </html>

@@ -1,199 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Technical paradigms in electricity supply for irrigation pumps | Rural Energy Research Group">
-    <title>Technical paradigms in electricity supply for irrigation pumps | Rural Energy Research Group</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <style>
-        /* Mobile layout: reorder to show sidebar at the very end */
-        @media (max-width: 768px) {
-            /* Make container flex to control order of all children */
-            .project-detail-container {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Technical paradigms in electricity supply for irrigation pumps | Rural Energy Research Group">
+        <title>Technical paradigms in electricity supply for irrigation pumps | Rural Energy Research Group</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <style>
+                /* Mobile layout: reorder to show sidebar at the very end */
+                @media (max-width: 768px) {
+                /* Make container flex to control order of all children */
+                .project-detail-container {
                 display: flex;
                 flex-direction: column;
-            }
-            
-            /* Use display: contents to flatten the grid structure on mobile */
-            .project-detail__content {
+                }
+
+                /* Use display: contents to flatten the grid structure on mobile */
+                .project-detail__content {
                 display: contents;
-            }
-            
-            /* Assign orders: body content, then sidebar */
-            .project-detail__body {
+                }
+
+                /* Assign orders: body content, then sidebar */
+                .project-detail__body {
                 order: 5;
-            }
-            
-            .project-detail__content aside {
+                }
+
+                .project-detail__content aside {
                 order: 6;
                 margin-top: var(--space-8);
-            }
-            
-            /* Keep header elements at the top */
-            .project-detail__tag {
+                }
+
+                /* Keep header elements at the top */
+                .project-detail__tag {
                 order: 1;
-            }
-            
-            .project-detail__title {
+                }
+
+                .project-detail__title {
                 order: 2;
-            }
-            
-            .project-detail__meta {
+                }
+
+                .project-detail__meta {
                 order: 3;
-            }
-            
-            /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+                }
+
+                /* Back link stays at the very bottom */
+                .project-detail-container > div:last-child {
                 order: 7;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container nav-centered">
-            <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
-                <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
-            </a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
-                <li><a href="../publications.html" class="nav-link">Publications</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
-                <li class="nav-item-dropdown" id="linksDropdown">
-                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
-                    <div class="dropdown-menu" id="linksMenu">
-                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
-                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
-                    </div>
-                </li>
-                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+                }
+                }
+        </style>
+        </head>
+            <body>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <div class="nav-container nav-centered">
+                        <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
+                            <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+                        </a>
+                            <button class="nav-toggle" id="navToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                                <ul class="nav-menu" id="navMenu">
+                                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                                    <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                                    <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                                    <li><a href="../team.html" class="nav-link">Team</a></li>
+                                    <li class="nav-item-dropdown" id="linksDropdown">
+                                        <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                                        <div class="dropdown-menu" id="linksMenu">
+                                            <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA’s Departmental page</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">Unnat Maharashtra Abhiyan</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link" target="_blank">Priya Jadhav’s profile on CTARA</a>
+                                            <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                                        </div>
+                                        </li>
+                                            <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                                        </ul>
+                                        </div>
+                                        </nav>
 
-    <main>
-        <article class="project-detail">
-            <div class="project-detail-container">
-                <!-- Project Header -->
+                                            <main>
+                                                <article class="project-detail">
+                                                    <div class="project-detail-container">
+                                                        <!-- Project Header -->
 
-                <h1 class="project-detail__title">Technical paradigms in electricity supply for irrigation pumps: Case of Maharashtra, India</h1>
-                
-                <!-- Meta Information -->
-                <div class="project-detail__meta">
-                    <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2020
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Priya Jadhav, Namita Sawant, Athira Madhusudhana Panicker
-                    </div>
-                </div>
+                                                        <h1 class="project-detail__title">Technical paradigms in electricity supply for irrigation pumps: Case of Maharashtra, India</h1>
 
-                <!-- Content Grid -->
-                <div class="project-detail__content">
-                    <div class="project-detail__body">
-                        <p>State governments have historically, and continue to, invest in power distribution infrastructure for irrigation pumps. Many new models such as offgrid solar PV Pumps, HVDS (High Voltage Distribution Systems), and solar Ag feeders continue to be implemented to varying extents by states in the country.</p>
-                        
-                        <p>This work was the first to do a techno-economic comparison of the various models through a systemic lens. A marginal price of electricity separating out the distribution infrastructure and energy costs was considered for the grid based system. It was found that a minimum 875 hours of pumping is required for offgrid solar pumps to be cost-effective compared to grid based pumps. This is not the case for most farmers in Maharashtra.</p>
-                        
-                        <p>An invited talk, which was very well received, was made at the Maharashtra Electricity Regulatory Commission on 31st August 2020.</p>
-                        
-                        <div style="margin-top: var(--space-6); text-align: center;">
-                            <img src="../images/technical-paradigms-supply.png" alt="Technical paradigms in electricity supply for irrigation pumps" style="max-width: 350px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-                        </div>
-                    </div>
+                                                        <!-- Meta Information -->
+                                                        <div class="project-detail__meta">
+                                                            <div class="project-detail__meta-item">
+                                                                <strong>Year:</strong> 2020
+                                                            </div>
+                                                                <div class="project-detail__meta-item">
+                                                                    <strong>Team:</strong> Priya Jadhav, Namita Sawant, Athira Madhusudhana Panicker
+                                                                </div>
+                                                                </div>
 
-                    <!-- Sidebar -->
-                    <aside>
-                        
+                                                                    <!-- Content Grid -->
+                                                                    <div class="project-detail__content">
+                                                                        <div class="project-detail__body">
+                                                                            <p>State governments have historically, and continue to, invest in power distribution infrastructure for irrigation pumps. Many new models such as offgrid solar PV Pumps, HVDS (High Voltage Distribution Systems), and solar Ag feeders continue to be implemented to varying extents by states in the country.</p>
 
-                        <div class="project-detail__sidebar-card project-detail__sidebar-card--related-publications">
-                            <h3 class="project-detail__sidebar-title">Related publications</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Journal Article (2020)</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5; margin-bottom: 0.5rem;">"Technical paradigms in electricity supply for irrigation pumps: Case of Maharashtra, India"</span>
-                                    <span style="display: block; font-size: var(--text-xs); font-style: italic;">Energy for Sustainable Development 58 (2020): 50-62</span>
-                                    <a href="https://doi.org/10.1016/j.esd.2020.07.005" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Paper →</a>
-                                </li>
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Presentation at MERC (2020)</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Invited talk at Maharashtra Electricity Regulatory Commission, August 31, 2020</span>
-                                    <a href="https://drive.google.com/file/d/1W7J4FRwbqVsM-PDizykz5ShE8ryhZtEH/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Download Presentation →</a>
-                                </li>
-                            </ul>
-                        </div>
+                                                                            <p>This work was the first to do a techno-economic comparison of the various models through a systemic lens. A marginal price of electricity separating out the distribution infrastructure and energy costs was considered for the grid based system. It was found that a minimum 875 hours of pumping is required for offgrid solar pumps to be cost-effective compared to grid based pumps. This is not the case for most farmers in Maharashtra.</p>
 
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><a href="lt-distribution-networks.html">Restructuring of LT Agricultural Distribution Networks</a></li>
-                                <li><a href="solar-golap.html">Solar PV Plant Study - Golap, Ratnagiri</a></li>
-                            </ul>
-                        </div>
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Team Members</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><strong>Project Team:</strong> Priya Jadhav, Namita Sawant, Athira Madhusudhana Panicker</li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+                                                                            <p>An invited talk, which was very well received, was made at the Maharashtra Electricity Regulatory Commission on 31st August 2020.</p>
 
-                <!-- Back Link -->
-                <div style="margin-top: 3rem;">
-                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
-                </div>
-            </div>
-        </article>
-    </main>
+                                                                            <div style="margin-top: var(--space-6); text-align: center;">
+                                                                                <img src="../images/technical-paradigms-supply.png" alt="Technical paradigms in electricity supply for irrigation pumps" style="max-width: 350px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                                                                            </div>
+                                                                            </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Rural Energy Research Group</h3>
-                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
-                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
-                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../team.html">Team</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
-        </div>
-    </footer>
+                                                                                <!-- Sidebar -->
+                                                                                <aside>
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-</body>
-</html>
+                                                                                    <div class="project-detail__sidebar-card project-detail__sidebar-card--related-publications">
+                                                                                        <h3 class="project-detail__sidebar-title">Related publications</h3>
+                                                                                        <ul class="project-detail__sidebar-list">
+                                                                                            <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Journal Article (2020)</strong>
+                                                                                                <span style="display: block; font-size: var(--text-xs); line-height: 1.5; margin-bottom: 0.5rem;">"Technical paradigms in electricity supply for irrigation pumps: Case of Maharashtra, India"</span>
+                                                                                                <span style="display: block; font-size: var(--text-xs); font-style: italic;">Energy for Sustainable Development 58 (2020): 50-62</span>
+                                                                                                <a href="https://doi.org/10.1016/j.esd.2020.07.005" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Paper →</a>
+                                                                                            </li>
+                                                                                                <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Presentation at MERC (2020)</strong>
+                                                                                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Invited talk at Maharashtra Electricity Regulatory Commission, August 31, 2020</span>
+                                                                                                    <a href="https://drive.google.com/file/d/1W7J4FRwbqVsM-PDizykz5ShE8ryhZtEH/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Download Presentation →</a>
+                                                                                                </li>
+                                                                                                </ul>
+                                                                                                </div>
+
+                                                                                                    <div class="project-detail__sidebar-card">
+                                                                                                        <h3 class="project-detail__sidebar-title">Other related projects</h3>
+                                                                                                        <ul class="project-detail__sidebar-list">
+                                                                                                            <li><a href="lt-distribution-networks.html">Restructuring of LT Agricultural Distribution Networks</a></li>
+                                                                                                            <li><a href="solar-golap.html">Solar PV Plant Study - Golap, Ratnagiri</a></li>
+                                                                                                        </ul>
+                                                                                                        </div>
+                                                                                                            <div class="project-detail__sidebar-card">
+                                                                                                                <h3 class="project-detail__sidebar-title">Team Members</h3>
+                                                                                                                <ul class="project-detail__sidebar-list">
+                                                                                                                    <li><strong>Project Team:</strong> Priya Jadhav, Namita Sawant, Athira Madhusudhana Panicker</li>
+                                                                                                                </ul>
+                                                                                                                </div>
+                                                                                                                </aside>
+                                                                                                                </div>
+
+                                                                                                                    <!-- Back Link -->
+                                                                                                                    <div style="margin-top: 3rem;">
+                                                                                                                        <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
+                                                                                                                    </div>
+                                                                                                                    </div>
+                                                                                                                    </article>
+                                                                                                                    </main>
+
+                                                                                                                        <!-- Footer -->
+                                                                                                                        <footer class="footer">
+                                                                                                                            <div class="footer-content">
+                                                                                                                                <div class="footer-section">
+                                                                                                                                    <h3>Rural Energy Research Group</h3>
+                                                                                                                                    <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+                                                                                                                                </div>
+                                                                                                                                    <div class="footer-section">
+                                                                                                                                        <h3>Contact Us</h3>
+                                                                                                                                        <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                                                                                                                                        <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                                                                                                                                        <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+                                                                                                                                    </div>
+                                                                                                                                        <div class="footer-section">
+                                                                                                                                            <h3>Quick Links</h3>
+                                                                                                                                            <ul>
+                                                                                                                                                <li><a href="../index.html">Home</a></li>
+                                                                                                                                                <li><a href="../projects.html">Projects</a></li>
+                                                                                                                                                <li><a href="../publications.html">Publications</a></li>
+                                                                                                                                                <li><a href="../team.html">Team</a></li>
+                                                                                                                                            </ul>
+                                                                                                                                            </div>
+                                                                                                                                            </div>
+                                                                                                                                                <div class="footer-bottom">
+                                                                                                                                                    <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+                                                                                                                                                </div>
+                                                                                                                                                </footer>
+
+                                                                                                                                                    <!-- JavaScript -->
+                                                                                                                                                    <script src="../js/main.js"></script>
+                                                                                                                                                </body>
+                                                                                                                                                </html>

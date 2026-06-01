@@ -1,203 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Solar Agriculture Plants - Dharashiv District | Rural Energy Research Group">
-    <title>Solar Agriculture Plants - Dharashiv | Rural Energy Research Group</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <style>
-        /* Full width content section that appears after sidebar ends */
-        .project-detail__full-width {
-            margin-top: var(--space-10);
-            width: 100%;
-        }
-        
-        .project-detail__full-width p {
-            margin-bottom: var(--space-4);
-            line-height: var(--leading-loose);
-            color: var(--pd-text-body);
-        }
-        
-        /* Mobile layout: reorder to show sidebar at the very end */
-        @media (max-width: 768px) {
-            /* Make container flex to control order of all children */
-            .project-detail-container {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Solar Agriculture Plants - Dharashiv District | Rural Energy Research Group">
+        <title>Solar Agriculture Plants - Dharashiv | Rural Energy Research Group</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <style>
+                /* Full width content section that appears after sidebar ends */
+                .project-detail__full-width {
+                margin-top: var(--space-10);
+                width: 100%;
+                }
+
+                .project-detail__full-width p {
+                margin-bottom: var(--space-4);
+                line-height: var(--leading-loose);
+                color: var(--pd-text-body);
+                }
+
+                /* Mobile layout: reorder to show sidebar at the very end */
+                @media (max-width: 768px) {
+                /* Make container flex to control order of all children */
+                .project-detail-container {
                 display: flex;
                 flex-direction: column;
-            }
-            
-            /* Use display: contents to flatten the grid structure on mobile */
-            .project-detail__content {
+                }
+
+                /* Use display: contents to flatten the grid structure on mobile */
+                .project-detail__content {
                 display: contents;
-            }
-            
-            /* Assign orders: body content, full-width section, then sidebar */
-            .project-detail__body {
+                }
+
+                /* Assign orders: body content, full-width section, then sidebar */
+                .project-detail__body {
                 order: 5;
-            }
-            
-            .project-detail__full-width {
+                }
+
+                .project-detail__full-width {
                 order: 6;
                 margin-top: var(--space-8);
-            }
-            
-            .project-detail__content aside {
+                }
+
+                .project-detail__content aside {
                 order: 7;
                 margin-top: var(--space-8);
-            }
-            
-            /* Keep header elements at the top */
-            .project-detail__tag {
+                }
+
+                /* Keep header elements at the top */
+                .project-detail__tag {
                 order: 1;
-            }
-            
-            .project-detail__title {
+                }
+
+                .project-detail__title {
                 order: 2;
-            }
-            
-            .project-detail__meta {
+                }
+
+                .project-detail__meta {
                 order: 3;
-            }
-            
-            /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+                }
+
+                /* Back link stays at the very bottom */
+                .project-detail-container > div:last-child {
                 order: 8;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container nav-centered">
-            <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
-                <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
-            </a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
-                <li><a href="../publications.html" class="nav-link">Publications</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
-                <li class="nav-item-dropdown" id="linksDropdown">
-                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
-                    <div class="dropdown-menu" id="linksMenu">
-                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
-                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
-                    </div>
-                </li>
-                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+                }
+                }
+        </style>
+        </head>
+            <body>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <div class="nav-container nav-centered">
+                        <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
+                            <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+                        </a>
+                            <button class="nav-toggle" id="navToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                                <ul class="nav-menu" id="navMenu">
+                                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                                    <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                                    <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                                    <li><a href="../team.html" class="nav-link">Team</a></li>
+                                    <li class="nav-item-dropdown" id="linksDropdown">
+                                        <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                                        <div class="dropdown-menu" id="linksMenu">
+                                            <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA’s Departmental page</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">Unnat Maharashtra Abhiyan</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link" target="_blank">Priya Jadhav’s profile on CTARA</a>
+                                            <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                                        </div>
+                                        </li>
+                                            <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                                        </ul>
+                                        </div>
+                                        </nav>
 
-    <main>
-        <article class="project-detail">
-            <div class="project-detail-container">
-                <!-- Project Header -->
+                                            <main>
+                                                <article class="project-detail">
+                                                    <div class="project-detail-container">
+                                                        <!-- Project Header -->
 
-                <h1 class="project-detail__title">Solar Agriculture Plants - Dharashiv District</h1>
-                
-                <!-- Meta Information -->
-                <div class="project-detail__meta">
-                    <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2025 – Ongoing
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Shashwata Swarupa Sahoo, Tejas Nagotkar, Keshav Reddy
-                    </div>
-                </div>
+                                                        <h1 class="project-detail__title">Solar Agriculture Plants &ndash; Dharashiv District</h1>
 
-                <!-- Content Grid -->
-                <div class="project-detail__content">
-                    <div class="project-detail__body">
-                        <p>The central government is promoting the establishment of 2 - 8 MW scale renewable energy projects connected to Agricultural feeders. This approach results in renewable capacity development with the possibility of providing day time supply to all farmers with potentially lower requirement of distribution/transmission infrastructure enhancement. The scheme is also (a) allowing farmers to be community owners of the projects (b) allows farmers the opportunity to lease/sell agricultural land for a remunerative price.</p>
-                        
-                        <p>Reliable and low cost energy, or electrical power, is an important enabler in agricultural, industrial development, and for basic amenities for society. Also, the current renewable energy focus on small / medium sized solar PV and wind power plants is creating opportunities as well as challenges for people in rural areas.</p>
-                        
-                        <p>This project conducts the study and analysis of the implementation of the scheme in Dharashiv. The study will focus on project management processes, efficiency, coverage and overall benefits. Other attributes may be added as per discussions with district administration</p>
-                    </div>
+                                                        <!-- Meta Information -->
+                                                        <div class="project-detail__meta">
+                                                            <div class="project-detail__meta-item">
+                                                                <strong>Year:</strong> 2025 – Ongoing
+                                                            </div>
+                                                                <div class="project-detail__meta-item">
+                                                                    <strong>Team:</strong> Shashwata Swarupa Sahoo, Tejas Nagotkar, Keshav Reddy
+                                                                </div>
+                                                                </div>
 
-                    <!-- Sidebar -->
-                    <aside>
-                        
+                                                                    <!-- Content Grid -->
+                                                                    <div class="project-detail__content">
+                                                                        <div class="project-detail__body">
+                                                                            <p>The central government is promoting the establishment of 2 - 8 MW scale renewable energy projects connected to Agricultural feeders. This approach results in renewable capacity development with the possibility of providing day time supply to all farmers with potentially lower requirement of distribution/transmission infrastructure enhancement. The scheme is also (a) allowing farmers to be community owners of the projects (b) allows farmers the opportunity to lease/sell agricultural land for a remunerative price.</p>
 
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><a href="solar-golap.html">Study of 1 MW Solar Plant - Golap, Ratnagiri</a></li>
-                                <li><a href="technical-paradigms.html">Technical Paradigms in Electricity Supply</a></li>
-                            </ul>
-                        </div>
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Team Members</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><strong>Project Team:</strong> Shashwata Swarupa Sahoo (PhD), Tejas Nagotkar, Keshav Reddy (MTech)</li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+                                                                            <p>Reliable and low cost energy, or electrical power, is an important enabler in agricultural, industrial development, and for basic amenities for society. Also, the current renewable energy focus on small / medium sized solar PV and wind power plants is creating opportunities as well as challenges for people in rural areas.</p>
 
-                <!-- Full Width Content Section -->
-                <div class="project-detail__full-width">
-                    <div style="margin: 2rem 0; text-align: center;">
-                        <img src="../images/solar-dharashiv-shahapur-plant.jpg" alt="Shahapur Solar Power Plant (4 MW) setup under MSKVY scheme" style="max-width: 500px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
-                        <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Shahapur Solar Power Plant (4 MW) setup under MSKVY scheme</p>
-                    </div>
-                </div>
+                                                                            <p>This project conducts the study and analysis of the implementation of the scheme in Dharashiv. The study will focus on project management processes, efficiency, coverage and overall benefits. Other attributes may be added as per discussions with district administration</p>
+                                                                        </div>
 
-                <!-- Back Link -->
-                <div style="margin-top: 3rem;">
-                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
-                </div>
-            </div>
-        </article>
-    </main>
+                                                                            <!-- Sidebar -->
+                                                                            <aside>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Rural Energy Research Group</h3>
-                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
-                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
-                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../team.html">Team</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
-        </div>
-    </footer>
+                                                                                <div class="project-detail__sidebar-card">
+                                                                                    <h3 class="project-detail__sidebar-title">Other related projects</h3>
+                                                                                    <ul class="project-detail__sidebar-list">
+                                                                                        <li><a href="solar-golap.html">Study of 1 MW Solar Plant - Golap, Ratnagiri</a></li>
+                                                                                        <li><a href="technical-paradigms.html">Technical Paradigms in Electricity Supply</a></li>
+                                                                                    </ul>
+                                                                                    </div>
+                                                                                        <div class="project-detail__sidebar-card">
+                                                                                            <h3 class="project-detail__sidebar-title">Team Members</h3>
+                                                                                            <ul class="project-detail__sidebar-list">
+                                                                                                <li><strong>Project Team:</strong> Shashwata Swarupa Sahoo (PhD), Tejas Nagotkar, Keshav Reddy (MTech)</li>
+                                                                                            </ul>
+                                                                                            </div>
+                                                                                            </aside>
+                                                                                            </div>
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-</body>
-</html>
+                                                                                                <!-- Full Width Content Section -->
+                                                                                                <div class="project-detail__full-width">
+                                                                                                    <div style="margin: 2rem 0; text-align: center;">
+                                                                                                        <img src="../images/solar-dharashiv-shahapur-plant.jpg" alt="Shahapur Solar Power Plant (4 MW) setup under MSKVY scheme" style="max-width: 500px; width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow-md);">
+                                                                                                        <p style="margin-top: 1rem; font-size: var(--text-sm); color: var(--color-neutral-500); font-style: italic;">Shahapur Solar Power Plant (4 MW) setup under MSKVY scheme</p>
+                                                                                                    </div>
+                                                                                                    </div>
+
+                                                                                                        <!-- Back Link -->
+                                                                                                        <div style="margin-top: 3rem;">
+                                                                                                            <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
+                                                                                                        </div>
+                                                                                                        </div>
+                                                                                                        </article>
+                                                                                                        </main>
+
+                                                                                                            <!-- Footer -->
+                                                                                                            <footer class="footer">
+                                                                                                                <div class="footer-content">
+                                                                                                                    <div class="footer-section">
+                                                                                                                        <h3>Rural Energy Research Group</h3>
+                                                                                                                        <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+                                                                                                                    </div>
+                                                                                                                        <div class="footer-section">
+                                                                                                                            <h3>Contact Us</h3>
+                                                                                                                            <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                                                                                                                            <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                                                                                                                            <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+                                                                                                                        </div>
+                                                                                                                            <div class="footer-section">
+                                                                                                                                <h3>Quick Links</h3>
+                                                                                                                                <ul>
+                                                                                                                                    <li><a href="../index.html">Home</a></li>
+                                                                                                                                    <li><a href="../projects.html">Projects</a></li>
+                                                                                                                                    <li><a href="../publications.html">Publications</a></li>
+                                                                                                                                    <li><a href="../team.html">Team</a></li>
+                                                                                                                                </ul>
+                                                                                                                                </div>
+                                                                                                                                </div>
+                                                                                                                                    <div class="footer-bottom">
+                                                                                                                                        <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+                                                                                                                                    </div>
+                                                                                                                                    </footer>
+
+                                                                                                                                        <!-- JavaScript -->
+                                                                                                                                        <script src="../js/main.js"></script>
+                                                                                                                                    </body>
+                                                                                                                                    </html>

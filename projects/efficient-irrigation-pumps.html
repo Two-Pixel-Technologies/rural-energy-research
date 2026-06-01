@@ -1,319 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Appropriate pump selection and Efficiency in irrigation pumping | Rural Energy Research Group">
-    <title>Efficient Irrigation Pumps - Pressurized Irrigation | Rural Energy Research Group</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <style>
-        /* Project Images Grid */
-        .project-images-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-6);
-            margin-top: var(--space-8);
-            margin-bottom: var(--space-6);
-        }
-        
-        .project-image-item {
-            text-align: center;
-        }
-        
-        .project-image-item img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: var(--shadow-md);
-            object-fit: cover;
-        }
-        
-        /* Set fixed height for side-by-side images to match heights */
-        .project-image-item:not(.project-image-item--centered) img {
-            height: 350px;
-            object-position: top;
-        }
-        
-        /* Let the centered image maintain natural aspect ratio */
-        .project-image-item--centered img {
-            height: auto;
-            object-fit: contain;
-        }
-        
-        .project-image-caption {
-            margin-top: 1rem;
-            font-size: var(--text-sm);
-            color: var(--color-neutral-500);
-            font-style: italic;
-            line-height: 1.5;
-        }
-        
-        /* Center the third image */
-        .project-image-item--centered {
-            grid-column: 1 / -1;
-            max-width: 600px;
-            margin: 0 auto;
-            width: 100%;
-        }
-        
-        /* Tablet layout (768px - 1024px) */
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .project-images-grid {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Appropriate pump selection and Efficiency in irrigation pumping | Rural Energy Research Group">
+        <title>Efficient Irrigation Pumps - Pressurized Irrigation | Rural Energy Research Group</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <style>
+                /* Project Images Grid */
+                .project-images-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-6);
+                margin-top: var(--space-8);
+                margin-bottom: var(--space-6);
+                }
+
+                .project-image-item {
+                text-align: center;
+                }
+
+                .project-image-item img {
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: var(--shadow-md);
+                object-fit: cover;
+                }
+
+                /* Set fixed height for side-by-side images to match heights */
+                .project-image-item:not(.project-image-item--centered) img {
+                height: 350px;
+                object-position: top;
+                }
+
+                /* Let the centered image maintain natural aspect ratio */
+                .project-image-item--centered img {
+                height: auto;
+                object-fit: contain;
+                }
+
+                .project-image-caption {
+                margin-top: 1rem;
+                font-size: var(--text-sm);
+                color: var(--color-neutral-500);
+                font-style: italic;
+                line-height: 1.5;
+                }
+
+                /* Center the third image */
+                .project-image-item--centered {
+                grid-column: 1 / -1;
+                max-width: 600px;
+                margin: 0 auto;
+                width: 100%;
+                }
+
+                /* Tablet layout (768px - 1024px) */
+                @media (max-width: 1024px) and (min-width: 769px) {
+                .project-images-grid {
                 gap: var(--space-5);
-            }
-            
-            .project-image-item:not(.project-image-item--centered) img {
+                }
+
+                .project-image-item:not(.project-image-item--centered) img {
                 height: 300px;
-            }
-            
-            .project-image-item--centered {
+                }
+
+                .project-image-item--centered {
                 max-width: 500px;
-            }
-        }
-        
-        /* Mobile layout (max-width: 768px) */
-        @media (max-width: 768px) {
-            .project-images-grid {
+                }
+                }
+
+                /* Mobile layout (max-width: 768px) */
+                @media (max-width: 768px) {
+                .project-images-grid {
                 grid-template-columns: 1fr;
                 gap: var(--space-5);
                 margin-top: var(--space-6);
-            }
-            
-            /* On mobile, let all images maintain natural aspect ratio */
-            .project-image-item:not(.project-image-item--centered) img {
+                }
+
+                /* On mobile, let all images maintain natural aspect ratio */
+                .project-image-item:not(.project-image-item--centered) img {
                 height: auto;
-            }
-            
-            .project-image-item--centered {
+                }
+
+                .project-image-item--centered {
                 grid-column: 1;
                 max-width: 100%;
-            }
-            
-            /* Make container flex to control order of all children */
-            .project-detail-container {
+                }
+
+                /* Make container flex to control order of all children */
+                .project-detail-container {
                 display: flex;
                 flex-direction: column;
-            }
-            
-            /* Use display: contents to flatten the grid structure on mobile */
-            .project-detail__content {
+                }
+
+                /* Use display: contents to flatten the grid structure on mobile */
+                .project-detail__content {
                 display: contents;
-            }
-            
-            /* Assign orders: body content, then sidebar */
-            .project-detail__body {
+                }
+
+                /* Assign orders: body content, then sidebar */
+                .project-detail__body {
                 order: 5;
-            }
-            
-            .project-detail__content aside {
+                }
+
+                .project-detail__content aside {
                 order: 7;
                 margin-top: var(--space-8);
-            }
-            
-            /* Keep header elements at the top */
-            .project-detail__tag {
+                }
+
+                /* Keep header elements at the top */
+                .project-detail__tag {
                 order: 1;
-            }
-            
-            .project-detail__title {
+                }
+
+                .project-detail__title {
                 order: 2;
-            }
-            
-            .project-detail__meta {
+                }
+
+                .project-detail__meta {
                 order: 3;
-            }
-            
-            /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+                }
+
+                /* Back link stays at the very bottom */
+                .project-detail-container > div:last-child {
                 order: 8;
-            }
-        }
-        
-        /* Small mobile devices (max-width: 480px) */
-        @media (max-width: 480px) {
-            .project-images-grid {
+                }
+                }
+
+                /* Small mobile devices (max-width: 480px) */
+                @media (max-width: 480px) {
+                .project-images-grid {
                 gap: var(--space-4);
                 margin-top: var(--space-5);
-            }
-            
-            .project-image-caption {
+                }
+
+                .project-image-caption {
                 font-size: var(--text-xs);
                 margin-top: 0.75rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container nav-centered">
-            <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
-                <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
-            </a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
-                <li><a href="../publications.html" class="nav-link">Publications</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
-                <li class="nav-item-dropdown" id="linksDropdown">
-                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
-                    <div class="dropdown-menu" id="linksMenu">
-                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
-                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
-                    </div>
-                </li>
-                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+                }
+                }
+        </style>
+        </head>
+            <body>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <div class="nav-container nav-centered">
+                        <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
+                            <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+                        </a>
+                            <button class="nav-toggle" id="navToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                                <ul class="nav-menu" id="navMenu">
+                                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                                    <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                                    <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                                    <li><a href="../team.html" class="nav-link">Team</a></li>
+                                    <li class="nav-item-dropdown" id="linksDropdown">
+                                        <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                                        <div class="dropdown-menu" id="linksMenu">
+                                            <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA’s Departmental page</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">Unnat Maharashtra Abhiyan</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link" target="_blank">Priya Jadhav’s profile on CTARA</a>
+                                            <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                                        </div>
+                                        </li>
+                                            <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                                        </ul>
+                                        </div>
+                                        </nav>
 
-    <main>
-        <article class="project-detail">
-            <div class="project-detail-container">
-                <!-- Project Header -->
+                                            <main>
+                                                <article class="project-detail">
+                                                    <div class="project-detail-container">
+                                                        <!-- Project Header -->
 
-                <h1 class="project-detail__title">Appropriate pump selection and Efficiency in irrigation pumping</h1>
-                
-                <!-- Meta Information -->
-                <div class="project-detail__meta">
-                    <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2017 – 2021
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Saurabh Khobragade
-                    </div>
-                </div>
+                                                        <h1 class="project-detail__title">Appropriate pump selection and Efficiency in irrigation pumping</h1>
 
-                <!-- Content Grid -->
-                <div class="project-detail__content">
-                    <div class="project-detail__body">
-                        <p>Programs on energy efficiency irrigation pumps have been implemented by governments for several decades up to around 2015. The PoCRA work revealed some interesting new results. With the high penetration of sprinkler usage among farmers in Maharashtra, the selection of a pump can no longer be based on a single duty point. This work addresses this complexity. On the other hand due to various government schemes, many farmers have begun to use star-rated or at least standard pumps.</p>
-                        
-                        <p>A set of guidelines for pump selection were developed under PoCRA. A notification for promotion of guidelines was sent through a <a href="https://drive.google.com/file/d/1Rc1Grvd8RHCovwj12_ohh5F6gtHWQNLj/view?usp=drive_link" target="_blank">policy brief</a> to all block level and higher Agricultural officers. The data and result regarding this is included in a <a href="https://doi.org/10.1016/j.esd.2025.101719" target="_blank">publication</a> - <a href="https://doi.org/10.1016/j.esd.2025.101719" target="_blank">Methodology to quantify crop, irrigation water, and energy linkages in small-holder irrigation systems</a>.</p>
-                        
-                        <!-- Images Gallery -->
-                        <div class="project-images-grid">
-                            <div class="project-image-item">
-                                <img src="../images/efficient-irrigation-pumps-flow-measurement.jpg" alt="Water flow rate measurements">
-                                <p class="project-image-caption">Water flow rate measurements</p>
-                            </div>
-                            <div class="project-image-item">
-                                <img src="../images/efficient-irrigation-pumps-tank-pumping.jpg" alt="Water being pumped over 1 km from an irrigation tank in Umbarda Bazaar village, Washim">
-                                <p class="project-image-caption">Water being pumped over 1 km from an irrigation tank in Umbarda Bazaar village, Washim</p>
-                            </div>
-                            <div class="project-image-item project-image-item--centered">
-                                <img src="../images/efficient-irrigation-pumps-village-view.jpg" alt="Walgud-Junoni villages group, Osmanabad">
-                                <p class="project-image-caption">Walgud-Junoni villages group, Osmanabad, Osmanabad</p>
-                            </div>
-                        </div>
-                    </div>
+                                                        <!-- Meta Information -->
+                                                        <div class="project-detail__meta">
+                                                            <div class="project-detail__meta-item">
+                                                                <strong>Year:</strong> 2017 – 2021
+                                                            </div>
+                                                                <div class="project-detail__meta-item">
+                                                                    <strong>Team:</strong> Saurabh Khobragade
+                                                                </div>
+                                                                </div>
 
-                    <!-- Sidebar -->
-                    <aside>
-                        
+                                                                    <!-- Content Grid -->
+                                                                    <div class="project-detail__content">
+                                                                        <div class="project-detail__body">
+                                                                            <p>Programs on energy efficiency irrigation pumps have been implemented by governments for several decades up to around 2015. The PoCRA work revealed some interesting new results. With the high penetration of sprinkler usage among farmers in Maharashtra, the selection of a pump can no longer be based on a single duty point. This work addresses this complexity. On the other hand due to various government schemes, many farmers have begun to use star-rated or at least standard pumps.</p>
 
-                        <div class="project-detail__sidebar-card project-detail__sidebar-card--related-publications">
-                            <h3 class="project-detail__sidebar-title">Related publications</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Project Report</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Done as a part of the Project on Climate Resilient Agriculture</span>
-                                    <a href="https://drive.google.com/file/d/1YBSQzDIRYmVWGHUbk2rJYaCbouf-JfJS/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Download Report →</a>
-                                </li>
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">MTech Report (2018)</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Investigating Agriculture Demand Side Management through ESCO – A case study of Solapur Pump replacement Project</span>
-                                    <a href="https://drive.google.com/file/d/15TkB_4OxIvCzXOpBfz8xBsy4sErawCfl/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Download Report →</a>
-                                </li>
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Policy Brief</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Guidelines for pump selection sent to block level Agricultural officers</span>
-                                    <a href="https://drive.google.com/file/d/1Rc1Grvd8RHCovwj12_ohh5F6gtHWQNLj/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Download Policy Brief →</a>
-                                </li>
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Conference Paper (2021)</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5; margin-bottom: 0.5rem;">ESCO Model for Energy-Efficient Pump Installation Scheme: A Case Study</span>
-                                    <span style="display: block; font-size: var(--text-xs); font-style: italic;">Proceedings of the 7th International Conference on Advances in Energy Research, Springer</span>
-                                    <a href="https://doi.org/10.1007/978-981-15-5955-6_35" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Paper →</a>
-                                </li>
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Journal Article (2025)</strong>
-                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5; margin-bottom: 0.5rem;">Methodology to quantify crop, irrigation water, and energy linkages in small-holder irrigation systems</span>
-                                    <span style="display: block; font-size: var(--text-xs); font-style: italic;">Energy for Sustainable Development, 2025</span>
-                                    <a href="https://doi.org/10.1016/j.esd.2025.101719" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Paper →</a>
-                                </li>
-                            </ul>
-                        </div>
+                                                                            <p>A set of guidelines for pump selection were developed under PoCRA. A notification for promotion of guidelines was sent through a <a href="https://drive.google.com/file/d/1Rc1Grvd8RHCovwj12_ohh5F6gtHWQNLj/view?usp=drive_link" target="_blank">policy brief</a> to all block level and higher Agricultural officers. The data and result regarding this is included in a <a href="https://doi.org/10.1016/j.esd.2025.101719" target="_blank">publication</a> - <a href="https://doi.org/10.1016/j.esd.2025.101719" target="_blank">Methodology to quantify crop, irrigation water, and energy linkages in small-holder irrigation systems</a>.</p>
 
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
-                                <li><a href="energy-water-crops.html">Modeling of Energy, Water and Crops linkages</a></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Team Members</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><strong>MTech Student:</strong> Saurabh Khobragade</li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+                                                                            <!-- Images Gallery -->
+                                                                            <div class="project-images-grid">
+                                                                                <div class="project-image-item">
+                                                                                    <img src="../images/efficient-irrigation-pumps-flow-measurement.jpg" alt="Water flow rate measurements">
+                                                                                    <p class="project-image-caption">Water flow rate measurements</p>
+                                                                                </div>
+                                                                                    <div class="project-image-item">
+                                                                                        <img src="../images/efficient-irrigation-pumps-tank-pumping.jpg" alt="Water being pumped over 1 km from an irrigation tank in Umbarda Bazaar village, Washim">
+                                                                                        <p class="project-image-caption">Water being pumped over 1 km from an irrigation tank in Umbarda Bazaar village, Washim</p>
+                                                                                    </div>
+                                                                                        <div class="project-image-item project-image-item--centered">
+                                                                                            <img src="../images/efficient-irrigation-pumps-village-view.jpg" alt="Walgud-Junoni villages group, Osmanabad">
+                                                                                            <p class="project-image-caption">Walgud-Junoni villages group, Osmanabad, Osmanabad</p>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                        </div>
 
+                                                                                            <!-- Sidebar -->
+                                                                                            <aside>
 
-                <!-- Back Link -->
-                <div style="margin-top: 3rem;">
-                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
-                </div>
-            </div>
-        </article>
-    </main>
+                                                                                                <div class="project-detail__sidebar-card project-detail__sidebar-card--related-publications">
+                                                                                                    <h3 class="project-detail__sidebar-title">Related publications</h3>
+                                                                                                    <ul class="project-detail__sidebar-list">
+                                                                                                        <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                            <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Project Report</strong>
+                                                                                                            <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Done as a part of the Project on Climate Resilient Agriculture</span>
+                                                                                                            <a href="https://drive.google.com/file/d/1YBSQzDIRYmVWGHUbk2rJYaCbouf-JfJS/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Download Report →</a>
+                                                                                                        </li>
+                                                                                                            <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                                <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">MTech Report (2018)</strong>
+                                                                                                                <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Investigating Agriculture Demand Side Management through ESCO – A case study of Solapur Pump replacement Project</span>
+                                                                                                                <a href="https://drive.google.com/file/d/15TkB_4OxIvCzXOpBfz8xBsy4sErawCfl/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Download Report →</a>
+                                                                                                            </li>
+                                                                                                                <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                                    <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Policy Brief</strong>
+                                                                                                                    <span style="display: block; font-size: var(--text-xs); line-height: 1.5;">Guidelines for pump selection sent to block level Agricultural officers</span>
+                                                                                                                    <a href="https://drive.google.com/file/d/1Rc1Grvd8RHCovwj12_ohh5F6gtHWQNLj/view?usp=drive_link" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">Download Policy Brief →</a>
+                                                                                                                </li>
+                                                                                                                    <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                                        <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Conference Paper (2021)</strong>
+                                                                                                                        <span style="display: block; font-size: var(--text-xs); line-height: 1.5; margin-bottom: 0.5rem;">ESCO Model for Energy-Efficient Pump Installation Scheme: A Case Study</span>
+                                                                                                                        <span style="display: block; font-size: var(--text-xs); font-style: italic;">Proceedings of the 7th International Conference on Advances in Energy Research, Springer</span>
+                                                                                                                        <a href="https://doi.org/10.1007/978-981-15-5955-6_35" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Paper →</a>
+                                                                                                                    </li>
+                                                                                                                        <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                                            <strong style="display: block; margin-bottom: 0.5rem; color: var(--pd-text-dark);">Journal Article (2025)</strong>
+                                                                                                                            <span style="display: block; font-size: var(--text-xs); line-height: 1.5; margin-bottom: 0.5rem;">Methodology to quantify crop, irrigation water, and energy linkages in small-holder irrigation systems</span>
+                                                                                                                            <span style="display: block; font-size: var(--text-xs); font-style: italic;">Energy for Sustainable Development, 2025</span>
+                                                                                                                            <a href="https://doi.org/10.1016/j.esd.2025.101719" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">View Paper →</a>
+                                                                                                                        </li>
+                                                                                                                        </ul>
+                                                                                                                        </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Rural Energy Research Group</h3>
-                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
-                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
-                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../team.html">Team</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
-        </div>
-    </footer>
+                                                                                                                            <div class="project-detail__sidebar-card">
+                                                                                                                                <h3 class="project-detail__sidebar-title">Other related projects</h3>
+                                                                                                                                <ul class="project-detail__sidebar-list">
+                                                                                                                                    <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
+                                                                                                                                    <li><a href="energy-water-crops.html">Modeling of Energy, Water and Crops linkages</a></li>
+                                                                                                                                </ul>
+                                                                                                                                </div>
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-</body>
-</html>
+                                                                                                                                    <div class="project-detail__sidebar-card">
+                                                                                                                                        <h3 class="project-detail__sidebar-title">Team Members</h3>
+                                                                                                                                        <ul class="project-detail__sidebar-list">
+                                                                                                                                            <li><strong>MTech Student:</strong> Saurabh Khobragade</li>
+                                                                                                                                        </ul>
+                                                                                                                                        </div>
+                                                                                                                                        </aside>
+                                                                                                                                        </div>
+
+                                                                                                                                            <!-- Back Link -->
+                                                                                                                                            <div style="margin-top: 3rem;">
+                                                                                                                                                <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
+                                                                                                                                            </div>
+                                                                                                                                            </div>
+                                                                                                                                            </article>
+                                                                                                                                            </main>
+
+                                                                                                                                                <!-- Footer -->
+                                                                                                                                                <footer class="footer">
+                                                                                                                                                    <div class="footer-content">
+                                                                                                                                                        <div class="footer-section">
+                                                                                                                                                            <h3>Rural Energy Research Group</h3>
+                                                                                                                                                            <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+                                                                                                                                                        </div>
+                                                                                                                                                            <div class="footer-section">
+                                                                                                                                                                <h3>Contact Us</h3>
+                                                                                                                                                                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                                                                                                                                                                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                                                                                                                                                                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+                                                                                                                                                            </div>
+                                                                                                                                                                <div class="footer-section">
+                                                                                                                                                                    <h3>Quick Links</h3>
+                                                                                                                                                                    <ul>
+                                                                                                                                                                        <li><a href="../index.html">Home</a></li>
+                                                                                                                                                                        <li><a href="../projects.html">Projects</a></li>
+                                                                                                                                                                        <li><a href="../publications.html">Publications</a></li>
+                                                                                                                                                                        <li><a href="../team.html">Team</a></li>
+                                                                                                                                                                    </ul>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    </div>
+                                                                                                                                                                        <div class="footer-bottom">
+                                                                                                                                                                            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        </footer>
+
+                                                                                                                                                                            <!-- JavaScript -->
+                                                                                                                                                                            <script src="../js/main.js"></script>
+                                                                                                                                                                        </body>
+                                                                                                                                                                        </html>

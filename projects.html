@@ -1,404 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Research projects by Rural Energy Research Group - Sustainable agriculture, energy systems, and rural development">
-    <title>Projects | Rural Energy Research Group</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .clickable-card-wrapper {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            height: 100%;
-            outline: none;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Research projects by Rural Energy Research Group - Sustainable agriculture, energy systems, and rural development">
+        <title>Projects | Rural Energy Research Group</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <style>
+                .clickable-card-wrapper {
+                text-decoration: none;
+                color: inherit;
+                display: block;
+                height: 100%;
+                outline: none;
+                }
 
-        .clickable-card-wrapper article {
-            height: 100%;
-            transition: transform var(--transition-base), box-shadow var(--transition-base);
-            display: flex;
-            flex-direction: column;
-        }
+                .clickable-card-wrapper article {
+                height: 100%;
+                transition: transform var(--transition-base), box-shadow var(--transition-base);
+                display: flex;
+                flex-direction: column;
+                }
 
-        .clickable-card-wrapper:hover article, .clickable-card-wrapper:focus article {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
+                .clickable-card-wrapper:hover article, .clickable-card-wrapper:focus article {
+                transform: translateY(-4px);
+                box-shadow: var(--shadow-md);
+                }
 
-        .projects-header-bg {
-            background-color: var(--color-primary-800);
-            background-image: linear-gradient(rgba(21, 43, 34, 0.85), rgba(21, 43, 34, 0.85)), url('images/pic1.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: var(--space-12) 0;
-            border-bottom: 2px solid var(--color-accent-400);
-        }
-        
-        .projects-header-bg .page-header-title {
-            color: var(--color-white) !important;
-            border-bottom-color: rgba(255, 255, 255, 0.2) !important;
-        }
+                .projects-header-bg {
+                background-color: var(--color-primary-800);
+                background-image: linear-gradient(rgba(21, 43, 34, 0.85), rgba(21, 43, 34, 0.85)), url('images/pic1.jpg');
+                background-size: cover;
+                background-position: center;
+                padding: var(--space-12) 0;
+                border-bottom: 2px solid var(--color-accent-400);
+                }
 
-        .projects-header-bg .page-header-subtitle {
-            color: rgba(255, 255, 255, 0.9) !important;
-        }
-        
-        .card-pseudo-link {
-            margin-top: auto;
-            color: var(--color-accent-600);
-            font-weight: 500;
-            display: inline-block;
-            transition: color var(--transition-fast);
-        }
+                .projects-header-bg .page-header-title {
+                color: var(--color-white) !important;
+                border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+                }
 
-        .clickable-card-wrapper:hover .card-pseudo-link {
-            color: var(--color-accent-700);
-        }
-    </style>
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container nav-centered">
-            <a href="index.html" class="nav-brand" aria-label="IIT Bombay">
-                <img src="images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
-            </a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="projects.html" class="nav-link nav-link-active">Projects</a></li>
-                <li><a href="publications.html" class="nav-link">Publications</a></li>
-                <li><a href="team.html" class="nav-link">Team</a></li>
-                <li class="nav-item-dropdown" id="linksDropdown">
-                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
-                    <div class="dropdown-menu" id="linksMenu">
-                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
-                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
-                    </div>
-                </li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+                .projects-header-bg .page-header-subtitle {
+                color: rgba(255, 255, 255, 0.9) !important;
+                }
 
-    <main>
-        <!-- Page Header -->
-        <header class="page-header-section projects-header-bg">
-            <div class="page-header-container">
-                <h1 class="page-header-title">Research Projects</h1>
-                <p class="page-header-subtitle">
-                    Explore our ongoing and completed research initiatives addressing critical challenges 
-                    in rural energy, irrigation systems, and sustainable development.
-                </p>
-            </div>
-        </header>
+                .card-pseudo-link {
+                margin-top: auto;
+                color: var(--color-accent-600);
+                font-weight: 500;
+                display: inline-block;
+                transition: color var(--transition-fast);
+                }
 
-        <!-- Projects Grid -->
-        <section class="projects-section-main">
-            <div class="projects-container">
-                <div class="projects-grid-layout">
+                .clickable-card-wrapper:hover .card-pseudo-link {
+                color: var(--color-accent-700);
+                }
+        </style>
+        </head>
+            <body>
+                <!-- Navbar -->
+                <nav class="navbar">
+                    <div class="nav-container nav-centered">
+                        <a href="index.html" class="nav-brand" aria-label="IIT Bombay">
+                            <img src="images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+                        </a>
+                            <button class="nav-toggle" id="navToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                                <ul class="nav-menu" id="navMenu">
+                                    <li><a href="index.html" class="nav-link">Home</a></li>
+                                    <li><a href="projects.html" class="nav-link nav-link-active">Projects</a></li>
+                                    <li><a href="publications.html" class="nav-link">Publications</a></li>
+                                    <li><a href="team.html" class="nav-link">Team</a></li>
+                                    <li class="nav-item-dropdown" id="linksDropdown">
+                                        <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                                        <div class="dropdown-menu" id="linksMenu">
+                                            <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA’s Departmental page</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">Unnat Maharashtra Abhiyan</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link" target="_blank">Priya Jadhav’s profile on CTARA</a>
+                                            <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                                        </div>
+                                        </li>
+                                            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                                        </ul>
+                                        </div>
+                                        </nav>
 
-                    <a href="projects/pocra.html" class="clickable-card-wrapper pocra-main-card">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading">PoCRA</h3>
-                                <p class="project-card-text" style="-webkit-line-clamp: unset; line-clamp: unset;">
-                                    IIT Bombay's collaboration with PoCRA to enhance climate-resilience and profitability of smallholder farming systems. Energy team solutions for reliable access to water and electricity for irrigation across 5000 villages.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2020-2024</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                            <main>
+                                                <!-- Page Header -->
+                                                <header class="page-header-section projects-header-bg">
+                                                    <div class="page-header-container">
+                                                        <h1 class="page-header-title">Research Projects</h1>
+                                                        <p class="page-header-subtitle">
+                                                            Explore our ongoing and completed research initiatives addressing critical challenges
+                                                            in rural energy, irrigation systems, and sustainable development.
+                                                        </p>
+                                                        </div>
+                                                        </header>
 
-                    <a href="projects/energy-water-crops.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Modelling of Energy - Water - Crops linkage</h3>
-                                <p class="project-card-text">
-                                    First work to quantify water-energy-food nexus linkages using a generalized methodology. Provides crop-wise energy usage (kWh/ha) and water applied (mm) for irrigation systems in Maharashtra.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2017-2022</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                            <!-- Projects Grid -->
+                                                            <section class="projects-section-main">
+                                                                <div class="projects-container">
+                                                                    <div class="projects-grid-layout">
 
-                    <a href="projects/demand-modelling.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Demand modelling of irrigation energy demand</h3>
-                                <p class="project-card-text">
-                                    Demand model for power consumption based on cropping and irrigation practices. Built into software module to estimate minimum Distribution Transformer capacity required in villages.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2017-2022</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                        <a href="projects/pocra.html" class="clickable-card-wrapper pocra-main-card">
+                                                                            <article class="project-card-item project-card-item-no-image">
+                                                                                <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                    <h3 class="project-card-heading">PoCRA</h3>
+                                                                                    <p class="project-card-text" style="-webkit-line-clamp: unset; line-clamp: unset;">
+                                                                                        IIT Bombay's collaboration with PoCRA to enhance climate-resilience and profitability of smallholder farming systems. Energy team solutions for reliable access to water and electricity for irrigation across 5000 villages.
+                                                                                    </p>
+                                                                                        <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2020-2024</p>
+                                                                                        <div class="card-pseudo-link">
+                                                                                            Learn more <span class="arrow-icon">→</span>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                        </article>
+                                                                                        </a>
 
-                    <a href="projects/energy-estimation-tool.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Energy Estimation Tool for Distribution Transformer capacity estimation</h3>
-                                <p class="project-card-text">
-                                    Innovative solution to determine infrastructure requirements based on crop data. Successfully implemented in 10 villages through government processes, promoting information, comprehension and collective action.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2023-2024</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                            <a href="projects/energy-water-crops.html" class="clickable-card-wrapper">
+                                                                                                <article class="project-card-item project-card-item-no-image">
+                                                                                                    <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                        <h3 class="project-card-heading" style="font-size: var(--text-lg);">Modelling of Energy - Water - Crops linkage</h3>
+                                                                                                        <p class="project-card-text">
+                                                                                                            First work to quantify water-energy-food nexus linkages using a generalized methodology. Provides crop-wise energy usage (kWh/ha) and water applied (mm) for irrigation systems in Maharashtra.
+                                                                                                        </p>
+                                                                                                            <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2017-2022</p>
+                                                                                                            <div class="card-pseudo-link">
+                                                                                                                Learn more <span class="arrow-icon">→</span>
+                                                                                                            </div>
+                                                                                                            </div>
+                                                                                                            </article>
+                                                                                                            </a>
 
-                    <a href="projects/lt-distribution-networks.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Restructuring of Low Tension Agricultural distribution networks</h3>
-                                <p class="project-card-text">
-                                    New approach to restructure distribution networks to ensure good quality power supply. Feasibility study in Umbarda Village led to one-third cost reduction, improved voltage profile and even loading of transformers.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2020-2021</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                <a href="projects/demand-modelling.html" class="clickable-card-wrapper">
+                                                                                                                    <article class="project-card-item project-card-item-no-image">
+                                                                                                                        <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                            <h3 class="project-card-heading" style="font-size: var(--text-lg);">Demand modelling of irrigation energy demand</h3>
+                                                                                                                            <p class="project-card-text">
+                                                                                                                                Demand model for power consumption based on cropping and irrigation practices. Built into software module to estimate minimum Distribution Transformer capacity required in villages.
+                                                                                                                            </p>
+                                                                                                                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2017-2022</p>
+                                                                                                                                <div class="card-pseudo-link">
+                                                                                                                                    Learn more <span class="arrow-icon">→</span>
+                                                                                                                                </div>
+                                                                                                                                </div>
+                                                                                                                                </article>
+                                                                                                                                </a>
 
-                    <a href="projects/efficient-irrigation-pumps.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Efficient irrigation pumps - context of pressurized irrigation</h3>
-                                <p class="project-card-text">
-                                    Guidelines for appropriate pump selection with high penetration of sprinkler usage. Addresses complexity of pump selection beyond single duty point considerations for pressurized irrigation systems.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2017-2021</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                    <a href="projects/energy-estimation-tool.html" class="clickable-card-wrapper">
+                                                                                                                                        <article class="project-card-item project-card-item-no-image">
+                                                                                                                                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Energy Estimation Tool for Distribution Transformer capacity estimation</h3>
+                                                                                                                                                <p class="project-card-text">
+                                                                                                                                                    Innovative solution to determine infrastructure requirements based on crop data. Successfully implemented in 10 villages through government processes, promoting information, comprehension and collective action.
+                                                                                                                                                </p>
+                                                                                                                                                    <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2023-2024</p>
+                                                                                                                                                    <div class="card-pseudo-link">
+                                                                                                                                                        Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                    </div>
+                                                                                                                                                    </div>
+                                                                                                                                                    </article>
+                                                                                                                                                    </a>
 
-                    <a href="projects/capacitors.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Capacitor usage with irrigation pumps</h3>
-                                <p class="project-card-text">
-                                    Low-cost, effective solution to improve power quality for irrigation. Capacitor usage leads to 5-10% voltage improvement and 5% energy loss reduction, substantially reducing transformer failure and tripping incidences.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2014-2024</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                        <a href="projects/lt-distribution-networks.html" class="clickable-card-wrapper">
+                                                                                                                                                            <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                    <h3 class="project-card-heading" style="font-size: var(--text-lg);">Restructuring of Low Tension Agricultural distribution networks</h3>
+                                                                                                                                                                    <p class="project-card-text">
+                                                                                                                                                                        New approach to restructure distribution networks to ensure good quality power supply. Feasibility study in Umbarda Village led to one-third cost reduction, improved voltage profile and even loading of transformers.
+                                                                                                                                                                    </p>
+                                                                                                                                                                        <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2020-2021</p>
+                                                                                                                                                                        <div class="card-pseudo-link">
+                                                                                                                                                                            Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        </article>
+                                                                                                                                                                        </a>
 
-                    <a href="projects/load-management.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Load Management Initiative on the Distribution Transformer</h3>
-                                <p class="project-card-text">
-                                    App-based solution to schedule farmers' irrigation requirements to avoid transformer overloading during peak Rabi season. Successfully implemented at 11 locations across Vidarbha and Marathwada.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2021-2024</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                                            <a href="projects/efficient-irrigation-pumps.html" class="clickable-card-wrapper">
+                                                                                                                                                                                <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                    <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                        <h3 class="project-card-heading" style="font-size: var(--text-lg);">Efficient irrigation pumps - context of pressurized irrigation</h3>
+                                                                                                                                                                                        <p class="project-card-text">
+                                                                                                                                                                                            Guidelines for appropriate pump selection with high penetration of sprinkler usage. Addresses complexity of pump selection beyond single duty point considerations for pressurized irrigation systems.
+                                                                                                                                                                                        </p>
+                                                                                                                                                                                            <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2017-2021</p>
+                                                                                                                                                                                            <div class="card-pseudo-link">
+                                                                                                                                                                                                Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                            </div>
+                                                                                                                                                                                            </div>
+                                                                                                                                                                                            </article>
+                                                                                                                                                                                            </a>
 
-                    <!-- Project 9 -->
-                    <a href="projects/gise-hub.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Digital infrastructure for performance of power distribution feeders based on agro-climatic conditions</h3>
-                                <p class="project-card-text">
-                                    Documenting electrical distribution system of agricultural feeders in GIS and connecting it to cropping patterns and water sources. System for design and analysis while optimizing resources and farmer requirements.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2023-2025</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                                                                <a href="projects/capacitors.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                    <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                        <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                            <h3 class="project-card-heading" style="font-size: var(--text-lg);">Capacitor usage with irrigation pumps</h3>
+                                                                                                                                                                                                            <p class="project-card-text">
+                                                                                                                                                                                                                Low-cost, effective solution to improve power quality for irrigation. Capacitor usage leads to 5-10% voltage improvement and 5% energy loss reduction, substantially reducing transformer failure and tripping incidences.
+                                                                                                                                                                                                            </p>
+                                                                                                                                                                                                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2014-2024</p>
+                                                                                                                                                                                                                <div class="card-pseudo-link">
+                                                                                                                                                                                                                    Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                </article>
+                                                                                                                                                                                                                </a>
 
-                    <!-- Project 10 -->
-                    <a href="projects/solar-golap.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Analysis of a rural 1 MW Solar PV plant in Ratnagiri district, Maharashtra</h3>
-                                <p class="project-card-text">
-                                    Technical analysis of 1 MW scale solar PV plant through observations, SCADA data analysis and simulations. Suggestions made for incorporation in future implementations and DPRs of similar plants.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2023</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                                                                                    <a href="projects/load-management.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                                        <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Load Management Initiative on the Distribution Transformer</h3>
+                                                                                                                                                                                                                                <p class="project-card-text">
+                                                                                                                                                                                                                                    App-based solution to schedule farmers' irrigation requirements to avoid transformer overloading during peak Rabi season. Successfully implemented at 11 locations across Vidarbha and Marathwada.
+                                                                                                                                                                                                                                </p>
+                                                                                                                                                                                                                                    <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2021-2024</p>
+                                                                                                                                                                                                                                    <div class="card-pseudo-link">
+                                                                                                                                                                                                                                        Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                    </article>
+                                                                                                                                                                                                                                    </a>
 
-                    <!-- Project 11 -->
-                    <a href="projects/solar-dharashiv.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Study of Solar Ag feeders (PM-KUSOM Component C) in Dharashiv district, Maharashtra</h3>
-                                <p class="project-card-text">
-                                    Study and analysis of 2-8 MW scale renewable energy projects connected to Agricultural feeders. Focus on project management processes, efficiency, coverage and overall benefits.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2025-Ongoing</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                                                                                                        <!-- Project 9 -->
+                                                                                                                                                                                                                                        <a href="projects/gise-hub.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                                                            <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                                                                <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                                                                    <h3 class="project-card-heading" style="font-size: var(--text-lg);">Digital infrastructure for performance of power distribution feeders based on agro-climatic conditions</h3>
+                                                                                                                                                                                                                                                    <p class="project-card-text">
+                                                                                                                                                                                                                                                        Documenting electrical distribution system of agricultural feeders in GIS and connecting it to cropping patterns and water sources. System for design and analysis while optimizing resources and farmer requirements.
+                                                                                                                                                                                                                                                    </p>
+                                                                                                                                                                                                                                                        <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2023-2025</p>
+                                                                                                                                                                                                                                                        <div class="card-pseudo-link">
+                                                                                                                                                                                                                                                            Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                        </article>
+                                                                                                                                                                                                                                                        </a>
 
-                    <!-- Project 12 -->
-                    <a href="projects/agricultural-energy-consumption.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Study on Agricultural Energy Consumption Estimation of Maharashtra</h3>
-                                <p class="project-card-text">
-                                    Multi-institutional study across Maharashtra to develop protocol for energy consumption estimation. Study of 100 feeders resulted in changes to MSEDCL energy accounting.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2015-2016</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                                                                                                                            <!-- Project 10 -->
+                                                                                                                                                                                                                                                            <a href="projects/solar-golap.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                                                                                <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                                                                                    <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                                                                                        <h3 class="project-card-heading" style="font-size: var(--text-lg);">Analysis of a rural 1 MW Solar PV plant in Ratnagiri district, Maharashtra</h3>
+                                                                                                                                                                                                                                                                        <p class="project-card-text">
+                                                                                                                                                                                                                                                                            Technical analysis of 1 MW scale solar PV plant through observations, SCADA data analysis and simulations. Suggestions made for incorporation in future implementations and DPRs of similar plants.
+                                                                                                                                                                                                                                                                        </p>
+                                                                                                                                                                                                                                                                            <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2023</p>
+                                                                                                                                                                                                                                                                            <div class="card-pseudo-link">
+                                                                                                                                                                                                                                                                                Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                            </article>
+                                                                                                                                                                                                                                                                            </a>
 
-                    <a href="projects/residential-demand.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Residential Electricity Demand Modeling</h3>
-                                <p class="project-card-text">
-                                    Research on residential electricity demand modeling in rural and peri-urban contexts.
-                                </p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                                                                                                                                                <!-- Project 11 -->
+                                                                                                                                                                                                                                                                                <a href="projects/solar-dharashiv.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                                                                                                    <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                                                                                                        <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                                                                                                            <h3 class="project-card-heading" style="font-size: var(--text-lg);">Study of Solar Ag feeders (PM-KUSOM Component C) in Dharashiv district, Maharashtra</h3>
+                                                                                                                                                                                                                                                                                            <p class="project-card-text">
+                                                                                                                                                                                                                                                                                                Study and analysis of 2-8 MW scale renewable energy projects connected to Agricultural feeders. Focus on project management processes, efficiency, coverage and overall benefits.
+                                                                                                                                                                                                                                                                                            </p>
+                                                                                                                                                                                                                                                                                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2025-Ongoing</p>
+                                                                                                                                                                                                                                                                                                <div class="card-pseudo-link">
+                                                                                                                                                                                                                                                                                                    Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                </article>
+                                                                                                                                                                                                                                                                                                </a>
 
-                    <a href="projects/technology-aided-groundwater-management.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Technology Aided Groundwater Management in India (Collaboration with University of Virginia)</h3>
-                                <p class="project-card-text">
-                                    Collaborative research on technology-aided groundwater management approaches in India.
-                                </p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                                                                                                                                                                    <!-- Project 12 -->
+                                                                                                                                                                                                                                                                                                    <a href="projects/agricultural-energy-consumption.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                                                                                                                        <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                                                                                                                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                                                                                                                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Study on Agricultural Energy Consumption Estimation of Maharashtra</h3>
+                                                                                                                                                                                                                                                                                                                <p class="project-card-text">
+                                                                                                                                                                                                                                                                                                                    Multi-institutional study across Maharashtra to develop protocol for energy consumption estimation. Study of 100 feeders resulted in changes to MSEDCL energy accounting.
+                                                                                                                                                                                                                                                                                                                </p>
+                                                                                                                                                                                                                                                                                                                    <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2015-2016</p>
+                                                                                                                                                                                                                                                                                                                    <div class="card-pseudo-link">
+                                                                                                                                                                                                                                                                                                                        Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                    </article>
+                                                                                                                                                                                                                                                                                                                    </a>
 
-                    <!-- Solar Potential Goa -->
-                    <a href="projects/solar-potential-goa.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Solar potential of rooftop, Goa</h3>
-                                <p class="project-card-text">
-                                    Systematic estimation of solar PV potential across government building rooftops, canal tops, and abandoned mine lands in Goa. Study found approximately 123 MWp total potential using GIS mapping with site verification.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2017-2018</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                                                                                                                                                                                        <a href="projects/residential-demand.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                                                                                                                                            <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                                                                                                                                                <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                                                                                                                                                    <h3 class="project-card-heading" style="font-size: var(--text-lg);">Residential Electricity Demand Modeling</h3>
+                                                                                                                                                                                                                                                                                                                                    <p class="project-card-text">
+                                                                                                                                                                                                                                                                                                                                        Research on residential electricity demand modeling in rural and peri-urban contexts.
+                                                                                                                                                                                                                                                                                                                                    </p>
+                                                                                                                                                                                                                                                                                                                                        <div class="card-pseudo-link">
+                                                                                                                                                                                                                                                                                                                                            Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                        </article>
+                                                                                                                                                                                                                                                                                                                                        </a>
 
-                    <!-- Project 13 -->
-                    <a href="projects/technical-paradigms.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Technical paradigms in electricity supply for irrigation pumps</h3>
-                                <p class="project-card-text">
-                                    Techno-economic comparison of various power distribution models including offgrid solar PV, HVDS, and grid based systems through a systemic lens.
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2020</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                                                                                                                                                                                                            <a href="projects/technology-aided-groundwater-management.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                                                                                                                                                                <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                                                                                                                                                                    <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                                                                                                                                                                        <h3 class="project-card-heading" style="font-size: var(--text-lg);">Technology Aided Groundwater Management in India (Collaboration with University of Virginia)</h3>
+                                                                                                                                                                                                                                                                                                                                                        <p class="project-card-text">
+                                                                                                                                                                                                                                                                                                                                                            Collaborative research on technology-aided groundwater management approaches in India.
+                                                                                                                                                                                                                                                                                                                                                        </p>
+                                                                                                                                                                                                                                                                                                                                                            <div class="card-pseudo-link">
+                                                                                                                                                                                                                                                                                                                                                                Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                            </article>
+                                                                                                                                                                                                                                                                                                                                                            </a>
 
-                    <!-- Project 14 -->
-                    <a href="projects/irrigation-indices.html" class="clickable-card-wrapper">
-                        <article class="project-card-item project-card-item-no-image">
-                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
-                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Irrigation Investment Indices</h3>
-                                <p class="project-card-text">
-                                    Study on profitability of different cropping patterns as a function of water sources. Investigated the economics of irrigation investment across Marathwada and Vidarbha regions. Findings show increasing irrigation
-                                </p>
-                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2021-2022</p>
-                                <div class="card-pseudo-link">
-                                    Learn more <span class="arrow-icon">→</span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                                                                                                                                                                                                                                                                                                                                                                <!-- Solar Potential Goa -->
+                                                                                                                                                                                                                                                                                                                                                                <a href="projects/solar-potential-goa.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                                                                                                                                                                                    <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                                                                                                                                                                                        <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                                                                                                                                                                                            <h3 class="project-card-heading" style="font-size: var(--text-lg);">Solar potential of rooftop, Goa</h3>
+                                                                                                                                                                                                                                                                                                                                                                            <p class="project-card-text">
+                                                                                                                                                                                                                                                                                                                                                                                Systematic estimation of solar PV potential across government building rooftops, canal tops, and abandoned mine lands in Goa. Study found approximately 123 MWp total potential using GIS mapping with site verification.
+                                                                                                                                                                                                                                                                                                                                                                            </p>
+                                                                                                                                                                                                                                                                                                                                                                                <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2017-2018</p>
+                                                                                                                                                                                                                                                                                                                                                                                <div class="card-pseudo-link">
+                                                                                                                                                                                                                                                                                                                                                                                    Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                </article>
+                                                                                                                                                                                                                                                                                                                                                                                </a>
 
-                </div>
-            </div>
-        </section>
-    </main>
+                                                                                                                                                                                                                                                                                                                                                                                    <!-- Project 13 -->
+                                                                                                                                                                                                                                                                                                                                                                                    <a href="projects/technical-paradigms.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                                                                                                                                                                                                        <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                                                                                                                                                                                                            <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                                                                                                                                                                                                                <h3 class="project-card-heading" style="font-size: var(--text-lg);">Technical paradigms in electricity supply for irrigation pumps</h3>
+                                                                                                                                                                                                                                                                                                                                                                                                <p class="project-card-text">
+                                                                                                                                                                                                                                                                                                                                                                                                    Techno-economic comparison of various power distribution models including offgrid solar PV, HVDS, and grid based systems through a systemic lens.
+                                                                                                                                                                                                                                                                                                                                                                                                </p>
+                                                                                                                                                                                                                                                                                                                                                                                                    <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2020</p>
+                                                                                                                                                                                                                                                                                                                                                                                                    <div class="card-pseudo-link">
+                                                                                                                                                                                                                                                                                                                                                                                                        Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                    </article>
+                                                                                                                                                                                                                                                                                                                                                                                                    </a>
 
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Rural Energy Research Group</h3>
-                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
-                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
-                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="team.html">Team</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
-        </div>
-    </footer>
+                                                                                                                                                                                                                                                                                                                                                                                                        <!-- Project 14 -->
+                                                                                                                                                                                                                                                                                                                                                                                                        <a href="projects/irrigation-indices.html" class="clickable-card-wrapper">
+                                                                                                                                                                                                                                                                                                                                                                                                            <article class="project-card-item project-card-item-no-image">
+                                                                                                                                                                                                                                                                                                                                                                                                                <div class="project-card-body" style="height: 100%; display: flex; flex-direction: column;">
+                                                                                                                                                                                                                                                                                                                                                                                                                    <h3 class="project-card-heading" style="font-size: var(--text-lg);">Irrigation Investment Indices</h3>
+                                                                                                                                                                                                                                                                                                                                                                                                                    <p class="project-card-text">
+                                                                                                                                                                                                                                                                                                                                                                                                                        Study on profitability of different cropping patterns as a function of water sources. Investigated the economics of irrigation investment across Marathwada and Vidarbha regions. Findings show increasing irrigation
+                                                                                                                                                                                                                                                                                                                                                                                                                    </p>
+                                                                                                                                                                                                                                                                                                                                                                                                                        <p style="font-size: var(--text-sm); color: var(--color-neutral-500); margin-bottom: var(--space-4);"><strong>Year:</strong> 2021-2022</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="card-pseudo-link">
+                                                                                                                                                                                                                                                                                                                                                                                                                            Learn more <span class="arrow-icon">→</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                        </article>
+                                                                                                                                                                                                                                                                                                                                                                                                                        </a>
 
-    <script src="js/main.js"></script>
-</body>
-</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                        </section>
+                                                                                                                                                                                                                                                                                                                                                                                                                        </main>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                            <!-- Footer -->
+                                                                                                                                                                                                                                                                                                                                                                                                                            <footer class="footer" id="contact">
+                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="footer-content">
+                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="footer-section">
+                                                                                                                                                                                                                                                                                                                                                                                                                                        <h3>Rural Energy Research Group</h3>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="footer-section">
+                                                                                                                                                                                                                                                                                                                                                                                                                                            <h3>Contact Us</h3>
+                                                                                                                                                                                                                                                                                                                                                                                                                                            <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                            <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                            <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="footer-section">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                <h3>Quick Links</h3>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li><a href="index.html">Home</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li><a href="projects.html">Projects</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li><a href="publications.html">Publications</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li><a href="team.html">Team</a></li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="footer-bottom">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    </footer>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        <script src="js/main.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    </body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    </html>

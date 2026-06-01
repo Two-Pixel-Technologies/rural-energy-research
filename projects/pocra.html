@@ -1,259 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project on Climate Resilient Agriculture - IIT Bombay Energy Projects | Rural Energy Research Group">
-    <title>Project on Climate Resilient Agriculture | Rural Energy Research Group</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <style>
-        /* Images container - side by side layout */
-        .pocra-images {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .pocra-image-item {
-            text-align: center;
-        }
-        
-        .pocra-image-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: var(--shadow-md);
-            display: block;
-        }
-        
-        .image-caption {
-            margin-top: 1rem;
-            font-size: var(--text-sm);
-            color: var(--color-neutral-500);
-            font-style: italic;
-            line-height: 1.4;
-        }
-        
-        /* Medium screens (tablets) - maintain side by side but with smaller gap */
-        @media (max-width: 1024px) {
-            .pocra-images {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Project on Climate Resilient Agriculture - IIT Bombay Energy Projects | Rural Energy Research Group">
+        <title>Project on Climate Resilient Agriculture | Rural Energy Research Group</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <style>
+                /* Images container - side by side layout */
+                .pocra-images {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                margin-top: 2.5rem;
+                margin-bottom: 1.5rem;
+                }
+
+                .pocra-image-item {
+                text-align: center;
+                }
+
+                .pocra-image-item img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: var(--shadow-md);
+                display: block;
+                }
+
+                .image-caption {
+                margin-top: 1rem;
+                font-size: var(--text-sm);
+                color: var(--color-neutral-500);
+                font-style: italic;
+                line-height: 1.4;
+                }
+
+                /* Medium screens (tablets) - maintain side by side but with smaller gap */
+                @media (max-width: 1024px) {
+                .pocra-images {
                 gap: 1.5rem;
-            }
-        }
-        
-        /* Small tablets - still side by side but tighter */
-        @media (max-width: 768px) {
-            .pocra-images {
+                }
+                }
+
+                /* Small tablets - still side by side but tighter */
+                @media (max-width: 768px) {
+                .pocra-images {
                 gap: 1rem;
-            }
-            
-            .image-caption {
+                }
+
+                .image-caption {
                 font-size: 0.8rem;
-            }
-        }
-        
-        /* Mobile - stack vertically */
-        @media (max-width: 640px) {
-            .pocra-images {
+                }
+                }
+
+                /* Mobile - stack vertically */
+                @media (max-width: 640px) {
+                .pocra-images {
                 grid-template-columns: 1fr;
                 gap: 2rem;
-            }
-        }
-        
-        /* Mobile layout: reorder to show sidebar at the very end */
-        @media (max-width: 768px) {
-            /* Make container flex to control order of all children */
-            .project-detail-container {
+                }
+                }
+
+                /* Mobile layout: reorder to show sidebar at the very end */
+                @media (max-width: 768px) {
+                /* Make container flex to control order of all children */
+                .project-detail-container {
                 display: flex;
                 flex-direction: column;
-            }
-            
-            /* Use display: contents to flatten the grid structure on mobile */
-            .project-detail__content {
+                }
+
+                /* Use display: contents to flatten the grid structure on mobile */
+                .project-detail__content {
                 display: contents;
-            }
-            
-            /* Assign orders: body content, then sidebar */
-            .project-detail__body {
+                }
+
+                /* Assign orders: body content, then sidebar */
+                .project-detail__body {
                 order: 5;
-            }
-            
-            .project-detail__content aside {
+                }
+
+                .project-detail__content aside {
                 order: 6;
                 margin-top: var(--space-8);
-            }
-            
-            /* Keep header elements at the top */
-            .project-detail__tag {
+                }
+
+                /* Keep header elements at the top */
+                .project-detail__tag {
                 order: 1;
-            }
-            
-            .project-detail__title {
+                }
+
+                .project-detail__title {
                 order: 2;
-            }
-            
-            .project-detail__meta {
+                }
+
+                .project-detail__meta {
                 order: 3;
-            }
-            
-            /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+                }
+
+                /* Back link stays at the very bottom */
+                .project-detail-container > div:last-child {
                 order: 7;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container nav-centered">
-            <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
-                <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
-            </a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
-                <li><a href="../publications.html" class="nav-link">Publications</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
-                <li class="nav-item-dropdown" id="linksDropdown">
-                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
-                    <div class="dropdown-menu" id="linksMenu">
-                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
-                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
-                    </div>
-                </li>
-                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+                }
+                }
+        </style>
+        </head>
+            <body>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <div class="nav-container nav-centered">
+                        <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
+                            <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+                        </a>
+                            <button class="nav-toggle" id="navToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                                <ul class="nav-menu" id="navMenu">
+                                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                                    <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                                    <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                                    <li><a href="../team.html" class="nav-link">Team</a></li>
+                                    <li class="nav-item-dropdown" id="linksDropdown">
+                                        <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                                        <div class="dropdown-menu" id="linksMenu">
+                                            <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA’s Departmental page</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">Unnat Maharashtra Abhiyan</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link" target="_blank">Priya Jadhav’s profile on CTARA</a>
+                                            <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                                        </div>
+                                        </li>
+                                            <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                                        </ul>
+                                        </div>
+                                        </nav>
 
-    <main>
-        <article class="project-detail">
-            <div class="project-detail-container">
-                <!-- Project Header -->
+                                            <main>
+                                                <article class="project-detail">
+                                                    <div class="project-detail-container">
+                                                        <!-- Project Header -->
 
-                <h1 class="project-detail__title">Project on Climate Resilient Agriculture - IIT Bombay (Energy projects)</h1>
-                
-                <!-- Meta Information -->
-                <div class="project-detail__meta">
-                    <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2020 – 2024
-                    </div>
-                </div>
+                                                        <h1 class="project-detail__title">Project on Climate Resilient Agriculture &ndash; IIT Bombay (Energy projects)</h1>
 
-                <!-- Content Grid -->
-                <div class="project-detail__content">
-                    <div class="project-detail__body">
-                        <p>The 'Project on Climate Resilient Agriculture' (PoCRA) or Nanji Deshmukh Sanjeevani Krishi Prakalp is a project implemented by the Department of Agriculture, Government of Maharashtra (MahaPoCRA, 2017), funded by the World Bank to enhance climate-resilience and profitability of smallholder farming systems. The first phase of this project was carried out from 2017 to 2024 in 5000 villages of 15 districts in the divisions of Marathwada and West Vidarbha.</p>
-                        
-                        <p>IIT Bombay worked with PoCRA on solutions for reliable access to water, and electricity for irrigation. Prof. Milind Sohoni was the Principal Investigator for the duration of the project. The MoUs between IIT Bombay and PoCRA, reports and solutions submitted are available <a href="https://www.cse.iitb.ac.in/~pocra/" target="_blank">here</a>.</p>
-                        
-                        <p>The energy team led by co-Principal Investigator Prof. Priya Jadhav worked on the project from 2020. The main reports and solutions of the energy team are listed below.</p>
-                        
-                        <!-- Images Section -->
-                        <div class="pocra-images">
-                            <div class="pocra-image-item">
-                                <img src="../images/pocra-sprinklers-yehala.png" alt="Sprinklers being used in a field in Yehala, Yavatmal">
-                                <p class="image-caption">Sprinklers being used in a field in Yehala, Yavatmal</p>
-                            </div>
-                            
-                            <div class="pocra-image-item">
-                                <img src="../images/pocra-fgd-farmers.jpg" alt="Focused Group Discussion with farmers">
-                                <p class="image-caption">Focused Group Discussion with farmers</p>
-                            </div>
-                        </div>
-                    </div>
+                                                        <!-- Meta Information -->
+                                                        <div class="project-detail__meta">
+                                                            <div class="project-detail__meta-item">
+                                                                <strong>Year:</strong> 2020 – 2024
+                                                            </div>
+                                                            </div>
 
-                    <!-- Sidebar -->
-                    <aside>
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Project Resources</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li style="border-bottom: none; padding-bottom: 0;">
-                                    <a href="https://www.cse.iitb.ac.in/~pocra/" target="_blank" style="color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">MoUs, Reports and Solutions →</a>
-                                </li>
-                            </ul>
-                        </div>
+                                                                <!-- Content Grid -->
+                                                                <div class="project-detail__content">
+                                                                    <div class="project-detail__body">
+                                                                        <p>The 'Project on Climate Resilient Agriculture' (PoCRA) or Nanji Deshmukh Sanjeevani Krishi Prakalp is a project implemented by the Department of Agriculture, Government of Maharashtra (MahaPoCRA, 2017), funded by the World Bank to enhance climate-resilience and profitability of smallholder farming systems. The first phase of this project was carried out from 2017 to 2024 in 5000 villages of 15 districts in the divisions of Marathwada and West Vidarbha.</p>
 
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><a href="lt-distribution-networks.html">Restructuring of Low Tension Agricultural distribution networks</a></li>
-                                <li><a href="efficient-irrigation-pumps.html">Efficient irrigation pumps - context of pressurized irrigation</a></li>
-                                <li><a href="energy-water-crops.html">Modelling of Energy - Water - Crops linkage</a></li>
-                                <li><a href="demand-modelling.html">Demand modelling of irrigation energy demand</a></li>
-                                <li><a href="capacitors.html">Capacitors</a></li>
-                                <li><a href="load-management.html">Load Management Initiative</a></li>
-                                <li><a href="irrigation-indices.html">Irrigation Investment Indices</a></li>
-                            </ul>
-                        </div>
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Team Members</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><strong>Project Team:</strong> Vivek Shinde, Devanand Doifode, Sameer Kulkarni, Kiran Doifode, Parasharam Akhare, Siddhesh Mane, Abhishek Khaire, Vaibhav Dound, Amol Budhwat, Shubham Bankhele, Vinayak Kamat</li>
-                                <li><strong>Students:</strong> Namita Sawant, Athira Madhusudhana Panicker, Prathamesh Antarkar</li>
-                            </ul>
-                        </div>
+                                                                        <p>IIT Bombay worked with PoCRA on solutions for reliable access to water, and electricity for irrigation. Prof. Milind Sohoni was the Principal Investigator for the duration of the project. The MoUs between IIT Bombay and PoCRA, reports and solutions submitted are available <a href="https://www.cse.iitb.ac.in/~pocra/" target="_blank">here</a>.</p>
 
-                        
-                    </aside>
-                </div>
+                                                                        <p>The energy team led by co-Principal Investigator Prof. Priya Jadhav worked on the project from 2020. The main reports and solutions of the energy team are listed below.</p>
 
+                                                                        <!-- Images Section -->
+                                                                        <div class="pocra-images">
+                                                                            <div class="pocra-image-item">
+                                                                                <img src="../images/pocra-sprinklers-yehala.png" alt="Sprinklers being used in a field in Yehala, Yavatmal">
+                                                                                <p class="image-caption">Sprinklers being used in a field in Yehala, Yavatmal</p>
+                                                                            </div>
 
-                <!-- Back Link -->
-                <div style="margin-top: 3rem;">
-                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
-                </div>
-            </div>
-        </article>
-    </main>
+                                                                                <div class="pocra-image-item">
+                                                                                    <img src="../images/pocra-fgd-farmers.jpg" alt="Focused Group Discussion with farmers">
+                                                                                    <p class="image-caption">Focused Group Discussion with farmers</p>
+                                                                                </div>
+                                                                                </div>
+                                                                                </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Rural Energy Research Group</h3>
-                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
-                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
-                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../team.html">Team</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
-        </div>
-    </footer>
+                                                                                    <!-- Sidebar -->
+                                                                                    <aside>
+                                                                                        <div class="project-detail__sidebar-card">
+                                                                                            <h3 class="project-detail__sidebar-title">Project Resources</h3>
+                                                                                            <ul class="project-detail__sidebar-list">
+                                                                                                <li style="border-bottom: none; padding-bottom: 0;">
+                                                                                                    <a href="https://www.cse.iitb.ac.in/~pocra/" target="_blank" style="color: var(--color-accent-600); text-decoration: underline; font-size: var(--text-xs);">MoUs, Reports and Solutions →</a>
+                                                                                                </li>
+                                                                                                </ul>
+                                                                                                </div>
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-</body>
-</html>
+                                                                                                    <div class="project-detail__sidebar-card">
+                                                                                                        <h3 class="project-detail__sidebar-title">Other related projects</h3>
+                                                                                                        <ul class="project-detail__sidebar-list">
+                                                                                                            <li><a href="lt-distribution-networks.html">Restructuring of Low Tension Agricultural distribution networks</a></li>
+                                                                                                            <li><a href="efficient-irrigation-pumps.html">Efficient irrigation pumps - context of pressurized irrigation</a></li>
+                                                                                                            <li><a href="energy-water-crops.html">Modelling of Energy - Water - Crops linkage</a></li>
+                                                                                                            <li><a href="demand-modelling.html">Demand modelling of irrigation energy demand</a></li>
+                                                                                                            <li><a href="capacitors.html">Capacitors</a></li>
+                                                                                                            <li><a href="load-management.html">Load Management Initiative</a></li>
+                                                                                                            <li><a href="irrigation-indices.html">Irrigation Investment Indices</a></li>
+                                                                                                        </ul>
+                                                                                                        </div>
+                                                                                                            <div class="project-detail__sidebar-card">
+                                                                                                                <h3 class="project-detail__sidebar-title">Team Members</h3>
+                                                                                                                <ul class="project-detail__sidebar-list">
+                                                                                                                    <li><strong>Project Team:</strong> Vivek Shinde, Devanand Doifode, Sameer Kulkarni, Kiran Doifode, Parasharam Akhare, Siddhesh Mane, Abhishek Khaire, Vaibhav Dound, Amol Budhwat, Shubham Bankhele, Vinayak Kamat</li>
+                                                                                                                    <li><strong>Students:</strong> Namita Sawant, Athira Madhusudhana Panicker, Prathamesh Antarkar</li>
+                                                                                                                </ul>
+                                                                                                                </div>
+
+                                                                                                                </aside>
+                                                                                                                </div>
+
+                                                                                                                    <!-- Back Link -->
+                                                                                                                    <div style="margin-top: 3rem;">
+                                                                                                                        <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
+                                                                                                                    </div>
+                                                                                                                    </div>
+                                                                                                                    </article>
+                                                                                                                    </main>
+
+                                                                                                                        <!-- Footer -->
+                                                                                                                        <footer class="footer">
+                                                                                                                            <div class="footer-content">
+                                                                                                                                <div class="footer-section">
+                                                                                                                                    <h3>Rural Energy Research Group</h3>
+                                                                                                                                    <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+                                                                                                                                </div>
+                                                                                                                                    <div class="footer-section">
+                                                                                                                                        <h3>Contact Us</h3>
+                                                                                                                                        <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                                                                                                                                        <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                                                                                                                                        <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+                                                                                                                                    </div>
+                                                                                                                                        <div class="footer-section">
+                                                                                                                                            <h3>Quick Links</h3>
+                                                                                                                                            <ul>
+                                                                                                                                                <li><a href="../index.html">Home</a></li>
+                                                                                                                                                <li><a href="../projects.html">Projects</a></li>
+                                                                                                                                                <li><a href="../publications.html">Publications</a></li>
+                                                                                                                                                <li><a href="../team.html">Team</a></li>
+                                                                                                                                            </ul>
+                                                                                                                                            </div>
+                                                                                                                                            </div>
+                                                                                                                                                <div class="footer-bottom">
+                                                                                                                                                    <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+                                                                                                                                                </div>
+                                                                                                                                                </footer>
+
+                                                                                                                                                    <!-- JavaScript -->
+                                                                                                                                                    <script src="../js/main.js"></script>
+                                                                                                                                                </body>
+                                                                                                                                                </html>

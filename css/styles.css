@@ -4,6 +4,7 @@
 
 /* Google Fonts Import - Professional Serif Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&display=swap');
 
 :root {
     /* ========== Color Palette ========== */
@@ -44,8 +45,8 @@
     /* ========== Typography ========== */
     
     /* Font Families */
-    --font-heading: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
-    --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --font-heading: 'Cormorant Garamond', Georgia, Cambria, serif;
+    --font-body: 'Source Serif 4', Georgia, Cambria, serif;
     
     /* Font Sizes - Fluid Scale */
     --text-xs: 0.75rem;      /* 12px */
@@ -69,7 +70,7 @@
     --font-normal: 400;
     --font-medium: 500;
     --font-semibold: 600;
-    --font-bold: 700;
+    --font-bold: 800;
     
     /* Letter Spacing */
     --tracking-tight: -0.015em;
@@ -129,6 +130,8 @@ body {
     line-height: var(--leading-relaxed);
     color: var(--color-neutral-600);
     background-color: var(--color-neutral-100);
+    font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -145,10 +148,11 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: var(--font-semibold);
+    font-weight: var(--font-bold);
     line-height: var(--leading-snug);
-    color: var(--color-primary-600);
+    color: var(--color-primary-900);
     letter-spacing: var(--tracking-tight);
+    font-feature-settings: "liga" 1, "clig" 1;
 }
 
 /* ============================================
@@ -536,10 +540,10 @@ h1, h2, h3, h4, h5, h6 {
 .uma-section h2 {
     font-size: var(--text-xl);
     font-weight: var(--font-semibold);
-    color: var(--color-primary-600);
+    color: var(--color-primary-700);
     margin-bottom: var(--space-6);
     padding-bottom: var(--space-4);
-    border-bottom: 2px solid var(--color-accent-100);
+    border-bottom: 2px solid var(--color-accent-300);
 }
 
 /* ============================================
@@ -775,7 +779,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-subtitle {
     font-size: var(--text-lg);
-    color: var(--color-neutral-500);
+    color: var(--color-neutral-700);
+    font-weight: var(--font-medium);
     font-style: italic;
 }
 
@@ -1043,7 +1048,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-header-title {
     font-family: var(--font-heading);
-    font-size: clamp(1.875rem, 4vw, 2.5rem);
+    font-size: clamp(2.2rem, 4.8vw, 2.8rem);
     font-weight: var(--font-bold);
     color: var(--color-primary-600);
     margin-bottom: var(--space-4);
@@ -1051,10 +1056,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page-header-subtitle {
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
     font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
-    color: var(--color-neutral-600);
+    color: var(--color-neutral-700);
+    font-weight: var(--font-bold);
     max-width: 700px;
 }
 
@@ -1077,7 +1083,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Home Header Background Overlay */
 .home-header-bg {
     background-color: var(--color-primary-800);
-    background-image: linear-gradient(rgba(21, 43, 34, 0.58), rgba(21, 43, 34, 0.58)), url('../images/pic11.jpg');
+    background-image: linear-gradient(rgba(21, 43, 34, 0.58), rgba(21, 43, 34, 0.58)), url('../images/pic7.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1437,7 +1443,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Project Card Heading */
 .project-card-heading {
-    font-family: var(--font-heading);
+    font-family: 'Source Serif 4', Georgia, Cambria, serif;
     font-size: var(--text-xl);
     font-weight: var(--font-semibold);
     color: var(--color-primary-600);
@@ -1873,7 +1879,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--pd-primary);
     margin-bottom: var(--space-4);
     font-weight: var(--font-semibold);
-    font-family: var(--font-heading);
+    font-family: 'Source Serif 4', Georgia, Cambria, serif !important;
 }
 
 .project-detail__sidebar-list {
@@ -2089,6 +2095,19 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     border: 0;
+}
+.project-image-embed {
+    max-width: 800px; /* jo bhi width chahiye */
+    margin: 0 auto;
+    border-radius: 12px;
+    
+}
+
+.project-image-embed img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
 }
 
 /* Responsive adjustments for project media */

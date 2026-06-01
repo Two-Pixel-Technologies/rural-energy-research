@@ -1,403 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Us | Rural Energy Research Group">
-    <title>Contact Us | Rural Energy Research Group</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <style>
-        /* Contact Page Specific Styles */
-        .contact-page {
-            max-width: var(--max-width);
-            margin: var(--space-8) auto var(--space-12);
-            padding: 0 var(--space-4);
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contact Us | Rural Energy Research Group">
+        <title>Contact Us | Rural Energy Research Group</title>
 
-        /* Full Width Header Strip */
-        .contact-header-bg {
-            background-color: var(--color-primary-800);
-            background-image: linear-gradient(rgba(21, 43, 34, 0.65), rgba(21, 43, 34, 0.65)), url('images/pic14.jpg');            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: var(--space-12) 0;
-            border-bottom: 2px solid var(--color-accent-400);
-        }
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-        .contact-header-container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 var(--space-4);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: var(--space-6);
-        }
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="css/styles.css">
 
-        .contact-header-left h1 {
-            font-size: var(--text-4xl);
-            color: var(--color-white) !important;
-            margin-bottom: var(--space-2);
-        }
+        <style>
+                /* Contact Page Specific Styles */
+                .contact-page {
+                max-width: var(--max-width);
+                margin: var(--space-8) auto var(--space-12);
+                padding: 0 var(--space-4);
+                }
 
-        .contact-header-left p {
-            color: rgba(255, 255, 255, 0.9) !important;
-            font-size: var(--text-lg);
-            max-width: 600px;
-        }
+                /* Full Width Header Strip */
+                .contact-header-bg {
+                background-color: var(--color-primary-800);
+                background-image: linear-gradient(rgba(21, 43, 34, 0.65), rgba(21, 43, 34, 0.65)), url('images/pic14.jpg');            background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                padding: var(--space-12) 0;
+                border-bottom: 2px solid var(--color-accent-400);
+                }
 
-        .contact-header-right {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-2);
-            text-align: right;
-        }
+                .contact-header-container {
+                max-width: var(--max-width);
+                margin: 0 auto;
+                padding: 0 var(--space-4);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: var(--space-6);
+                }
 
-        .quick-contact {
-            display: inline-flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: var(--space-2);
-            font-size: var(--text-base);
-            color: rgba(255, 255, 255, 0.95);
-            font-weight: 500;
-        }
+                .contact-header-left h1 {
+                font-size: var(--text-4xl);
+                color: var(--color-white) !important;
+                margin-bottom: var(--space-2);
+                }
 
-        .contact-icon {
-            width: 18px;
-            height: 18px;
-            color: var(--color-accent-400);
-        }
+                .contact-header-left p {
+                color: rgba(255, 255, 255, 0.9) !important;
+                font-size: var(--text-lg);
+                max-width: 600px;
+                }
 
-        /* 2-Column Grid Layout */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-6);
-        }
+                .contact-header-right {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-2);
+                text-align: right;
+                }
 
-        .contact-column {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-6);
-        }
-        
-        /* Cards */
-        .contact-card {
-            background-color: var(--color-white);
-            border: 1px solid var(--color-neutral-200);
-            border-radius: var(--radius-md);
-            padding: var(--space-6);
-            display: flex;
-            flex-direction: column;
-            box-shadow: var(--shadow-sm);
-            transition: box-shadow var(--transition-base), transform var(--transition-base);
-        }
+                .quick-contact {
+                display: inline-flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: var(--space-2);
+                font-size: var(--text-base);
+                color: rgba(255, 255, 255, 0.95);
+                font-weight: 500;
+                }
 
-        /* Hover Effect match Projects Page */
-        .contact-card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
+                .contact-icon {
+                width: 18px;
+                height: 18px;
+                color: var(--color-accent-400);
+                }
 
-        .contact-card.h-full {
-            height: 100%;
-        }
+                /* 2-Column Grid Layout */
+                .contact-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-6);
+                }
 
-        .contact-card h2 {
-            font-size: var(--text-xl);
-            color: var(--color-primary-700);
-            margin-bottom: var(--space-4);
-            padding-bottom: var(--space-2);
-            /* Consistent subtle bottom border for section differentiation */
-            border-bottom: 2px solid var(--color-accent-100); 
-        }
-        
-        /* Information Sections */
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-4);
-        }
+                .contact-column {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-6);
+                }
 
-        .contact-info-block {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-3);
-        }
+                /* Cards */
+                .contact-card {
+                background-color: var(--color-white);
+                border: 1px solid var(--color-neutral-200);
+                border-radius: var(--radius-md);
+                padding: var(--space-6);
+                display: flex;
+                flex-direction: column;
+                box-shadow: var(--shadow-sm);
+                transition: box-shadow var(--transition-base), transform var(--transition-base);
+                }
 
-        .contact-row {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-3);
-        }
+                /* Hover Effect match Projects Page */
+                .contact-card:hover {
+                box-shadow: var(--shadow-md);
+                transform: translateY(-2px);
+                }
 
-        .contact-label {
-            font-weight: 600;
-            color: var(--color-primary-800);
-            font-size: var(--text-base);
-            min-width: 70px;
-        }
+                .contact-card.h-full {
+                height: 100%;
+                }
 
-        .contact-detail-text {
-            color: var(--color-neutral-700);
-            font-size: var(--text-base);
-            line-height: var(--leading-relaxed);
-            margin: 0;
-        }
+                .contact-card h2 {
+                font-size: var(--text-xl);
+                color: var(--color-primary-700);
+                margin-bottom: var(--space-4);
+                padding-bottom: var(--space-2);
+                /* Consistent subtle bottom border for section differentiation */
+                border-bottom: 2px solid var(--color-accent-100);
+                }
 
-        .contact-group-name {
-            font-size: var(--text-lg);
-            font-weight: 600;
-            color: var(--color-primary-800);
-            margin-bottom: var(--space-1);
-        }
-        
-        .contact-person-name {
-            font-size: var(--text-xl);
-            font-weight: 600;
-            color: var(--color-primary-800);
-            margin-bottom: var(--space-1);
-        }
+                /* Information Sections */
+                .contact-info {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-4);
+                }
 
-        /* Links */
-        .contact-link {
-            color: var(--color-accent-600);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: all var(--transition-fast);
-            font-weight: 500;
-        }
+                .contact-info-block {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-3);
+                }
 
-        .contact-link:hover {
-            color: var(--color-accent-700);
-            border-bottom-color: var(--color-accent-600);
-        }
+                .contact-row {
+                display: flex;
+                align-items: flex-start;
+                gap: var(--space-3);
+                }
 
-        /* Map Settings */
-        .map-wrapper {
-            margin-top: var(--space-4);
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            border: 1px solid var(--color-neutral-200);
-            flex: 1; /* Expand to fill left column full height to match right column */
-            display: flex;
-        }
+                .contact-label {
+                font-weight: 600;
+                color: var(--color-primary-800);
+                font-size: var(--text-base);
+                min-width: 70px;
+                }
 
-        .map-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            min-height: 250px;
-            border: 0;
-            flex: 1;
-        }
+                .contact-detail-text {
+                color: var(--color-neutral-700);
+                font-size: var(--text-base);
+                line-height: var(--leading-relaxed);
+                margin: 0;
+                }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .contact-header-container {
+                .contact-group-name {
+                font-size: var(--text-lg);
+                font-weight: 600;
+                color: var(--color-primary-800);
+                margin-bottom: var(--space-1);
+                }
+
+                .contact-person-name {
+                font-size: var(--text-xl);
+                font-weight: 600;
+                color: var(--color-primary-800);
+                margin-bottom: var(--space-1);
+                }
+
+                /* Links */
+                .contact-link {
+                color: var(--color-accent-600);
+                text-decoration: none;
+                border-bottom: 1px solid transparent;
+                transition: all var(--transition-fast);
+                font-weight: 500;
+                }
+
+                .contact-link:hover {
+                color: var(--color-accent-700);
+                border-bottom-color: var(--color-accent-600);
+                }
+
+                /* Map Settings */
+                .map-wrapper {
+                margin-top: var(--space-4);
+                border-radius: var(--radius-sm);
+                overflow: hidden;
+                border: 1px solid var(--color-neutral-200);
+                flex: 1; /* Expand to fill left column full height to match right column */
+                display: flex;
+                }
+
+                .map-wrapper iframe {
+                width: 100%;
+                height: 100%;
+                min-height: 250px;
+                border: 0;
+                flex: 1;
+                }
+
+                /* Responsive */
+                @media (max-width: 768px) {
+                .contact-header-container {
                 flex-direction: column;
                 align-items: flex-start;
-            }
-            .contact-header-right {
+                }
+                .contact-header-right {
                 text-align: left;
                 align-items: flex-start;
-            }
-            .quick-contact {
+                }
+                .quick-contact {
                 justify-content: flex-start;
-            }
-            .contact-grid {
+                }
+                .contact-grid {
                 grid-template-columns: 1fr;
-            }
-            .map-wrapper {
+                }
+                .map-wrapper {
                 min-height: 250px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container nav-centered">
-            <a href="index.html" class="nav-brand" aria-label="IIT Bombay">
-                <img src="images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
-            </a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="publications.html" class="nav-link">Publications</a></li>
-                <li><a href="team.html" class="nav-link">Team</a></li>
-                <li class="nav-item-dropdown" id="linksDropdown">
-                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
-                    <div class="dropdown-menu" id="linksMenu">
-                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
-                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
-                    </div>
-                </li>
-                <li><a href="contact.html" class="nav-link nav-link-active">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+                }
+                }
+        </style>
+        </head>
+            <body>
+                <!-- Navbar -->
+                <nav class="navbar">
+                    <div class="nav-container nav-centered">
+                        <a href="index.html" class="nav-brand" aria-label="IIT Bombay">
+                            <img src="images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+                        </a>
+                            <button class="nav-toggle" id="navToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                                <ul class="nav-menu" id="navMenu">
+                                    <li><a href="index.html" class="nav-link">Home</a></li>
+                                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                                    <li><a href="publications.html" class="nav-link">Publications</a></li>
+                                    <li><a href="team.html" class="nav-link">Team</a></li>
+                                    <li class="nav-item-dropdown" id="linksDropdown">
+                                        <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                                        <div class="dropdown-menu" id="linksMenu">
+                                            <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA’s Departmental page</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">Unnat Maharashtra Abhiyan</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link" target="_blank">Priya Jadhav’s profile on CTARA</a>
+                                            <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                                        </div>
+                                        </li>
+                                            <li><a href="contact.html" class="nav-link nav-link-active">Contact Us</a></li>
+                                        </ul>
+                                        </div>
+                                        </nav>
 
-    <!-- Main Content -->
-    <main>
-        
-        <!-- Header Strip -->
-        <header class="page-header-section contact-header-bg">
-            <div class="contact-header-container">
-                <div class="contact-header-left">
-                <h1>Contact Us</h1>
-                <p>For collaborations, research queries, or academic partnerships, feel free to reach out.</p>
-            </div>
-            <div class="contact-header-right">
-                <div class="quick-contact">
-                    <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    jadhav_priya@iitb.ac.in
-                </div>
-                <div class="quick-contact">
-                    <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    022-2576 7291
-                </div>
-            </div>
-        </header>
+                                            <!-- Main Content -->
+                                            <main>
 
-        <section class="contact-page">
-            <div class="contact-grid">
-            
-            <!-- Left Column: Reach Us -->
-            <div class="contact-column">
-                <section class="contact-card h-full">
-                    <h2>Reach Us</h2>
-                    <div class="contact-info">
-                        <div class="contact-info-block">
-                            <div class="contact-group-name">Rural Energy Group</div>
-                            <div class="contact-row">
-                                <svg class="contact-icon" style="margin-top: 4px; min-width: 18px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                <div class="contact-detail-text">
-                                    <span class="contact-label">Office Address:</span><br>
-                                    <a href="https://maps.app.goo.gl/aQNtBXDpnKzz59nt5" target="_blank" class="contact-link">
-                                        Applied Materials Exploration Center, IIT Bombay<br>
-                                        Powai<br>
-                                        Mumbai 400076
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                                                <!-- Header Strip -->
+                                                <header class="page-header-section contact-header-bg">
+                                                    <div class="contact-header-container">
+                                                        <div class="contact-header-left">
+                                                            <h1>Contact Us</h1>
+                                                            <p>For collaborations, research queries, or academic partnerships, feel free to reach out.</p>
+                                                        </div>
+                                                            <div class="contact-header-right">
+                                                                <div class="quick-contact">
+                                                                    <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                                                    jadhav_priya@iitb.ac.in
+                                                                </div>
+                                                                    <div class="quick-contact">
+                                                                        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                                                        022-2576 7291
+                                                                    </div>
+                                                                    </div>
+                                                                    </header>
 
-                        <!-- Embed Google Map -->
-                        <div class="map-wrapper">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.754407886915!2d72.91264421118126!3d19.118432381987556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7f66a2a0753%3A0xe543c8b4ce160d5b!2sIndian%20Institute%20of%20Technology%20Bombay!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </section>
-            </div>
+                                                                        <section class="contact-page">
+                                                                            <div class="contact-grid">
 
-            <!-- Right Column: Contact Person & CTARA Stacked -->
-            <div class="contact-column">
-                
-                <!-- Top Right: Contact Person -->
-                <section class="contact-card">
-                    <h2>Contact Person</h2>
-                    <div class="contact-info">
-                        <div class="contact-info-block">
-                            <div class="contact-person-name">Prof. Priya Jadhav</div>
-                            
-                            <div class="contact-row">
-                                <svg class="contact-icon" style="margin-top: 4px; min-width: 18px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                <div>
-                                    <span class="contact-label">Email:</span><br>
-                                    <a href="mailto:jadhav_priya@iitb.ac.in" class="contact-link">jadhav_priya@iitb.ac.in</a>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-row">
-                                <svg class="contact-icon" style="margin-top: 4px; min-width: 18px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                <div>
-                                    <span class="contact-label">Phone:</span><br>
-                                    <a href="tel:02225767291" class="contact-link">022-2576 7291</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                                                                                <!-- Left Column: Reach Us -->
+                                                                                <div class="contact-column">
+                                                                                    <section class="contact-card h-full">
+                                                                                        <h2>Reach Us</h2>
+                                                                                        <div class="contact-info">
+                                                                                            <div class="contact-info-block">
+                                                                                                <div class="contact-group-name">Rural Energy Group</div>
+                                                                                                <div class="contact-row">
+                                                                                                    <svg class="contact-icon" style="margin-top: 4px; min-width: 18px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                                                                                    <div class="contact-detail-text">
+                                                                                                        <span class="contact-label">Office Address:</span><br>
+                                                                                                        <a href="https://maps.app.goo.gl/aQNtBXDpnKzz59nt5" target="_blank" class="contact-link">
+                                                                                                            Applied Materials Exploration Center, IIT Bombay<br>
+                                                                                                            Powai<br>
+                                                                                                            Mumbai 400076
+                                                                                                        </a>
+                                                                                                        </div>
+                                                                                                        </div>
+                                                                                                        </div>
 
-                <!-- Bottom Right: CTARA Department -->
-                <section class="contact-card">
-                    <h2>CTARA Department Office</h2>
-                    <div class="contact-info">
-                        <div class="contact-info-block">
-                            
-                            <!-- Phone Top -->
-                            <div class="contact-row">
-                                <svg class="contact-icon" style="margin-top: 4px; min-width: 18px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                <div>
-                                    <span class="contact-label">Phone:</span><br>
-                                    <a href="tel:02225767870" class="contact-link">022 2576 7870</a>
-                                </div>
-                            </div>
+                                                                                                            <!-- Embed Google Map -->
+                                                                                                            <div class="map-wrapper">
+                                                                                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.754407886915!2d72.91264421118126!3d19.118432381987556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7f66a2a0753%3A0xe543c8b4ce160d5b!2sIndian%20Institute%20of%20Technology%20Bombay!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                                                                            </div>
+                                                                                                            </div>
+                                                                                                            </section>
+                                                                                                            </div>
 
-                            <!-- Address Stacked Below -->
-                            <div class="contact-row">
-                                <svg class="contact-icon" style="margin-top: 4px; min-width: 18px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                <div class="contact-detail-text">
-                                    <span class="contact-label">Address:</span><br>
-                                    Centre for Technology Alternatives for Rural Areas<br>
-                                    Old CSE Building, 2nd Floor<br>
-                                    IIT Bombay, Powai
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </section>
+                                                                                                                <!-- Right Column: Contact Person & CTARA Stacked -->
+                                                                                                                <div class="contact-column">
 
-            </div>
-        </section>
-    </main>
+                                                                                                                    <!-- Top Right: Contact Person -->
+                                                                                                                    <section class="contact-card">
+                                                                                                                        <h2>Contact Person</h2>
+                                                                                                                        <div class="contact-info">
+                                                                                                                            <div class="contact-info-block">
+                                                                                                                                <div class="contact-person-name">Prof. Priya Jadhav</div>
 
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Rural Energy Research Group</h3>
-                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
-                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
-                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="team.html">Team</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
-        </div>
-    </footer>
+                                                                                                                                <div class="contact-row">
+                                                                                                                                    <svg class="contact-icon" style="margin-top: 4px; min-width: 18px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                                                                                                                    <div>
+                                                                                                                                        <span class="contact-label">Email:</span><br>
+                                                                                                                                        <a href="mailto:jadhav_priya@iitb.ac.in" class="contact-link">jadhav_priya@iitb.ac.in</a>
+                                                                                                                                    </div>
+                                                                                                                                    </div>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
-</body>
-</html>
+                                                                                                                                        <div class="contact-row">
+                                                                                                                                            <svg class="contact-icon" style="margin-top: 4px; min-width: 18px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                                                                                                                            <div>
+                                                                                                                                                <span class="contact-label">Phone:</span><br>
+                                                                                                                                                <a href="tel:02225767291" class="contact-link">022-2576 7291</a>
+                                                                                                                                            </div>
+                                                                                                                                            </div>
+                                                                                                                                            </div>
+                                                                                                                                            </div>
+                                                                                                                                            </section>
+
+                                                                                                                                                <!-- Bottom Right: CTARA Department -->
+                                                                                                                                                <section class="contact-card">
+                                                                                                                                                    <h2>CTARA Department Office</h2>
+                                                                                                                                                    <div class="contact-info">
+                                                                                                                                                        <div class="contact-info-block">
+
+                                                                                                                                                            <!-- Phone Top -->
+                                                                                                                                                            <div class="contact-row">
+                                                                                                                                                                <svg class="contact-icon" style="margin-top: 4px; min-width: 18px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                                                                                                                                                <div>
+                                                                                                                                                                    <span class="contact-label">Phone:</span><br>
+                                                                                                                                                                    <a href="tel:02225767870" class="contact-link">022 2576 7870</a>
+                                                                                                                                                                </div>
+                                                                                                                                                                </div>
+
+                                                                                                                                                                    <!-- Address Stacked Below -->
+                                                                                                                                                                    <div class="contact-row">
+                                                                                                                                                                        <svg class="contact-icon" style="margin-top: 4px; min-width: 18px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                                                                                                                                                        <div class="contact-detail-text">
+                                                                                                                                                                            <span class="contact-label">Address:</span><br>
+                                                                                                                                                                            Centre for Technology Alternatives for Rural Areas<br>
+                                                                                                                                                                            Old CSE Building, 2nd Floor<br>
+                                                                                                                                                                            IIT Bombay, Powai
+                                                                                                                                                                        </div>
+                                                                                                                                                                        </div>
+
+                                                                                                                                                                        </div>
+                                                                                                                                                                        </div>
+                                                                                                                                                                        </section>
+
+                                                                                                                                                                        </div>
+                                                                                                                                                                        </section>
+                                                                                                                                                                        </main>
+
+                                                                                                                                                                            <!-- Footer -->
+                                                                                                                                                                            <footer class="footer" id="contact">
+                                                                                                                                                                                <div class="footer-content">
+                                                                                                                                                                                    <div class="footer-section">
+                                                                                                                                                                                        <h3>Rural Energy Research Group</h3>
+                                                                                                                                                                                        <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                        <div class="footer-section">
+                                                                                                                                                                                            <h3>Contact Us</h3>
+                                                                                                                                                                                            <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                                                                                                                                                                                            <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                                                                                                                                                                                            <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+                                                                                                                                                                                        </div>
+                                                                                                                                                                                            <div class="footer-section">
+                                                                                                                                                                                                <h3>Quick Links</h3>
+                                                                                                                                                                                                <ul>
+                                                                                                                                                                                                    <li><a href="index.html">Home</a></li>
+                                                                                                                                                                                                    <li><a href="projects.html">Projects</a></li>
+                                                                                                                                                                                                    <li><a href="publications.html">Publications</a></li>
+                                                                                                                                                                                                    <li><a href="team.html">Team</a></li>
+                                                                                                                                                                                                </ul>
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                </div>
+                                                                                                                                                                                                    <div class="footer-bottom">
+                                                                                                                                                                                                        <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                    </footer>
+
+                                                                                                                                                                                                        <!-- JavaScript -->
+                                                                                                                                                                                                        <script src="js/main.js"></script>
+                                                                                                                                                                                                    </body>
+                                                                                                                                                                                                    </html>

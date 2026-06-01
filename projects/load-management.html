@@ -1,220 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Load management at the Distribution Transformer | Rural Energy Research Group">
-    <title>Load Management at the Distribution Transformer | Rural Energy Research Group</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    <style>
-        /* Full width content section that appears after sidebar ends */
-        .project-detail__full-width {
-            margin-top: var(--space-10);
-            width: 100%;
-        }
-        
-        .project-detail__full-width p {
-            margin-bottom: var(--space-4);
-            line-height: var(--leading-loose);
-            color: var(--pd-text-body);
-        }
-        
-        /* Mobile layout: reorder to show sidebar at the very end */
-        @media (max-width: 768px) {
-            /* Make container flex to control order of all children */
-            .project-detail-container {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Load management at the Distribution Transformer | Rural Energy Research Group">
+        <title>Load Management at the Distribution Transformer | Rural Energy Research Group</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="../css/styles.css">
+
+        <style>
+                /* Full width content section that appears after sidebar ends */
+                .project-detail__full-width {
+                margin-top: var(--space-10);
+                width: 100%;
+                }
+
+                .project-detail__full-width p {
+                margin-bottom: var(--space-4);
+                line-height: var(--leading-loose);
+                color: var(--pd-text-body);
+                }
+
+                /* Mobile layout: reorder to show sidebar at the very end */
+                @media (max-width: 768px) {
+                /* Make container flex to control order of all children */
+                .project-detail-container {
                 display: flex;
                 flex-direction: column;
-            }
-            
-            /* Use display: contents to flatten the grid structure on mobile */
-            .project-detail__content {
+                }
+
+                /* Use display: contents to flatten the grid structure on mobile */
+                .project-detail__content {
                 display: contents;
-            }
-            
-            /* Assign orders: body content, full-width section, then sidebar */
-            .project-detail__body {
+                }
+
+                /* Assign orders: body content, full-width section, then sidebar */
+                .project-detail__body {
                 order: 5;
-            }
-            
-            .project-detail__full-width {
+                }
+
+                .project-detail__full-width {
                 order: 6;
                 margin-top: var(--space-8);
-            }
-            
-            .project-detail__content aside {
+                }
+
+                .project-detail__content aside {
                 order: 7;
                 margin-top: var(--space-8);
-            }
-            
-            /* Keep header elements at the top */
-            .project-detail__tag {
+                }
+
+                /* Keep header elements at the top */
+                .project-detail__tag {
                 order: 1;
-            }
-            
-            .project-detail__title {
+                }
+
+                .project-detail__title {
                 order: 2;
-            }
-            
-            .project-detail__meta {
+                }
+
+                .project-detail__meta {
                 order: 3;
-            }
-            
-            /* Back link stays at the very bottom */
-            .project-detail-container > div:last-child {
+                }
+
+                /* Back link stays at the very bottom */
+                .project-detail-container > div:last-child {
                 order: 8;
-            }
-        }
+                }
+                }
 
-        .page-load-management .project-video-embed {
-            max-width: min(720px, 90%);
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container nav-centered">
-            <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
-                <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
-            </a>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
-                <li><a href="../publications.html" class="nav-link">Publications</a></li>
-                <li><a href="../team.html" class="nav-link">Team</a></li>
-                <li class="nav-item-dropdown" id="linksDropdown">
-                    <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
-                    <div class="dropdown-menu" id="linksMenu">
-                        <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">UMA</a>
-                        <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link">Profile</a>
-                        <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
-                    </div>
-                </li>
-                <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+                .page-load-management .project-video-embed {
+                max-width: min(720px, 90%);
+                margin-left: auto;
+                margin-right: auto;
+                }
+        </style>
+        </head>
+            <body>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <div class="nav-container nav-centered">
+                        <a href="../index.html" class="nav-brand" aria-label="IIT Bombay">
+                            <img src="../images/iitb1.png" alt="IIT Bombay logo" class="nav-brand-logo">
+                        </a>
+                            <button class="nav-toggle" id="navToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                                <ul class="nav-menu" id="navMenu">
+                                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                                    <li><a href="../projects.html" class="nav-link nav-link-active">Projects</a></li>
+                                    <li><a href="../publications.html" class="nav-link">Publications</a></li>
+                                    <li><a href="../team.html" class="nav-link">Team</a></li>
+                                    <li class="nav-item-dropdown" id="linksDropdown">
+                                        <a href="#" class="nav-link nav-dropdown-toggle" id="linksToggle">Links</a>
+                                        <div class="dropdown-menu" id="linksMenu">
+                                            <a href="https://www.ctara.iitb.ac.in/" class="dropdown-link" target="_blank">CTARA’s Departmental page</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/467" class="dropdown-link" target="_blank">Unnat Maharashtra Abhiyan</a>
+                                            <a href="https://www.ctara.iitb.ac.in/node/217" class="dropdown-link" target="_blank">Priya Jadhav’s profile on CTARA</a>
+                                            <a href="https://www.iitb.ac.in/" class="dropdown-link" target="_blank">IIT Bombay</a>
+                                        </div>
+                                        </li>
+                                            <li><a href="../contact.html" class="nav-link">Contact Us</a></li>
+                                        </ul>
+                                        </div>
+                                        </nav>
 
-    <main>
-        <article class="project-detail page-load-management">
-            <div class="project-detail-container">
-                <!-- Project Header -->
+                                            <main>
+                                                <article class="project-detail page-load-management">
+                                                    <div class="project-detail-container">
+                                                        <!-- Project Header -->
 
-                <h1 class="project-detail__title">Load management at the Distribution Transformer</h1>
-                
-                <!-- Meta Information -->
-                <div class="project-detail__meta">
-                    <div class="project-detail__meta-item">
-                        <strong>Year:</strong> 2021 – 2024
-                    </div>
-                    <div class="project-detail__meta-item">
-                        <strong>Team:</strong> Vivek Shinde, Devanand Doifode, Athira Panicker (PhD)
-                    </div>
-                </div>
+                                                        <h1 class="project-detail__title">Load management at the Distribution Transformer</h1>
 
-                <!-- Content Grid -->
-                <div class="project-detail__content">
-                    <div class="project-detail__body">
-                        <p>During peak irrigation season (winter / Rabi) agricultural distribution transformers across the state get overloaded for a few weeks leading to transformer failure and other power quality problems. Load management involves scheduling farmers' irrigation requirements to avoid overloading.</p>
-                        
-                        <p>Farmers create a schedule in groups considering irrigation requirements, and field conditions such as the day-night supply of electricity, water transfers from borewell to openwell, and prioritising critical irrigations. An app has been developed to simplify the generation of irrigation schedules. In fact, it has been observed that farmers sometimes use a crude and suboptimal approach where one of two branches of the network operates on alternate days.</p>
+                                                        <!-- Meta Information -->
+                                                        <div class="project-detail__meta">
+                                                            <div class="project-detail__meta-item">
+                                                                <strong>Year:</strong> 2021 – 2024
+                                                            </div>
+                                                                <div class="project-detail__meta-item">
+                                                                    <strong>Team:</strong> Vivek Shinde, Devanand Doifode, Athira Panicker (PhD)
+                                                                </div>
+                                                                </div>
 
-                        <p><strong>A video on the initiative:</strong></p>
-                        <div class="project-video-embed">
-                            <iframe src="https://www.youtube.com/embed/Yh3jxU0WCNI?start=179" title="Load Management Initiative video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
+                                                                    <!-- Content Grid -->
+                                                                    <div class="project-detail__content">
+                                                                        <div class="project-detail__body">
+                                                                            <p>During peak irrigation season (winter / Rabi) agricultural distribution transformers across the state get overloaded for a few weeks leading to transformer failure and other power quality problems. Load management involves scheduling farmers' irrigation requirements to avoid overloading.</p>
 
-                        <p>The load management initiative has been successfully implemented at 11 locations across Vidarbha and Marathwada. The app is currently available under the PoCRA scheme of the Department of Agriculture, Government of Maharashtra.</p>
+                                                                            <p>Farmers create a schedule in groups considering irrigation requirements, and field conditions such as the day-night supply of electricity, water transfers from borewell to openwell, and prioritising critical irrigations. An app has been developed to simplify the generation of irrigation schedules. In fact, it has been observed that farmers sometimes use a crude and suboptimal approach where one of two branches of the network operates on alternate days.</p>
 
-                        <div class="project-media-grid">
-                            <div class="project-media-grid__item project-media-grid__item--landscape">
-                                <img src="../images/load-management-schedule.jpg" alt="Schedule generated using the load management app">
-                                <p class="project-figure-caption">Schedule generated using the load management app for Ingole DT</p>
-                            </div>
-                            <div class="project-media-grid__item project-media-grid__item--vertical">
-                                <img src="../images/load-management-interface.jpg" alt="Irrigation details interface">
-                                <p class="project-figure-caption">Irrigation details interface of the load management app</p>
-                            </div>
-                        </div>
-                    </div>
+                                                                            <p><strong>A video on the initiative:</strong></p>
+                                                                            <div class="project-video-embed">
+                                                                                <iframe src="https://www.youtube.com/embed/Yh3jxU0WCNI?start=179" title="Load Management Initiative video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                                            </div>
 
-                    <!-- Sidebar -->
-                    <aside>
-                        
+                                                                                <p>The load management initiative has been successfully implemented at 11 locations across Vidarbha and Marathwada. The app is currently available under the PoCRA scheme of the Department of Agriculture, Government of Maharashtra.</p>
 
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Other related projects</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
-                                <li><a href="energy-estimation-tool.html">Energy Estimation Tool</a></li>
-                                <li><a href="capacitors.html">Capacitor Usage with Irrigation Pumps</a></li>
-                            </ul>
-                        </div>
-                        <div class="project-detail__sidebar-card">
-                            <h3 class="project-detail__sidebar-title">Team Members</h3>
-                            <ul class="project-detail__sidebar-list">
-                                <li><strong>Project Team:</strong> Vivek Shinde, Devanand Doifode, Athira Panicker (PhD)</li>
-                            </ul>
-                        </div>
-                    </aside>
-                </div>
+                                                                                <div class="project-media-grid">
+                                                                                    <div class="project-media-grid__item project-media-grid__item--landscape">
+                                                                                        <img src="../images/load-management-schedule.jpg" alt="Schedule generated using the load management app">
+                                                                                        <p class="project-figure-caption">Schedule generated using the load management app for Ingole DT</p>
+                                                                                    </div>
+                                                                                        <div class="project-media-grid__item project-media-grid__item--vertical">
+                                                                                            <img src="../images/load-management-interface.jpg" alt="Irrigation details interface">
+                                                                                            <p class="project-figure-caption">Irrigation details interface of the load management app</p>
+                                                                                        </div>
+                                                                                        </div>
+                                                                                        </div>
 
+                                                                                            <!-- Sidebar -->
+                                                                                            <aside>
 
+                                                                                                <div class="project-detail__sidebar-card">
+                                                                                                    <h3 class="project-detail__sidebar-title">Other related projects</h3>
+                                                                                                    <ul class="project-detail__sidebar-list">
+                                                                                                        <li><a href="pocra.html">PoCRA - Project on Climate Resilient Agriculture</a></li>
+                                                                                                        <li><a href="energy-estimation-tool.html">Energy Estimation Tool</a></li>
+                                                                                                        <li><a href="capacitors.html">Capacitor Usage with Irrigation Pumps</a></li>
+                                                                                                    </ul>
+                                                                                                    </div>
+                                                                                                        <div class="project-detail__sidebar-card">
+                                                                                                            <h3 class="project-detail__sidebar-title">Team Members</h3>
+                                                                                                            <ul class="project-detail__sidebar-list">
+                                                                                                                <li><strong>Project Team:</strong> Vivek Shinde, Devanand Doifode, Athira Panicker (PhD)</li>
+                                                                                                            </ul>
+                                                                                                            </div>
+                                                                                                            </aside>
+                                                                                                            </div>
 
-                <!-- Back Link -->
-                <div style="margin-top: 3rem;">
-                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
-                </div>
-            </div>
-        </article>
-    </main>
+                                                                                                                <!-- Back Link -->
+                                                                                                                <div style="margin-top: 3rem;">
+                                                                                                                    <a href="../projects.html" class="btn btn--secondary">← Back to All Projects</a>
+                                                                                                                </div>
+                                                                                                                </div>
+                                                                                                                </article>
+                                                                                                                </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Rural Energy Research Group</h3>
-                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
-                <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
-                <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../team.html">Team</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
-        </div>
-    </footer>
+                                                                                                                    <!-- Footer -->
+                                                                                                                    <footer class="footer">
+                                                                                                                        <div class="footer-content">
+                                                                                                                            <div class="footer-section">
+                                                                                                                                <h3>Rural Energy Research Group</h3>
+                                                                                                                                <p>Research on energy for irrigation, renewable energy, and rural electricity supply.</p>
+                                                                                                                            </div>
+                                                                                                                                <div class="footer-section">
+                                                                                                                                    <h3>Contact Us</h3>
+                                                                                                                                    <p>Email: <a href="mailto:jadhav_priya@iitb.ac.in">jadhav_priya@iitb.ac.in</a></p>
+                                                                                                                                    <p>Phone: <a href="tel:+912225767291">022-2576 7291</a></p>
+                                                                                                                                    <p>Address: Applied Materials Exploration Center, IIT Bombay, Powai, Mumbai 400076</p>
+                                                                                                                                </div>
+                                                                                                                                    <div class="footer-section">
+                                                                                                                                        <h3>Quick Links</h3>
+                                                                                                                                        <ul>
+                                                                                                                                            <li><a href="../index.html">Home</a></li>
+                                                                                                                                            <li><a href="../projects.html">Projects</a></li>
+                                                                                                                                            <li><a href="../publications.html">Publications</a></li>
+                                                                                                                                            <li><a href="../team.html">Team</a></li>
+                                                                                                                                        </ul>
+                                                                                                                                        </div>
+                                                                                                                                        </div>
+                                                                                                                                            <div class="footer-bottom">
+                                                                                                                                                <p>&copy; 2025 Rural Energy Research Group. All rights reserved.</p>
+                                                                                                                                            </div>
+                                                                                                                                            </footer>
 
-    <!-- JavaScript -->
-    <script src="../js/main.js"></script>
-</body>
-</html>
+                                                                                                                                                <!-- JavaScript -->
+                                                                                                                                                <script src="../js/main.js"></script>
+                                                                                                                                            </body>
+                                                                                                                                            </html>
