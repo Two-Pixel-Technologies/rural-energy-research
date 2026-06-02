@@ -4,7 +4,7 @@
 
 /* Google Fonts Import - Professional Serif Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap');
 
 :root {
     /* ========== Color Palette ========== */
@@ -45,8 +45,8 @@
     /* ========== Typography ========== */
     
     /* Font Families */
-    --font-heading: 'Cormorant Garamond', Georgia, Cambria, serif;
-    --font-body: 'Source Serif 4', Georgia, Cambria, serif;
+    --font-heading: 'DM Serif Display', serif;
+    --font-body: 'DM Sans', sans-serif;
     
     /* Font Sizes - Fluid Scale */
     --text-xs: 0.75rem;      /* 12px */
@@ -74,7 +74,7 @@
     
     /* Letter Spacing */
     --tracking-tight: -0.015em;
-    --tracking-normal: 0;
+    --tracking-normal: 0.02em;
     --tracking-wide: 0.025em;
     --tracking-wider: 0.05em;
     
@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-bold);
     line-height: var(--leading-snug);
     color: var(--color-primary-900);
-    letter-spacing: var(--tracking-tight);
+    letter-spacing: var(--tracking-normal);
     font-feature-settings: "liga" 1, "clig" 1;
 }
 
@@ -415,7 +415,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: var(--text-4xl);
     font-weight: var(--font-bold);
     color: var(--color-white);
-    letter-spacing: var(--tracking-tight);
+    letter-spacing: var(--tracking-normal);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -575,7 +575,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .projects-sublist li {
     margin-bottom: var(--space-2);
-    font-size: var(--text-base);
+    font-size: var(--text-lg);
     color: var(--color-neutral-600);
 }
 
@@ -1443,7 +1443,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Project Card Heading */
 .project-card-heading {
-    font-family: 'Source Serif 4', Georgia, Cambria, serif;
+    font-family: var(--font-heading);
     font-size: var(--text-xl);
     font-weight: var(--font-semibold);
     color: var(--color-primary-600);
@@ -1879,7 +1879,8 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--pd-primary);
     margin-bottom: var(--space-4);
     font-weight: var(--font-semibold);
-    font-family: 'Source Serif 4', Georgia, Cambria, serif !important;
+    font-family: var(--font-heading);
+    font-spacing: var(--tracking-tight);
 }
 
 .project-detail__sidebar-list {
@@ -2045,6 +2046,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: var(--space-2);
     line-height: var(--leading-normal);
     font-style: italic;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 /* Media grid (side-by-side images) */
@@ -2066,7 +2071,9 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
 }
-
+.project-media-grid__item--lower {
+    transform: translateY(28px);
+}
 .project-media-grid__item--vertical img {
     max-width: 280px;
     margin: 0 auto;
@@ -2080,9 +2087,12 @@ h1, h2, h3, h4, h5, h6 {
 /* Video embed */
 .project-video-embed {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    margin: var(--space-6) 0 var(--space-2);
+    width: 80%;
+    max-width: 800px;
+
+    padding-bottom: 45%; /* abhi 56.25% hai */
+    margin: var(--space-6) auto var(--space-2);
+
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -2093,23 +2103,9 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%;   /* ✅ */
     border: 0;
 }
-.project-image-embed {
-    max-width: 800px; /* jo bhi width chahiye */
-    margin: 0 auto;
-    border-radius: 12px;
-    
-}
-
-.project-image-embed img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: var(--radius-md);
-}
-
 /* Responsive adjustments for project media */
 @media (max-width: 768px) {
     .project-media-grid {
