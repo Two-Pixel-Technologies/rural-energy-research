@@ -60,7 +60,7 @@
     
     /* Line Heights */
     --leading-tight: 1.25;
-    --leading-snug: 1.375;
+    --leading-snug: 1.45;
     --leading-normal: 1.5;
     --leading-relaxed: 1.75;
     --leading-loose: 2;
@@ -70,11 +70,11 @@
     --font-normal: 400;
     --font-medium: 500;
     --font-semibold: 600;
-    --font-bold: 800;
+    --font-bold: 700;
     
     /* Letter Spacing */
     --tracking-tight: -0.015em;
-    --tracking-normal: 0.02em;
+    --tracking-normal: -0.01em;
     --tracking-wide: 0.025em;
     --tracking-wider: 0.05em;
     
@@ -526,6 +526,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--color-neutral-200);
     box-shadow: var(--shadow-sm);
     transition: box-shadow var(--transition-base), transform var(--transition-base);
+    
 }
 
 .projects-section:hover,
@@ -544,6 +545,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: var(--space-6);
     padding-bottom: var(--space-4);
     border-bottom: 2px solid var(--color-accent-300);
+    font-family: var(--font-heading);
+    font-weight: 530;
+    letter-spacing: 0.04em;
 }
 
 /* ============================================
@@ -615,6 +619,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     gap: var(--space-8);
+    
 }
 
 /* ============================================
@@ -623,6 +628,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .updates-section {
     flex: 1;
+    
+    
 }
 
 .policy-list {
@@ -687,10 +694,10 @@ h1, h2, h3, h4, h5, h6 {
 .footer-section h3 {
     font-family: var(--font-heading);
     font-size: var(--text-base);
-    font-weight: var(--font-semibold);
+    font-weight: 400;
     margin-bottom: var(--space-4);
     color: var(--color-white);
-    letter-spacing: var(--tracking-wide);
+    letter-spacing: 0.04em;
 }
 
 .footer-section p {
@@ -1049,10 +1056,10 @@ h1, h2, h3, h4, h5, h6 {
 .page-header-title {
     font-family: var(--font-heading);
     font-size: clamp(2.2rem, 4.8vw, 2.8rem);
-    font-weight: var(--font-bold);
+    font-weight: 500;
     color: var(--color-primary-600);
     margin-bottom: var(--space-4);
-    letter-spacing: var(--tracking-tight);
+    letter-spacing: 0.01em;
 }
 
 .page-header-subtitle {
@@ -1060,8 +1067,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: var(--text-lg);
     line-height: var(--leading-relaxed);
     color: var(--color-neutral-700);
-    font-weight: var(--font-bold);
+    font-weight: 400;
     max-width: 700px;
+    letter-spacing: 0.04em;
 }
 
 /* Active nav link */
@@ -1286,14 +1294,16 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     gap: var(--space-3);
+    
 }
 
 .team-name {
     font-size: var(--text-lg);
-    font-weight: var(--font-bold);
+    font-weight: 500;
     color: var(--color-primary-900);
     margin: 0;
     line-height: var(--leading-tight);
+    letter-spacing: 0.04em;
 }
 
 .team-role {
@@ -1389,6 +1399,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: all var(--transition-base);
     display: flex;
     flex-direction: column;
+    
 }
 
 .project-card-item:hover {
@@ -1445,7 +1456,8 @@ h1, h2, h3, h4, h5, h6 {
 .project-card-heading {
     font-family: var(--font-heading);
     font-size: var(--text-xl);
-    font-weight: var(--font-semibold);
+    font-weight: 550;
+    letter-spacing: 0.01em;
     color: var(--color-primary-600);
     margin-bottom: var(--space-3);
     line-height: var(--leading-tight);
@@ -1769,7 +1781,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: var(--space-5);
     color: var(--pd-text-dark);
     font-family: var(--font-heading);
-    font-weight: var(--font-bold);
+    font-weight: 500;
+    letter-spacing: 0em;
     line-height: var(--leading-tight);
 }
 
@@ -1878,9 +1891,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: var(--text-base);
     color: var(--pd-primary);
     margin-bottom: var(--space-4);
-    font-weight: var(--font-semibold);
+    font-weight: 520;
     font-family: var(--font-heading);
-    font-spacing: var(--tracking-tight);
+    letter-spacing: 0;
 }
 
 .project-detail__sidebar-list {

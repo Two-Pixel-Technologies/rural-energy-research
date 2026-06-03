@@ -43,15 +43,21 @@
                 }
 
                 .contact-header-left h1 {
-                font-size: var(--text-4xl);
+                font-size: clamp(2.2rem, 4.8vw, 2.8rem);
                 color: var(--color-white) !important;
-                margin-bottom: var(--space-2);
+                margin-bottom: var(--space-4);
+                font-weight: 500;
+                letter-spacing: 0.01em;
+                font-family: var(--font-heading);
                 }
 
                 .contact-header-left p {
                 color: rgba(255, 255, 255, 0.9) !important;
                 font-size: var(--text-lg);
                 max-width: 600px;
+                font-family: var(--font-heading);
+                font-weight: 450;
+                letter-spacing: 0.04em;
                 }
 
                 .contact-header-right {
@@ -59,6 +65,8 @@
                 flex-direction: column;
                 gap: var(--space-2);
                 text-align: right;
+                font-family: var(--font-heading);
+                letter-spacing: 0.06em;
                 }
 
                 .quick-contact {
@@ -119,6 +127,8 @@
                 padding-bottom: var(--space-2);
                 /* Consistent subtle bottom border for section differentiation */
                 border-bottom: 2px solid var(--color-accent-100);
+                font-weight: 500;
+                letter-spacing: 0.04em;
                 }
 
                 /* Information Sections */
@@ -162,7 +172,7 @@
                 }
 
                 .contact-person-name {
-                font-size: var(--text-xl);
+                font-size: var(--text-lg);
                 font-weight: 600;
                 color: var(--color-primary-800);
                 margin-bottom: var(--space-1);
